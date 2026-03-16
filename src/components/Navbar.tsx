@@ -1,0 +1,169 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  EDU_PATHWAYS,
+  EDU_COURSES,
+  MIG_SKILLED,
+  MIG_EMPLOYER,
+  MIG_OTHER,
+} from "@/lib/data";
+import LOGO from "@/lib/logo";
+
+const CONSULTATION_URL = "https://www.racc.net.au/migration-agent-education-agent";
+
+interface NavbarProps { activePage?: "news" | "migration" | "reviews" | "about"; }
+
+export default function Navbar({ activePage }: NavbarProps = {}) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <>
+      <nav style={{
+        position: "sticky", top: 0, zIndex: 100,
+        background: "var(--white)", borderBottom: "1px solid var(--border)",
+        padding: "0 5%", display: "flex", alignItems: "center",
+        height: 68, gap: 20,
+      }}>
+        {/* Logo */}
+        <Link href="https://www.racc.net.au" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }}>
+          <Image src={LOGO} alt="RACC Australia" width={42} height={42} style={{ objectFit: "contain" }} />
+          <span style={{ fontWeight: 600, fontSize: 17, color: "var(--navy)" }}>RACC Australia</span>
+        </Link>
+
+        {/* Desktop Links */}
+        <ul style={{ display: "flex", alignItems: "center", gap: 2, flex: 1, justifyContent: "center", listStyle: "none" }}
+          className="nav-links-desktop">
+          <li><Link href="/about-us" className={`nav-link${activePage === "about" ? " nav-link-active" : ""}`}>About Us</Link></li>
+
+          {/* Education dropdown */}
+          <li className="has-dropdown">
+            <Link href="https://www.racc.net.au/education-migration-and-study-options-popular-occupations-australia" className="nav-link">
+              Education ▾
+            </Link>
+            <div className="dropdown cols-2">
+              <div className="dropdown-col">
+                <div className="dropdown-heading">Pathway Courses</div>
+                {EDU_PATHWAYS.map((l) => <Link key={l.href} href={l.href} className="dropdown-link">{l.label}</Link>)}
+              </div>
+              <div className="dropdown-col">
+                <div className="dropdown-heading">Courses &amp; Training</div>
+                {EDU_COURSES.map((l) => <Link key={l.href} href={l.href} className="dropdown-link">{l.label}</Link>)}
+              </div>
+            </div>
+          </li>
+
+          {/* Migration dropdown */}
+          <li className="has-dropdown">
+            <Link href="/migration-services" className={`nav-link${activePage === "migration" ? " nav-link-active" : ""}`}>
+              Migration ▾
+            </Link>
+            <div className="dropdown cols-3">
+              <div className="dropdown-col">
+                <div className="dropdown-heading">Skilled Migration</div>
+                {MIG_SKILLED.map((l) => <Link key={l.href} href={l.href} className="dropdown-link">{l.label}</Link>)}
+              </div>
+              <div className="dropdown-col">
+                <div className="dropdown-heading">Employer &amp; Family</div>
+                {MIG_EMPLOYER.map((l) => <Link key={l.href} href={l.href} className="dropdown-link">{l.label}</Link>)}
+              </div>
+              <div className="dropdown-col">
+                <div className="dropdown-heading">Other Visas</div>
+                {MIG_OTHER.map((l) => <Link key={l.href} href={l.href} className="dropdown-link">{l.label}</Link>)}
+              </div>
+            </div>
+          </li>
+
+          <li><Link href="/news-events" className={`nav-link${activePage === "news" ? " nav-link-active" : ""}`}>News &amp; Events</Link></li>
+          <li><Link href="/client-reviews" className={`nav-link${activePage === "reviews" ? " nav-link-active" : ""}`}>Client Reviews</Link></li>
+        </ul>
+
+        {/* CTA */}
+        <Link href={CONSULTATION_URL} className="nav-cta-btn nav-links-desktop">
+          Book Free Consultation
+        </Link>
+
+        {/* Hamburger */}
+        <button
+          aria-label="Toggle menu"
+          onClick={() => setMobileOpen((v) => !v)}
+          className="hamburger-btn"
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="mobile-menu">
+          <Link href="/about-us" className="mobile-link">About Us</Link>
+          <Link href="https://www.racc.net.au/education-migration-and-study-options-popular-occupations-australia" className="mobile-link">Education</Link>
+          <Link href="/migration-services" className="mobile-link">Migration</Link>
+          <Link href="/news-events" className="mobile-link">News &amp; Events</Link>
+          <Link href="/client-reviews" className="mobile-link">Client Reviews</Link>
+          <Link href={CONSULTATION_URL} className="mobile-link mob-cta">Book Free Consultation</Link>
+        </div>
+      )}
+
+      <style>{`
+        .nav-link {
+          font-size: 14px; font-weight: 500; color: var(--tm);
+          text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all .2s;
+        }
+        .nav-link:hover, .nav-link-active { background: var(--light); color: var(--navy); font-weight: 600; }
+        .nav-cta-btn {
+          background: var(--yellow); color: var(--navy); font-size: 14px; font-weight: 700;
+          padding: 10px 20px; border-radius: 8px; text-decoration: none; white-space: nowrap;
+          flex-shrink: 0; transition: all .2s;
+        }
+        .nav-cta-btn:hover { background: var(--gold); }
+        .hamburger-btn {
+          display: none; flex-direction: column; gap: 5px; cursor: pointer;
+          background: none; border: none; padding: 4px;
+        }
+        .hamburger-btn span { width: 22px; height: 2px; background: var(--navy); border-radius: 2px; display: block; }
+        .has-dropdown { position: relative; }
+        .has-dropdown > a { cursor: pointer; }
+        .dropdown {
+          display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+          transform: translateX(-50%); background: var(--white); border: 1px solid var(--border);
+          border-radius: 14px; box-shadow: 0 16px 48px rgba(28,58,138,.14);
+          padding: 20px; z-index: 200; min-width: 220px; gap: 24px; flex-direction: row;
+        }
+        .dropdown.cols-2 { min-width: 440px; }
+        .dropdown.cols-3 { min-width: 660px; }
+        .has-dropdown:hover .dropdown { display: flex; }
+        .dropdown-col { display: flex; flex-direction: column; gap: 2px; min-width: 180px; }
+        .dropdown-heading {
+          font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase;
+          letter-spacing: 1px; padding: 4px 10px 8px; border-bottom: 1px solid var(--border); margin-bottom: 4px;
+        }
+        .dropdown-link {
+          font-size: 13px; color: var(--tm); text-decoration: none; padding: 6px 10px;
+          border-radius: 7px; transition: all .15s; white-space: nowrap;
+        }
+        .dropdown-link:hover { background: var(--light); color: var(--navy); }
+        .mobile-menu {
+          position: fixed; top: 68px; left: 0; right: 0; background: var(--white);
+          border-bottom: 1px solid var(--border); padding: 14px 5% 20px; z-index: 99;
+          display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        }
+        .mobile-link {
+          font-size: 15px; font-weight: 500; color: var(--tm);
+          text-decoration: none; padding: 10px 14px; border-radius: 8px;
+        }
+        .mobile-link:hover { background: var(--light); color: var(--navy); }
+        .mob-cta {
+          background: var(--yellow) !important; color: var(--navy) !important;
+          font-weight: 700 !important; text-align: center; margin-top: 6px;
+        }
+        @media (max-width: 768px) {
+          .nav-links-desktop { display: none !important; }
+          .hamburger-btn { display: flex !important; }
+        }
+      `}</style>
+    </>
+  );
+}
