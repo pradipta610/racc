@@ -1,3 +1,12 @@
+import Image from "next/image";
+
+const SAMPLE_PHOTOS = [
+  { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80", alt: "Diverse multicultural group — developer: replace with real client photo" },
+  { src: "https://images.unsplash.com/photo-1545044846-351ba102b6d5?auto=format&fit=crop&w=400&q=80", alt: "Melbourne city life — developer: replace with real Melbourne office photo" },
+  { src: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=400&q=80", alt: "University campus — developer: replace with real education photo" },
+  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c6f6?auto=format&fit=crop&w=400&q=80", alt: "Graduation celebration — developer: replace with real client success photo" },
+];
+
 export default function BrandPhotography() {
   return (
     <div id="photography" style={{ padding: "64px 7%", borderBottom: "1px solid var(--border)", background: "var(--off)" }}>
@@ -7,6 +16,20 @@ export default function BrandPhotography() {
       <p style={{ fontSize: 15, color: "var(--tl)", marginBottom: 36, maxWidth: 600, lineHeight: 1.7 }}>
         Photography should feel warm, real, and multicultural — reflecting RACC&apos;s diverse international client base. Avoid generic stock photography with obviously staged Western subjects.
       </p>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14, marginBottom: 32 }} className="photo-samples">
+        {SAMPLE_PHOTOS.map((p) => (
+          <div key={p.src} style={{ borderRadius: 12, overflow: "hidden", border: "1.5px solid var(--border)" }}>
+            <Image
+              src={p.src}
+              alt={p.alt}
+              width={400}
+              height={260}
+              style={{ width: "100%", height: 160, objectFit: "cover", display: "block" }}
+            />
+          </div>
+        ))}
+      </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 24 }} className="do-dont-grid">
         {/* Do */}

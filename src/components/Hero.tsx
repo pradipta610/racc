@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const CONSULTATION_URL = "https://www.racc.net.au/migration-agent-education-agent";
 
@@ -66,31 +67,43 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Float Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, padding: "40px 0 60px" }} className="hero-visual">
-          {[
-            { cls: "animate-float-up",   bg: "#EBF3FF", icon: "🎓", title: "Student Visa Approved",        sub: "University of Melbourne · 2 days ago" },
-            { cls: "animate-float-up-2", bg: "#FFF8DC", icon: "✈️", title: "PR Visa Granted",              sub: "Skilled Independent 189 · 1 week ago",  ml: 36 },
-            { cls: "animate-float-up-3", bg: "#E8F5F0", icon: "✅", title: "Employer Sponsored Approved",  sub: "Skills in Demand 482 · 3 days ago" },
-          ].map((c) => (
-            <div key={c.title} className={c.cls} style={{
-              background: "var(--white)", border: "1px solid var(--border)", borderRadius: 14,
-              padding: "14px 18px", boxShadow: "0 6px 24px rgba(28,58,138,.08)",
-              display: "flex", alignItems: "center", gap: 14, maxWidth: 310,
-              marginLeft: c.ml ?? 0,
-            }}>
-              <div style={{
-                width: 42, height: 42, borderRadius: 10, background: c.bg,
-                display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0,
-              }}>
-                {c.icon}
-              </div>
-              <div>
-                <strong style={{ fontSize: 14, fontWeight: 600, color: "var(--td)", display: "block" }}>{c.title}</strong>
-                <p style={{ fontSize: 12, color: "var(--tl)", margin: 0 }}>{c.sub}</p>
-              </div>
+        {/* Hero Image */}
+        <div style={{ position: "relative", padding: "40px 0 60px" }} className="hero-visual">
+          <div style={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 16px 48px rgba(28,58,138,.12)" }}>
+            <Image
+              src="https://images.unsplash.com/photo-1545044846-351ba102b6d5?auto=format&fit=crop&w=800&q=80"
+              alt="Melbourne city skyline — RACC Australia migration and education consultancy"
+              width={560}
+              height={400}
+              style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+              priority
+            />
+          </div>
+          {/* Overlay float cards */}
+          <div style={{
+            position: "absolute", bottom: 40, left: -20,
+            background: "var(--white)", border: "1px solid var(--border)", borderRadius: 12,
+            padding: "10px 14px", boxShadow: "0 6px 24px rgba(28,58,138,.1)",
+            display: "flex", alignItems: "center", gap: 10, zIndex: 2,
+          }}>
+            <div style={{ width: 36, height: 36, borderRadius: 8, background: "#EBF3FF", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 17 }}>🎓</div>
+            <div>
+              <strong style={{ fontSize: 12, fontWeight: 600, color: "var(--td)", display: "block" }}>Student Visa Approved</strong>
+              <span style={{ fontSize: 11, color: "var(--tl)" }}>University of Melbourne · 2 days ago</span>
             </div>
-          ))}
+          </div>
+          <div style={{
+            position: "absolute", top: 60, right: -10,
+            background: "var(--white)", border: "1px solid var(--border)", borderRadius: 12,
+            padding: "10px 14px", boxShadow: "0 6px 24px rgba(28,58,138,.1)",
+            display: "flex", alignItems: "center", gap: 10, zIndex: 2,
+          }}>
+            <div style={{ width: 36, height: 36, borderRadius: 8, background: "#FFF8DC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 17 }}>✈️</div>
+            <div>
+              <strong style={{ fontSize: 12, fontWeight: 600, color: "var(--td)", display: "block" }}>PR Visa Granted</strong>
+              <span style={{ fontSize: 11, color: "var(--tl)" }}>Skilled Independent 189 · 1 week ago</span>
+            </div>
+          </div>
         </div>
       </div>
 
