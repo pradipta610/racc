@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { BLOG_POSTS } from "@/lib/data";
 
 export default function Blog() {
@@ -32,14 +31,12 @@ export default function Blog() {
               textDecoration: "none", color: "inherit", display: "block",
               background: "var(--white)", transition: "all .2s",
             }}>
-              <div style={{ height: 150, position: "relative", overflow: "hidden" }}>
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+              <div style={{
+                height: 150,
+                background: "linear-gradient(135deg, var(--light), #D0E4F7)",
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34,
+              }}>
+                {post.icon}
               </div>
               <div style={{ padding: 18 }}>
                 <div style={{

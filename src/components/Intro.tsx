@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const HIGHLIGHTS = [
   "Prepare & lodge your visa application",
   "Police Check preparation",
@@ -36,27 +34,16 @@ export default function Intro() {
             </p>
           </div>
 
-          <div>
-            <div style={{ borderRadius: 16, overflow: "hidden", marginBottom: 20, boxShadow: "0 8px 24px rgba(28,58,138,.08)" }}>
-              <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
-                alt="RACC consultation meeting — developer: replace with real team photo"
-                width={560}
-                height={300}
-                style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
-              />
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }} className="hi-grid">
-              {HIGHLIGHTS.map((h) => (
-                <div key={h} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                  <div style={{
-                    width: 7, height: 7, borderRadius: "50%", background: "var(--yellow)",
-                    marginTop: 5, flexShrink: 0,
-                  }} />
-                  <p style={{ fontSize: 13, color: "var(--tm)" }}>{h}</p>
-                </div>
-              ))}
-            </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }} className="hi-grid">
+            {HIGHLIGHTS.map((h) => (
+              <div key={h} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                <div style={{
+                  width: 7, height: 7, borderRadius: "50%", background: "var(--yellow)",
+                  marginTop: 5, flexShrink: 0,
+                }} />
+                <p style={{ fontSize: 13, color: "var(--tm)" }}>{h}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

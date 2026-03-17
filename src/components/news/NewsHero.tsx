@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { NEWS_FEATURED } from "@/lib/data";
 
 export default function NewsHero() {
@@ -42,16 +41,12 @@ export default function NewsHero() {
           transition: "all .2s",
         }}>
           <div style={{
-            height: 180, position: "relative", overflow: "hidden",
+            height: 180, background: "linear-gradient(135deg,#1C3A8A,#2E6DB4)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            position: "relative", overflow: "hidden",
           }}>
-            <Image
-              src={NEWS_FEATURED.image}
-              alt={NEWS_FEATURED.title}
-              fill
-              style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
             <span style={{ position: "absolute", top: 14, left: 14, background: "var(--yellow)", color: "var(--navy)", fontSize: 11, fontWeight: 700, padding: "4px 10px", borderRadius: 6, zIndex: 1 }}>Latest</span>
+            <span style={{ fontSize: 48, position: "relative", zIndex: 1 }}>{NEWS_FEATURED.icon}</span>
           </div>
           <div style={{ padding: 20 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: "var(--blue)", textTransform: "uppercase", letterSpacing: ".6px", marginBottom: 8 }}>

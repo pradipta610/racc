@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { NEWS_ARTICLES, NEWS_FILTERS } from "@/lib/data";
 
 const TAG_STYLES: Record<string, { bg: string; color: string }> = {
@@ -65,17 +64,13 @@ export default function ArticleGrid() {
               display: "flex", flexDirection: "column", transition: "all .2s",
             }}>
               <div style={{
-                height: 140, position: "relative", overflow: "hidden",
+                height: 140, background: "linear-gradient(135deg,var(--light),#D0E4F7)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 30, position: "relative", overflow: "hidden",
               }}>
-                <Image
-                  src={a.image}
-                  alt={a.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+                <span style={{ position: "relative", zIndex: 1 }}>{a.icon}</span>
                 <span style={{
-                  position: "absolute", bottom: 10, left: 10, zIndex: 1,
+                  position: "absolute", bottom: 10, left: 10,
                   fontSize: 10, fontWeight: 700, padding: "3px 9px", borderRadius: 5,
                   textTransform: "uppercase", letterSpacing: ".5px",
                   background: ts.bg, color: ts.color,
