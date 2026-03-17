@@ -7,7 +7,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section style={{ padding: "76px 5%", background: "var(--white)" }}>
+    <section className="faq-sec" style={{ padding: "76px 5%", background: "var(--white)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: 44 }}>
           <div style={{
@@ -62,6 +62,12 @@ export default function FAQ() {
           })}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .faq-sec h2 { font-size: 26px !important; }
+          .faq-sec > div > div > div > div { padding: 13px 16px !important; font-size: 14px !important; }
+        }
+      `}</style>
     </section>
   );
 }

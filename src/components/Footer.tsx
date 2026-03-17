@@ -177,6 +177,10 @@ export default function Footer() {
           .ft-pills      { grid-template-columns: 1fr !important; }
           .ft-links-row  { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
           .ft-bottom     { flex-direction: column !important; text-align: center !important; gap: 12px !important; }
+          .ft-bottom > div:first-child { justify-content: center; }
+        }
+        @media (max-width: 480px) {
+          .ft-links-row { grid-template-columns: 1fr !important; gap: 24px !important; }
         }
       `}</style>
     </footer>

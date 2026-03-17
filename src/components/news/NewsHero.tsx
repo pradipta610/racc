@@ -67,8 +67,13 @@ export default function NewsHero() {
       <style>{`
         .news-hl:hover { box-shadow: 0 10px 32px rgba(28,58,138,.1); transform: translateY(-2px); }
         @media (max-width: 768px) {
-          .news-hero-inner { grid-template-columns: 1fr !important; gap: 28px !important; }
+          .news-hero-inner {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+            text-align: center;
+          }
           .news-hero-inner h1 { font-size: 26px !important; }
+          .news-hero-inner p { margin-left: auto !important; margin-right: auto !important; }
         }
         @media (max-width: 480px) {
           .news-hero-inner h1 { font-size: 22px !important; }

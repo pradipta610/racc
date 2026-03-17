@@ -57,7 +57,31 @@ export default function Blog() {
       <style>{`
         .bc:hover { box-shadow: 0 8px 24px rgba(28,58,138,.09); transform: translateY(-2px); }
         .blog-all-link:hover { text-decoration: underline !important; }
-        @media (max-width: 768px) { .bgrid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 768px) {
+          .bgrid { grid-template-columns: 1fr !important; gap: 14px !important; }
+          .bc { display: flex !important; flex-direction: row !important; }
+          .bc > div:first-child {
+            width: 110px !important;
+            min-width: 110px !important;
+            height: auto !important;
+            min-height: 110px;
+            border-radius: 14px 0 0 14px !important;
+            font-size: 26px !important;
+          }
+          .bc > div:last-child {
+            padding: 14px !important;
+            flex: 1;
+          }
+          .bc > div:last-child h3 { font-size: 14px !important; margin-bottom: 4px !important; }
+          .bc > div:last-child > p { display: none; }
+          .bc > div:last-child > div:last-child { display: none; }
+        }
+        @media (max-width: 480px) {
+          .bc > div:first-child {
+            width: 90px !important;
+            min-width: 90px !important;
+          }
+        }
       `}</style>
     </section>
   );

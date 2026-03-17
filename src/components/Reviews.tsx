@@ -58,7 +58,14 @@ export default function Reviews() {
       </div>
 
       <style>{`
-        @media (max-width: 768px) { .rgrid { grid-template-columns: 1fr !important; } }
+        .rv-all-link:hover { text-decoration: underline !important; }
+        @media (max-width: 768px) {
+          .rgrid {
+            grid-template-columns: 1fr !important;
+            gap: 14px !important;
+          }
+          .rgrid > div { padding: 18px !important; }
+        }
       `}</style>
     </section>
   );

@@ -50,8 +50,44 @@ export default function Intro() {
 
       <style>{`
         @media (max-width: 768px) {
-          .intro-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
-          .hi-grid    { grid-template-columns: 1fr !important; }
+          .intro-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+            text-align: left !important;
+          }
+          .intro-grid h2 {
+            font-size: 24px !important;
+            text-align: left !important;
+          }
+          .intro-grid p[style*="borderLeft"] {
+            font-size: 14px !important;
+          }
+          .intro-grid > div:first-child > p:last-child {
+            font-size: 14px !important;
+            display: none;
+          }
+          .hi-grid {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+            text-align: left;
+          }
+          .hi-grid > div {
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+            gap: 8px !important;
+          }
+          .hi-grid > div > div:first-child {
+            margin-top: 3px !important;
+          }
+          .hi-grid > div p {
+            font-size: 12px !important;
+            line-height: 1.4 !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .intro-grid h2 { font-size: 22px !important; }
         }
       `}</style>
     </section>

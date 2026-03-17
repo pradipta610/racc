@@ -89,23 +89,29 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         <button
           aria-label="Toggle menu"
           onClick={() => setMobileOpen((v) => !v)}
-          className="hamburger-btn"
+          className={`hamburger-btn${mobileOpen ? " is-open" : ""}`}
         >
           <span /><span /><span />
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="mobile-menu">
-          <Link href="/about-us" className="mobile-link">About Us</Link>
-          <Link href="https://www.racc.net.au/education-migration-and-study-options-popular-occupations-australia" className="mobile-link">Education</Link>
-          <Link href="/migration-services" className="mobile-link">Migration</Link>
-          <Link href="/news-events" className="mobile-link">News &amp; Events</Link>
-          <Link href="/client-reviews" className="mobile-link">Client Reviews</Link>
-          <Link href={CONSULTATION_URL} className="mobile-link mob-cta">Book Free Consultation</Link>
-        </div>
-      )}
+      {/* Mobile menu — always rendered, animated via CSS */}
+      <div className={`mobile-menu${mobileOpen ? " mobile-menu-open" : ""}`}>
+        {[
+          { href: "/about-us", label: "About Us" },
+          { href: "https://www.racc.net.au/education-migration-and-study-options-popular-occupations-australia", label: "Education" },
+          { href: "/migration-services", label: "Migration" },
+          { href: "/news-events", label: "News & Events" },
+          { href: "/client-reviews", label: "Client Reviews" },
+        ].map((item, i) => (
+          <Link key={item.href} href={item.href} className="mobile-link" style={{ transitionDelay: mobileOpen ? `${(i + 1) * 50}ms` : "0ms" }}>
+            {item.label}
+          </Link>
+        ))}
+        <Link href={CONSULTATION_URL} className="mobile-link mob-cta" style={{ transitionDelay: mobileOpen ? "300ms" : "0ms" }}>
+          Book Free Consultation
+        </Link>
+      </div>
 
       <style>{`
         .nav-link {
@@ -121,9 +127,23 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         .nav-cta-btn:hover { background: var(--gold); }
         .hamburger-btn {
           display: none; flex-direction: column; gap: 5px; cursor: pointer;
-          background: none; border: none; padding: 4px;
+          background: none; border: none; padding: 8px;
+          margin-left: auto;
         }
-        .hamburger-btn span { width: 22px; height: 2px; background: var(--navy); border-radius: 2px; display: block; }
+        .hamburger-btn span {
+          width: 22px; height: 2px; background: var(--navy); border-radius: 2px;
+          display: block; transition: all .3s ease;
+          transform-origin: center;
+        }
+        .hamburger-btn.is-open span:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger-btn.is-open span:nth-child(2) {
+          opacity: 0; transform: scaleX(0);
+        }
+        .hamburger-btn.is-open span:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
         .has-dropdown { position: relative; }
         .has-dropdown > a { cursor: pointer; }
         .dropdown {
@@ -147,12 +167,23 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         .dropdown-link:hover { background: var(--light); color: var(--navy); }
         .mobile-menu {
           position: fixed; top: 68px; left: 0; right: 0; background: var(--white);
-          border-bottom: 1px solid var(--border); padding: 14px 5% 20px; z-index: 99;
-          display: flex; flex-direction: column; gap: 4px; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+          border-bottom: 1px solid var(--border); padding: 0 5%; z-index: 99;
+          display: flex; flex-direction: column; gap: 4px;
+          box-shadow: 0 8px 24px rgba(0,0,0,.08);
+          max-height: 0; overflow: hidden; opacity: 0;
+          transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .25s ease, padding .35s ease;
+        }
+        .mobile-menu.mobile-menu-open {
+          max-height: 420px; opacity: 1; padding: 14px 5% 20px;
         }
         .mobile-link {
           font-size: 15px; font-weight: 500; color: var(--tm);
           text-decoration: none; padding: 10px 14px; border-radius: 8px;
+          opacity: 0; transform: translateY(-8px);
+          transition: opacity .25s ease, transform .25s ease, background .15s ease, color .15s ease;
+        }
+        .mobile-menu-open .mobile-link {
+          opacity: 1; transform: translateY(0);
         }
         .mobile-link:hover { background: var(--light); color: var(--navy); }
         .mob-cta {
