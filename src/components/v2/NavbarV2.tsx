@@ -35,8 +35,6 @@ export default function NavbarV2() {
           <span>RACC Australia</span>
         </Link>
 
-        <Link href={CONSULTATION_URL} className="v2-nav-cta v2-desk-only">Book Consultation</Link>
-
         <ul className="v2-nav-links v2-desk-only">
           <li><Link href="/about-us">About Us</Link></li>
           <li><Link href="https://www.racc.net.au/event">News &amp; Events</Link></li>
@@ -72,6 +70,8 @@ export default function NavbarV2() {
           </li>
           <li><Link href="/client-reviews">Client Reviews</Link></li>
         </ul>
+
+        <Link href={CONSULTATION_URL} className="v2-nav-cta v2-desk-only">Book Consultation</Link>
 
         <button
           aria-label="Toggle menu"
@@ -194,6 +194,10 @@ export default function NavbarV2() {
           flex-direction: column; gap: 2px;
           box-shadow: 0 12px 32px rgba(28,58,138,.1);
           display: flex; opacity: 0; transform: translateY(-8px);
+          max-height: calc(100vh - 64px);
+          overflow-y: auto;
+          overscroll-behavior: contain;
+          -webkit-overflow-scrolling: touch;
           pointer-events: none;
           transition: opacity .25s ease, transform .25s cubic-bezier(.4,0,.2,1);
         }

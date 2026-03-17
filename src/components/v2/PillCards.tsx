@@ -3,7 +3,7 @@ import Link from "next/link";
 interface PillItem {
   label: string;
   href: string;
-  gradient: string;
+  image: string;
   tall?: boolean;
 }
 
@@ -31,7 +31,7 @@ export default function PillCards({ title, subtitle, titleHref, pills }: PillCar
               key={p.href + p.label}
               href={p.href}
               className={`v2-pill-card${p.tall ? " v2-pill-tall" : ""}`}
-              style={{ "--pill-bg": p.gradient } as React.CSSProperties}
+              style={{ "--pill-bg": `url(${p.image})` } as React.CSSProperties}
             >
               <div className="v2-pill-body">
                 <span className="v2-pill-label">{p.label}</span>

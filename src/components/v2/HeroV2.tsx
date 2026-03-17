@@ -24,14 +24,18 @@ export default function HeroV2() {
         .v2-hero {
           position: relative; min-height: 560px;
           display: flex; align-items: center; justify-content: center;
-          background: linear-gradient(135deg, #0B1933 0%, #1C3A8A 55%, #2456A0 100%);
+          background: #0B1933;
           overflow: hidden;
         }
         .v2-hero-bg-slot {
           position: absolute; inset: 0;
           background:
-            radial-gradient(ellipse at 25% 65%, rgba(91,163,217,.2) 0%, transparent 50%),
-            radial-gradient(ellipse at 75% 25%, rgba(245,197,24,.07) 0%, transparent 45%);
+            linear-gradient(135deg, rgba(11,25,51,.55) 0%, rgba(28,58,138,.4) 55%, rgba(36,86,160,.35) 100%),
+            radial-gradient(ellipse at 25% 65%, rgba(91,163,217,.18) 0%, transparent 50%),
+            radial-gradient(ellipse at 75% 25%, rgba(245,197,24,.08) 0%, transparent 45%),
+            url('https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Sails.jpg');
+          background-position: center 35%;
+          background-size: cover;
         }
         @keyframes v2fu { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
         .v2-hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 80px 5%; text-align: center; }

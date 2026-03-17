@@ -459,33 +459,135 @@ export const ABOUT_CAREER_CARDS = [
    ============================================================ */
 
 export const V2_EDU_PILLS = [
-  { label: "Free Course Application", href: "https://www.racc.net.au/free-course-application", gradient: "linear-gradient(135deg,#1a5c3a,#2e8b57)", tall: true },
-  { label: "1 Year Short Courses", href: "https://www.racc.net.au/diploma-courses-melbourne", gradient: "linear-gradient(135deg,#1C3A8A,#2E6DB4)", tall: true },
-  { label: "Bachelor Courses", href: "https://www.racc.net.au/bachelor-courses-melbourne", gradient: "linear-gradient(135deg,#2E6DB4,#5BA3D9)", tall: true },
-  { label: "Master Courses", href: "https://www.racc.net.au/master-courses-melbourne", gradient: "linear-gradient(135deg,#0d3d6e,#1C3A8A)" },
-  { label: "Nursing & Related Courses", href: "https://www.racc.net.au/nursing-and-related-courses", gradient: "linear-gradient(135deg,#1a5c3a,#148c52)" },
-  { label: "Trade Courses", href: "https://www.racc.net.au/trade-courses-melbourne", gradient: "linear-gradient(135deg,#7a4d1a,#b07030)" },
-  { label: "In-Demand Courses Across Australia", href: "https://www.racc.net.au/in-demand-courses-in-melbourne", gradient: "linear-gradient(135deg,#1C3A8A,#1a5c3a)" },
-  { label: "Student Visa Extension", href: "https://www.racc.net.au/student-visa-extension", gradient: "linear-gradient(135deg,#2E6DB4,#1C3A8A)" },
-  { label: "Study Pathway for VCE Students", href: "https://www.racc.net.au/international-vce-students", gradient: "linear-gradient(135deg,#5a1a8a,#7e3ab4)" },
-  { label: "Professional Year — Maximise PR Points", href: "https://www.racc.net.au/professional-year-australia", gradient: "linear-gradient(135deg,#8a6c1a,#c49a28)" },
-  { label: "PTE — Maximise PR Points", href: "https://www.racc.net.au/pte-training-course", gradient: "linear-gradient(135deg,#1a4a8a,#2E6DB4)" },
-  { label: "NAATI CCL — Maximise PR Points", href: "https://www.racc.net.au/naati-ccl-australia-test-date-coaching-class", gradient: "linear-gradient(135deg,#1a6b3a,#0f8a4a)" },
+  {
+    label: "Free Course Application",
+    href: "https://www.racc.net.au/free-course-application",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "1 Year Short Courses",
+    href: "https://www.racc.net.au/diploma-courses-melbourne",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "Bachelor Courses",
+    href: "https://www.racc.net.au/bachelor-courses-melbourne",
+    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "Master Courses",
+    href: "https://www.racc.net.au/master-courses-melbourne",
+    image: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Nursing & Related Courses",
+    href: "https://www.racc.net.au/nursing-and-related-courses",
+    image: "https://images.unsplash.com/photo-1580281658629-9f6a3b4b5b59?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Trade Courses",
+    href: "https://www.racc.net.au/trade-courses-melbourne",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "In-Demand Courses Across Australia",
+    href: "https://www.racc.net.au/in-demand-courses-in-melbourne",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Student Visa Extension",
+    href: "https://www.racc.net.au/student-visa-extension",
+    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Study Pathway for VCE Students",
+    href: "https://www.racc.net.au/international-vce-students",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Professional Year — Maximise PR Points",
+    href: "https://www.racc.net.au/professional-year-australia",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "PTE — Maximise PR Points",
+    href: "https://www.racc.net.au/pte-training-course",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "NAATI CCL — Maximise PR Points",
+    href: "https://www.racc.net.au/naati-ccl-australia-test-date-coaching-class",
+    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 export const V2_MIG_PILLS = [
-  { label: "Student Visa", href: "https://www.racc.net.au/student-visa", gradient: "linear-gradient(135deg,#1C3A8A,#2E6DB4)", tall: true },
-  { label: "Partner & Parent Visa", href: "https://www.racc.net.au/migration-partner-visa-australia/", gradient: "linear-gradient(135deg,#7a1a5c,#b03080)", tall: true },
-  { label: "Visitor Visa", href: "https://www.racc.net.au/migration-tourist-visa-australia", gradient: "linear-gradient(135deg,#0d6e6e,#148c8c)", tall: true },
-  { label: "Training Visa (407)", href: "https://www.racc.net.au/training-visa-australia-subclass-407", gradient: "linear-gradient(135deg,#7a4d1a,#a06a28)" },
-  { label: "Temporary Graduate Visa (TR 485)", href: "https://www.racc.net.au/temporary-graduate-visa-tr-485", gradient: "linear-gradient(135deg,#1a5c3a,#2e8b57)" },
-  { label: "General Skilled Migration (189, 190, 491)", href: "https://www.racc.net.au/general-skilled-migration-visas", gradient: "linear-gradient(135deg,#0d3d6e,#1C3A8A)" },
-  { label: "Employer Sponsored Visas (482, 186)", href: "https://www.racc.net.au/employer-sponsored-visas", gradient: "linear-gradient(135deg,#1C3A8A,#5BA3D9)" },
-  { label: "Business Visas", href: "https://www.racc.net.au/business-visas", gradient: "linear-gradient(135deg,#8a6c1a,#b8960a)" },
-  { label: "Skilled Recognised Graduate Visa", href: "https://www.racc.net.au/skilled-recognised-graduate-visa", gradient: "linear-gradient(135deg,#2e4d8a,#4a6eaa)" },
-  { label: "Visa Refusal — Apply for Review", href: "https://www.racc.net.au/visa-refusal-australia", gradient: "linear-gradient(135deg,#8a1a1a,#b83030)" },
-  { label: "Protection Visa", href: "https://www.racc.net.au/protection-visa-australia", gradient: "linear-gradient(135deg,#3a1a8a,#5e3aaa)" },
-  { label: "Child Visa", href: "https://www.racc.net.au/migration-child-visa-australia", gradient: "linear-gradient(135deg,#0d6e3a,#1a9a5a)" },
+  {
+    label: "Student Visa",
+    href: "https://www.racc.net.au/student-visa",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "Partner & Parent Visa",
+    href: "https://www.racc.net.au/migration-partner-visa-australia/",
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "Visitor Visa",
+    href: "https://www.racc.net.au/migration-tourist-visa-australia",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    tall: true,
+  },
+  {
+    label: "Training Visa (407)",
+    href: "https://www.racc.net.au/training-visa-australia-subclass-407",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Temporary Graduate Visa (TR 485)",
+    href: "https://www.racc.net.au/temporary-graduate-visa-tr-485",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "General Skilled Migration (189, 190, 491)",
+    href: "https://www.racc.net.au/general-skilled-migration-visas",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Employer Sponsored Visas (482, 186)",
+    href: "https://www.racc.net.au/employer-sponsored-visas",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Business Visas",
+    href: "https://www.racc.net.au/business-visas",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Skilled Recognised Graduate Visa",
+    href: "https://www.racc.net.au/skilled-recognised-graduate-visa",
+    image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Visa Refusal — Apply for Review",
+    href: "https://www.racc.net.au/visa-refusal-australia",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Protection Visa",
+    href: "https://www.racc.net.au/protection-visa-australia",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    label: "Child Visa",
+    href: "https://www.racc.net.au/migration-child-visa-australia",
+    image: "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 export const V2_REVIEWS = [
