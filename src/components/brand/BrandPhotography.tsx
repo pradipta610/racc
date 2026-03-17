@@ -4,7 +4,7 @@ const SAMPLE_PHOTOS = [
   { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80", alt: "Diverse multicultural group — developer: replace with real client photo" },
   { src: "https://images.unsplash.com/photo-1545044846-351ba102b6d5?auto=format&fit=crop&w=400&q=80", alt: "Melbourne city life — developer: replace with real Melbourne office photo" },
   { src: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=400&q=80", alt: "University campus — developer: replace with real education photo" },
-  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c6f6?auto=format&fit=crop&w=400&q=80", alt: "Graduation celebration — developer: replace with real client success photo" },
+  { src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80", alt: "Graduation celebration — developer: replace with real client success photo" },
 ];
 
 export default function BrandPhotography() {

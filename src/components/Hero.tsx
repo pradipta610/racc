@@ -34,7 +34,7 @@ export default function Hero() {
             Trusted migration and education consultancy with 20+ years of experience. We speak your language — English, Bahasa, Tagalog, Hindi, Mandarin &amp; more.
           </p>
 
-          <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 36, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 36, flexWrap: "wrap" }} className="hero-btns">
             <Link href={CONSULTATION_URL} style={{
               background: "var(--yellow)", color: "var(--navy)", padding: "13px 26px",
               borderRadius: 9, fontSize: 15, fontWeight: 700, textDecoration: "none", transition: "all .2s",
@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }} className="hero-stats">
             {[
               { val: "20+", label: "Years Experience" },
               { val: "4.8★", label: "Client Satisfaction" },
@@ -80,7 +80,7 @@ export default function Hero() {
             />
           </div>
           {/* Overlay float cards */}
-          <div style={{
+          <div className="hero-float" style={{
             position: "absolute", bottom: 40, left: -20,
             background: "var(--white)", border: "1px solid var(--border)", borderRadius: 12,
             padding: "10px 14px", boxShadow: "0 6px 24px rgba(28,58,138,.1)",
@@ -92,7 +92,7 @@ export default function Hero() {
               <span style={{ fontSize: 11, color: "var(--tl)" }}>University of Melbourne · 2 days ago</span>
             </div>
           </div>
-          <div style={{
+          <div className="hero-float" style={{
             position: "absolute", top: 60, right: -10,
             background: "var(--white)", border: "1px solid var(--border)", borderRadius: 12,
             padding: "10px 14px", boxShadow: "0 6px 24px rgba(28,58,138,.1)",
@@ -109,12 +109,17 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
-          .hero-wrap { grid-template-columns: 1fr !important; gap: 0 !important; padding: 40px 4% 0 !important; text-align: center; }
+          .hero-wrap { grid-template-columns: 1fr !important; gap: 24px !important; padding: 40px 4% 0 !important; text-align: center; }
           .hero-wrap h1 { font-size: 30px !important; }
-          .hero-visual { display: none !important; }
+          .hero-visual { padding: 0 0 32px !important; }
+          .hero-float { display: none !important; }
+          .hero-stats { justify-content: center !important; }
+          .hero-btns { justify-content: center !important; }
         }
         @media (max-width: 480px) {
           .hero-wrap h1 { font-size: 26px !important; }
+          .hero-stats { gap: 16px !important; }
+          .hero-stats > div { padding-right: 0 !important; border-right: none !important; }
         }
       `}</style>
     </section>
