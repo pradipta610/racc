@@ -454,6 +454,55 @@ export const ABOUT_CAREER_CARDS = [
   { icon: "🎤", title: "Interview Skills",        desc: "Mock interviews, coaching on common Australian workplace expectations, and tips for different interview formats." },
 ];
 
+/* ============================================================
+   HOMEPAGE V2 DATA
+   ============================================================ */
+
+export const V2_EDU_PILLS = [
+  { label: "Free Course Application", href: "https://www.racc.net.au/free-course-application", gradient: "linear-gradient(135deg,#1a5c3a,#2e8b57)", tall: true },
+  { label: "1 Year Short Courses", href: "https://www.racc.net.au/diploma-courses-melbourne", gradient: "linear-gradient(135deg,#1C3A8A,#2E6DB4)", tall: true },
+  { label: "Bachelor Courses", href: "https://www.racc.net.au/bachelor-courses-melbourne", gradient: "linear-gradient(135deg,#2E6DB4,#5BA3D9)", tall: true },
+  { label: "Master Courses", href: "https://www.racc.net.au/master-courses-melbourne", gradient: "linear-gradient(135deg,#0d3d6e,#1C3A8A)" },
+  { label: "Nursing & Related Courses", href: "https://www.racc.net.au/nursing-and-related-courses", gradient: "linear-gradient(135deg,#1a5c3a,#148c52)" },
+  { label: "Trade Courses", href: "https://www.racc.net.au/trade-courses-melbourne", gradient: "linear-gradient(135deg,#7a4d1a,#b07030)" },
+  { label: "In-Demand Courses Across Australia", href: "https://www.racc.net.au/in-demand-courses-in-melbourne", gradient: "linear-gradient(135deg,#1C3A8A,#1a5c3a)" },
+  { label: "Student Visa Extension", href: "https://www.racc.net.au/student-visa-extension", gradient: "linear-gradient(135deg,#2E6DB4,#1C3A8A)" },
+  { label: "Study Pathway for VCE Students", href: "https://www.racc.net.au/international-vce-students", gradient: "linear-gradient(135deg,#5a1a8a,#7e3ab4)" },
+  { label: "Professional Year — Maximise PR Points", href: "https://www.racc.net.au/professional-year-australia", gradient: "linear-gradient(135deg,#8a6c1a,#c49a28)" },
+  { label: "PTE — Maximise PR Points", href: "https://www.racc.net.au/pte-training-course", gradient: "linear-gradient(135deg,#1a4a8a,#2E6DB4)" },
+  { label: "NAATI CCL — Maximise PR Points", href: "https://www.racc.net.au/naati-ccl-australia-test-date-coaching-class", gradient: "linear-gradient(135deg,#1a6b3a,#0f8a4a)" },
+];
+
+export const V2_MIG_PILLS = [
+  { label: "Student Visa", href: "https://www.racc.net.au/student-visa", gradient: "linear-gradient(135deg,#1C3A8A,#2E6DB4)", tall: true },
+  { label: "Partner & Parent Visa", href: "https://www.racc.net.au/migration-partner-visa-australia/", gradient: "linear-gradient(135deg,#7a1a5c,#b03080)", tall: true },
+  { label: "Visitor Visa", href: "https://www.racc.net.au/migration-tourist-visa-australia", gradient: "linear-gradient(135deg,#0d6e6e,#148c8c)", tall: true },
+  { label: "Training Visa (407)", href: "https://www.racc.net.au/training-visa-australia-subclass-407", gradient: "linear-gradient(135deg,#7a4d1a,#a06a28)" },
+  { label: "Temporary Graduate Visa (TR 485)", href: "https://www.racc.net.au/temporary-graduate-visa-tr-485", gradient: "linear-gradient(135deg,#1a5c3a,#2e8b57)" },
+  { label: "General Skilled Migration (189, 190, 491)", href: "https://www.racc.net.au/general-skilled-migration-visas", gradient: "linear-gradient(135deg,#0d3d6e,#1C3A8A)" },
+  { label: "Employer Sponsored Visas (482, 186)", href: "https://www.racc.net.au/employer-sponsored-visas", gradient: "linear-gradient(135deg,#1C3A8A,#5BA3D9)" },
+  { label: "Business Visas", href: "https://www.racc.net.au/business-visas", gradient: "linear-gradient(135deg,#8a6c1a,#b8960a)" },
+  { label: "Skilled Recognised Graduate Visa", href: "https://www.racc.net.au/skilled-recognised-graduate-visa", gradient: "linear-gradient(135deg,#2e4d8a,#4a6eaa)" },
+  { label: "Visa Refusal — Apply for Review", href: "https://www.racc.net.au/visa-refusal-australia", gradient: "linear-gradient(135deg,#8a1a1a,#b83030)" },
+  { label: "Protection Visa", href: "https://www.racc.net.au/protection-visa-australia", gradient: "linear-gradient(135deg,#3a1a8a,#5e3aaa)" },
+  { label: "Child Visa", href: "https://www.racc.net.au/migration-child-visa-australia", gradient: "linear-gradient(135deg,#0d6e3a,#1a9a5a)" },
+];
+
+export const V2_REVIEWS = [
+  { initials: "RO", name: "Richard Ongosari", from: "Indonesia 🇮🇩", text: "Overall I believe this might be one of the best or if not the best Migration & Education agency here in Melbourne." },
+  { initials: "C", name: "Connie", from: "Philippines 🇵🇭", text: "My visa was granted on the same day we lodged it. Their service is top-notch and deserves to be recommended to all aspiring applicants." },
+  { initials: "CE", name: "Cheryl Erika Wijaya", from: "Indonesia 🇮🇩", text: "RACC especially Leonita is very helpful and active in helping me arrange my TR visa. Very satisfied with the service." },
+  { initials: "KN", name: "Karthik Nunna", from: "India 🇮🇳", text: "One of the best migration agencies I have seen. Fast and straightforward. Highly recommend RACC for your future migration purposes." },
+  { initials: "CG", name: "Chau Giang", from: "Vietnam 🇻🇳", text: "RACC has provided a good consultation and nice service helping me with my temporary working visa. Love to work with them again." },
+  { initials: "MC", name: "Maggie Chan", from: "Hong Kong 🇭🇰", text: "Totally satisfied. Staff are very helpful, professional and efficient. They did a big help to get my visa granted smoothly." },
+];
+
+export const V2_LANGUAGES = [
+  "English", "Bahasa Indonesia", "Mandarin", "Cantonese",
+  "Tagalog", "Thai", "Nepali", "Malay",
+  "Sinhalese", "Vietnamese", "Hindi", "Punjabi",
+];
+
 export const ABOUT_CONSULT_CARDS = [
   {
     theme: "mig" as const,
