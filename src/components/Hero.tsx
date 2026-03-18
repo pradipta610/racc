@@ -5,7 +5,7 @@ const CONSULTATION_URL = "https://www.racc.net.au/migration-agent-education-agen
 export default function Hero() {
   return (
     <section className="hero-section" style={{
-      background: "url('https://images.unsplash.com/photo-1545044846-351ba102b6d5?auto=format&fit=crop&w=1600&q=80') center 30% / cover no-repeat",
+      background: "url('https://static.wixstatic.com/media/a50ebd_18319192d4884e8fac74b4cacf59c3f8~mv2.jpg') center 30% / cover no-repeat",
       overflow: "hidden", position: "relative",
     }}>
 

@@ -33,7 +33,7 @@ export default function HeroV2() {
             linear-gradient(135deg, rgba(11,25,51,.55) 0%, rgba(28,58,138,.4) 55%, rgba(36,86,160,.35) 100%),
             radial-gradient(ellipse at 25% 65%, rgba(91,163,217,.18) 0%, transparent 50%),
             radial-gradient(ellipse at 75% 25%, rgba(245,197,24,.08) 0%, transparent 45%),
-            url('https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Sails.jpg');
+            url('https://static.wixstatic.com/media/a50ebd_18319192d4884e8fac74b4cacf59c3f8~mv2.jpg');
           background-position: center 35%;
           background-size: cover;
         }
