@@ -25,12 +25,11 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         position: "sticky", top: 0, zIndex: 100,
         background: "var(--white)", borderBottom: "1px solid var(--border)",
         padding: "0 5%", display: "flex", alignItems: "center",
-        height: 68, gap: 20,
+        height: 80, gap: 20,
       }}>
         {/* Logo */}
-        <Link href="https://www.racc.net.au" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }}>
-          <Image src={LOGO} alt="RACC Australia" width={42} height={42} style={{ objectFit: "contain" }} />
-          <span style={{ fontWeight: 600, fontSize: 17, color: "var(--navy)" }}>RACC Australia</span>
+        <Link href="https://www.racc.net.au" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
+          <Image src={LOGO} alt="RACC Australia" width={180} height={50} style={{ objectFit: "contain" }} />
         </Link>
 
         {/* Desktop Links */}
@@ -115,13 +114,13 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
 
       <style>{`
         .nav-link {
-          font-size: 14px; font-weight: 500; color: var(--tm);
-          text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all .2s;
+          font-size: 16px; font-weight: 500; color: var(--tm);
+          text-decoration: none; padding: 8px 14px; border-radius: 6px; transition: all .2s;
         }
         .nav-link:hover, .nav-link-active { background: var(--light); color: var(--navy); font-weight: 600; }
         .nav-cta-btn {
-          background: var(--yellow); color: var(--navy); font-size: 14px; font-weight: 700;
-          padding: 10px 20px; border-radius: 8px; text-decoration: none; white-space: nowrap;
+          background: var(--yellow); color: var(--navy); font-size: 15px; font-weight: 700;
+          padding: 11px 22px; border-radius: 8px; text-decoration: none; white-space: nowrap;
           flex-shrink: 0; transition: all .2s;
         }
         .nav-cta-btn:hover { background: var(--gold); }
@@ -157,16 +156,16 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         .has-dropdown:hover .dropdown { display: flex; }
         .dropdown-col { display: flex; flex-direction: column; gap: 2px; min-width: 180px; }
         .dropdown-heading {
-          font-size: 10px; font-weight: 700; color: var(--blue); text-transform: uppercase;
+          font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase;
           letter-spacing: 1px; padding: 4px 10px 8px; border-bottom: 1px solid var(--border); margin-bottom: 4px;
         }
         .dropdown-link {
-          font-size: 13px; color: var(--tm); text-decoration: none; padding: 6px 10px;
+          font-size: 14px; color: var(--tm); text-decoration: none; padding: 6px 10px;
           border-radius: 7px; transition: all .15s; white-space: nowrap;
         }
         .dropdown-link:hover { background: var(--light); color: var(--navy); }
         .mobile-menu {
-          position: fixed; top: 68px; left: 0; right: 0; background: var(--white);
+          position: fixed; top: 80px; left: 0; right: 0; background: var(--white);
           border-bottom: 1px solid var(--border); padding: 0 5%; z-index: 99;
           display: flex; flex-direction: column; gap: 4px;
           box-shadow: 0 8px 24px rgba(0,0,0,.08);
@@ -177,8 +176,8 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
           max-height: 420px; opacity: 1; padding: 14px 5% 20px;
         }
         .mobile-link {
-          font-size: 15px; font-weight: 500; color: var(--tm);
-          text-decoration: none; padding: 10px 14px; border-radius: 8px;
+          font-size: 16px; font-weight: 500; color: var(--tm);
+          text-decoration: none; padding: 12px 14px; border-radius: 8px;
           opacity: 0; transform: translateY(-8px);
           transition: opacity .25s ease, transform .25s ease, background .15s ease, color .15s ease;
         }
@@ -193,6 +192,7 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
           .hamburger-btn { display: flex !important; }
+          nav img { width: 120px !important; height: auto !important; }
         }
       `}</style>
     </>

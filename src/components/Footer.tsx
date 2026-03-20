@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FOOTER_MIG, FOOTER_EDU, FOOTER_QUICK } from "@/lib/data";
-import LOGO from "@/lib/logo";
 
 const SOCIALS = [
   {
@@ -58,18 +57,12 @@ export default function Footer() {
           paddingBottom: 44, borderBottom: "1px solid rgba(255,255,255,.08)",
         }} className="ft-brand-row">
 
-          <div>
-            <Link href="https://www.racc.net.au" style={{ display: "flex", alignItems: "center", gap: 14, textDecoration: "none" }}>
-              <Image src={LOGO} alt="RACC Australia" width={52} height={52}
-                style={{ objectFit: "contain", filter: "drop-shadow(0 2px 8px rgba(0,0,0,.3))" }} />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <strong style={{ fontSize: 18, fontWeight: 700, color: "#fff", lineHeight: 1 }}>RACC Australia</strong>
-                <span style={{ fontSize: 11, color: "rgba(255,255,255,.4)", letterSpacing: ".5px", marginTop: 3 }}>
-                  Migration &amp; Education Agent
-                </span>
-              </div>
+          <div className="ft-brand-section">
+            <Link href="https://www.racc.net.au" style={{ display: "inline-block", textDecoration: "none", marginBottom: 14 }}>
+              <Image src="/logo-whtie-text.png" alt="RACC Australia" width={120} height={33}
+                style={{ objectFit: "contain" }} />
             </Link>
-            <p style={{ fontSize: 13, color: "rgba(255,255,255,.45)", lineHeight: 1.7, maxWidth: 280, marginTop: 16 }}>
+            <p style={{ fontSize: 13, color: "rgba(255,255,255,.45)", lineHeight: 1.7, maxWidth: 300 }}>
               Registered migration agent and education consultancy in Melbourne. Helping people build a life in Australia for 20+ years.
             </p>
           </div>

@@ -4,25 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { EDU_SERVICES, MIG_SERVICES } from "@/lib/data";
 
-const CARD_BACKGROUNDS_BY_TAB: Record<string, string[]> = {
-  edu: [
-    "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80", // pathway/campus
-    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80", // student visa
-    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80", // extension/docs
-    "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80", // professional year
-    "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80", // coaching/language
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80", // speaking/training
-  ],
-  mig: [
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80", // skilled migration
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80", // employer sponsored
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80", // student+graduate visa
-    "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80", // family visa
-    "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80", // visitor/tourist
-    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80", // refusal/review
-  ],
-};
-
 const tabs = [
   { key: "edu", label: "🎓 Education", services: EDU_SERVICES },
   { key: "mig", label: "✈️ Migration", services: MIG_SERVICES },
@@ -31,7 +12,6 @@ const tabs = [
 export default function Services() {
   const [active, setActive] = useState("edu");
   const current = tabs.find((t) => t.key === active)!;
-  const activeBackgrounds = CARD_BACKGROUNDS_BY_TAB[active] ?? CARD_BACKGROUNDS_BY_TAB.edu;
 
   return (
     <section id="services" style={{ padding: "76px 5%", background: "var(--off)" }}>
@@ -75,29 +55,20 @@ export default function Services() {
         {/* Service cards */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 18 }}
           className="sgrid">
-          {current.services.map((s, i) => (
-            <Link key={s.href} href={s.href} style={{
-              borderRadius: 14, overflow: "hidden",
-              textDecoration: "none", color: "inherit", display: "block",
-              transition: "all .25s", border: "1.5px solid rgba(255,255,255,.18)",
-              backgroundImage: `linear-gradient(165deg, rgba(11,31,74,.84) 0%, rgba(11,31,74,.7) 45%, rgba(11,31,74,.62) 100%), url(${activeBackgrounds[i % activeBackgrounds.length]})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              minHeight: 235,
-              boxShadow: "0 8px 24px rgba(11,31,74,.14)",
-            }} className="sc">
-              <div style={{ padding: "20px 20px 18px", height: "100%", display: "flex", flexDirection: "column" }}>
+          {current.services.map((s) => (
+            <Link key={s.href} href={s.href} className="sc">
+              <div style={{ padding: "22px 22px 20px", height: "100%", display: "flex", flexDirection: "column" }}>
                 <div style={{
-                  width: 46, height: 46, borderRadius: 11,
-                  background: "rgba(255,255,255,.18)", border: "1px solid rgba(255,255,255,.28)",
+                  width: 48, height: 48, borderRadius: 12,
+                  background: "rgba(28,58,138,.06)", border: "1px solid rgba(28,58,138,.08)",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 21, backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)",
+                  fontSize: 22,
                 }}>{s.icon}</div>
-                <h3 style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginTop: 12, marginBottom: 8 }}>{s.title}</h3>
-                <p style={{ fontSize: 13, color: "rgba(255,255,255,.86)", lineHeight: 1.55, marginBottom: 12 }}>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)", marginTop: 14, marginBottom: 8 }}>{s.title}</h3>
+                <p style={{ fontSize: 14, color: "var(--tm)", lineHeight: 1.6, marginBottom: 14 }}>
                   {s.desc}
                 </p>
-                <span style={{ fontSize: 13, fontWeight: 600, color: "#fff", marginTop: "auto" }}>Learn more →</span>
+                <span className="sc-arrow">Learn more →</span>
               </div>
             </Link>
           ))}
@@ -105,7 +76,26 @@ export default function Services() {
       </div>
 
       <style>{`
-        .sc:hover { border-color: var(--blue) !important; box-shadow: 0 8px 28px rgba(28,58,138,.12); transform: translateY(-3px); }
+        .sc {
+          border-radius: 14px; overflow: hidden;
+          text-decoration: none; color: inherit; display: block;
+          transition: all .25s ease;
+          background: rgba(255,255,255,.65);
+          backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+          border: 1px solid rgba(255,255,255,.7);
+          box-shadow: 0 2px 12px rgba(28,58,138,.06), 0 1px 3px rgba(0,0,0,.04);
+          min-height: 235px;
+        }
+        .sc:hover {
+          border-color: var(--sky); transform: translateY(-3px);
+          box-shadow: 0 12px 32px rgba(28,58,138,.12), 0 2px 6px rgba(0,0,0,.06);
+          background: rgba(255,255,255,.9);
+        }
+        .sc-arrow {
+          font-size: 14px; font-weight: 600; color: var(--navy); margin-top: auto;
+          transition: color .15s;
+        }
+        .sc:hover .sc-arrow { color: var(--blue); }
         .svc-all-link:hover { text-decoration: underline !important; }
         @media (max-width: 900px) {
           .sgrid { grid-template-columns: 1fr 1fr !important; }

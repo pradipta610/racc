@@ -31,8 +31,7 @@ export default function NavbarV2() {
     <>
       <nav className="v2-nav">
         <Link href="https://www.racc.net.au" className="v2-nav-logo">
-          <Image src={LOGO} alt="RACC Australia" width={36} height={36} style={{ objectFit: "contain" }} />
-          <span>RACC Australia</span>
+          <Image src={LOGO} alt="RACC Australia" width={180} height={50} style={{ objectFit: "contain" }} />
         </Link>
 
         <ul className="v2-nav-links v2-desk-only">
@@ -125,13 +124,12 @@ export default function NavbarV2() {
           background: rgba(255,255,255,.96);
           backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
           border-bottom: 1px solid var(--border);
-          padding: 0 5%; display: flex; align-items: center; height: 64px; gap: 14px;
+          padding: 0 5%; display: flex; align-items: center; height: 80px; gap: 14px;
         }
-        .v2-nav-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; flex-shrink: 0; }
-        .v2-nav-logo span { font-weight: 600; font-size: 16px; color: var(--navy); }
+        .v2-nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
         .v2-nav-cta {
-          background: var(--yellow); color: var(--navy); font-size: 13px; font-weight: 700;
-          padding: 8px 17px; border-radius: 7px; text-decoration: none; white-space: nowrap;
+          background: var(--yellow); color: var(--navy); font-size: 15px; font-weight: 700;
+          padding: 11px 22px; border-radius: 7px; text-decoration: none; white-space: nowrap;
           flex-shrink: 0; transition: all .15s;
         }
         .v2-nav-cta:hover { background: var(--gold); }
@@ -140,8 +138,8 @@ export default function NavbarV2() {
           justify-content: flex-end; list-style: none; margin-right: 14px;
         }
         .v2-nav-links a {
-          font-size: 13px; font-weight: 500; color: var(--tm); text-decoration: none;
-          padding: 6px 10px; border-radius: 6px; display: block; transition: all .15s; white-space: nowrap;
+          font-size: 16px; font-weight: 500; color: var(--tm); text-decoration: none;
+          padding: 8px 12px; border-radius: 6px; display: block; transition: all .15s; white-space: nowrap;
         }
         .v2-nav-links a:hover { color: var(--navy); background: var(--light); }
         .v2-has-dropdown { position: relative; }
@@ -160,7 +158,7 @@ export default function NavbarV2() {
           letter-spacing: 1.2px; padding: 3px 10px 7px; border-bottom: 1px solid var(--border); margin-bottom: 3px;
         }
         .v2-dropdown a {
-          font-size: 12.5px; color: var(--tm); text-decoration: none; padding: 5px 10px;
+          font-size: 14px; color: var(--tm); text-decoration: none; padding: 6px 10px;
           border-radius: 6px; transition: all .12s;
         }
         .v2-dropdown a:hover { background: var(--light); color: var(--navy); }
@@ -186,7 +184,7 @@ export default function NavbarV2() {
 
         /* Mobile menu */
         .v2-mobile-menu {
-          position: fixed; top: 64px; left: 0; right: 0;
+          position: fixed; top: 80px; left: 0; right: 0;
           background: rgba(255,255,255,.98);
           backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
           border-bottom: 1px solid var(--border);
@@ -194,7 +192,7 @@ export default function NavbarV2() {
           flex-direction: column; gap: 2px;
           box-shadow: 0 12px 32px rgba(28,58,138,.1);
           display: flex; opacity: 0; transform: translateY(-8px);
-          max-height: calc(100vh - 64px);
+          max-height: calc(100vh - 80px);
           overflow-y: auto;
           overscroll-behavior: contain;
           -webkit-overflow-scrolling: touch;
@@ -265,6 +263,7 @@ export default function NavbarV2() {
           .v2-desk-only { display: none !important; }
           .v2-hamburger { display: flex; position: relative; }
           .v2-nav { padding: 0 4%; }
+          .v2-nav img { width: 120px !important; height: auto !important; }
         }
       `}</style>
     </>

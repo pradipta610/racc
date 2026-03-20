@@ -21,15 +21,15 @@ export default function CTAV2() {
         }
         .v2-cta-banner h2 {
           font-family: var(--font-playfair), 'Playfair Display', serif;
-          font-size: clamp(20px, 3vw, 30px); color: var(--td); margin-bottom: 10px; font-weight: 600;
+          font-size: clamp(26px, 3.5vw, 38px); color: var(--td); margin-bottom: 12px; font-weight: 600;
         }
         .v2-cta-banner p {
-          font-size: 14px; color: var(--tm); margin-bottom: 24px;
-          max-width: 440px; margin-left: auto; margin-right: auto;
+          font-size: 17px; color: var(--tm); margin-bottom: 28px;
+          max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6;
         }
         .v2-cta-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .v2-btn {
-          padding: 12px 26px; border-radius: 8px; font-size: 14px;
+          padding: 14px 30px; border-radius: 8px; font-size: 16px;
           font-weight: 600; text-decoration: none; transition: all .15s;
         }
         .v2-btn-navy { background: var(--navy); color: var(--white); }

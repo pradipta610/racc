@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import LOGO from "@/lib/logo";
 import {
   FOOTER_MIG,
   FOOTER_EDU,
@@ -36,11 +35,7 @@ export default function FooterV2() {
         <div className="v2-ft-grid">
           <div>
             <Link href="https://www.racc.net.au" className="v2-ft-brand">
-              <Image src={LOGO} alt="RACC Australia" width={40} height={40} style={{ objectFit: "contain" }} />
-              <div>
-                <strong>RACC Australia</strong>
-                <span>Migration &amp; Education Agent</span>
-              </div>
+              <Image src="/logo-whtie-text.png" alt="RACC Australia" width={120} height={33} style={{ objectFit: "contain" }} />
             </Link>
             <p className="v2-ft-tagline">
               Registered migration agents and education consultancy in Melbourne. Helping people build a life in Australia for 20+ years.
@@ -111,10 +106,8 @@ export default function FooterV2() {
           display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
           padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.07);
         }
-        .v2-ft-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 12px; }
-        .v2-ft-brand strong { font-size: 15px; font-weight: 700; color: var(--white); display: block; }
-        .v2-ft-brand span { font-size: 10.5px; color: rgba(255,255,255,.3); display: block; margin-top: 1px; }
-        .v2-ft-tagline { font-size: 12.5px; color: rgba(255,255,255,.38); line-height: 1.7; max-width: 270px; }
+        .v2-ft-brand { display: inline-block; text-decoration: none; margin-bottom: 14px; }
+        .v2-ft-tagline { font-size: 13px; color: rgba(255,255,255,.42); line-height: 1.7; max-width: 300px; }
         .v2-ft-pills { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
         .v2-ft-pill {
           display: flex; align-items: center; gap: 8px;

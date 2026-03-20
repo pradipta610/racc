@@ -22,7 +22,7 @@ export default function PillCards({ title, subtitle, titleHref, pills }: PillCar
           <h2 className="v2-svc-title">
             <Link href={titleHref} style={{ textDecoration: "none", color: "inherit" }}>{title}</Link>
           </h2>
-          <p style={{ fontSize: 13, color: "var(--tl)" }}>{subtitle}</p>
+          <p style={{ fontSize: 16, color: "var(--tl)", lineHeight: 1.6 }}>{subtitle}</p>
         </div>
 
         <div className="v2-pills-grid v2-pills-cols-3">
@@ -51,53 +51,43 @@ export default function PillCards({ title, subtitle, titleHref, pills }: PillCar
       <style>{`
         .v2-svc-title {
           font-family: var(--font-playfair), 'Playfair Display', serif;
-          font-size: clamp(20px, 2.5vw, 28px); color: var(--td); font-weight: 600; margin-bottom: 6px;
+          font-size: clamp(26px, 3vw, 38px); color: var(--td); font-weight: 600; margin-bottom: 8px;
         }
         .v2-pills-grid { display: grid; gap: 10px; }
         .v2-pills-cols-3 { grid-template-columns: repeat(3, 1fr); }
         .v2-pill-card {
-          position: relative; border-radius: 12px; overflow: hidden;
-          text-decoration: none; display: flex; align-items: flex-end;
-          min-height: 100px; border: 1.5px solid var(--border);
-          transition: all .2s; background: var(--light);
+          position: relative; border-radius: 14px; overflow: hidden;
+          text-decoration: none; display: flex; align-items: center;
+          min-height: 72px;
+          background: rgba(255,255,255,.65);
+          backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+          border: 1px solid rgba(255,255,255,.7);
+          box-shadow: 0 2px 12px rgba(28,58,138,.06), 0 1px 3px rgba(0,0,0,.04);
+          transition: all .25s ease;
         }
         .v2-pill-card:hover {
-          border-color: var(--sky); transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(28,58,138,.12);
+          border-color: var(--sky); transform: translateY(-3px);
+          box-shadow: 0 12px 32px rgba(28,58,138,.12), 0 2px 6px rgba(0,0,0,.06);
+          background: rgba(255,255,255,.85);
         }
-        .v2-pill-card::before {
-          content: ''; position: absolute; inset: 0;
-          background: var(--pill-bg, var(--light));
-          background-size: cover; background-position: center;
-          transition: transform .3s;
-        }
-        .v2-pill-card:hover::before { transform: scale(1.04); }
-        .v2-pill-card::after {
-          content: ''; position: absolute; inset: 0;
-          background: linear-gradient(to top, rgba(11,26,61,.82) 0%, rgba(11,26,61,.45) 50%, rgba(11,26,61,.1) 100%);
-          transition: opacity .2s;
-        }
-        .v2-pill-card:hover::after {
-          background: linear-gradient(to top, rgba(11,26,61,.9) 0%, rgba(11,26,61,.5) 50%, rgba(11,26,61,.15) 100%);
-        }
-        .v2-pill-tall { min-height: 140px; }
+        .v2-pill-tall { min-height: 80px; }
         .v2-pill-body {
-          position: relative; z-index: 1; width: 100%; padding: 14px 16px;
-          display: flex; align-items: center; justify-content: space-between; gap: 8px;
+          position: relative; z-index: 1; width: 100%; padding: 16px 20px;
+          display: flex; align-items: center; justify-content: space-between; gap: 10px;
         }
-        .v2-pill-label { font-size: 13.5px; font-weight: 600; color: var(--white); line-height: 1.3; }
+        .v2-pill-label { font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.3; }
         .v2-pill-arrow {
-          width: 28px; height: 28px; border-radius: 50%;
-          background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
+          width: 30px; height: 30px; border-radius: 50%;
+          background: var(--light); border: 1px solid var(--border);
           display: flex; align-items: center; justify-content: center;
-          font-size: 13px; color: var(--white); flex-shrink: 0; transition: all .2s;
+          font-size: 13px; color: var(--navy); flex-shrink: 0; transition: all .2s;
         }
         .v2-pill-card:hover .v2-pill-arrow {
-          background: var(--yellow); border-color: var(--yellow); color: var(--navy);
+          background: var(--navy); border-color: var(--navy); color: var(--white);
         }
         .v2-svc-cta-btn {
-          display: inline-block; padding: 13px 32px; border-radius: 8px;
-          font-size: 14px; font-weight: 700; text-decoration: none; transition: all .15s;
+          display: inline-block; padding: 14px 36px; border-radius: 8px;
+          font-size: 16px; font-weight: 700; text-decoration: none; transition: all .15s;
           background: var(--navy); color: var(--white);
         }
         .v2-svc-cta-btn:hover { background: var(--blue); }

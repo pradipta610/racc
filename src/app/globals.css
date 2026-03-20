@@ -32,3 +32,4 @@ body {
 .animate-float-up   { animation: floatUp .6s ease both; }
 .animate-float-up-2 { animation: floatUp .6s ease both; animation-delay: .15s; }
 .animate-float-up-3 { animation: floatUp .6s ease both; animation-delay: .30s; }
+.animate-float-up-4 { animation: floatUp .6s ease both; animation-delay: .45s; }

@@ -16,8 +16,8 @@ export default function Hero() {
       }} />
 
       <div style={{
-        maxWidth: 1200, margin: "0 auto", padding: "56px 5% 24px",
-        display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center",
+        maxWidth: 1200, margin: "0 auto", padding: "50px 0px 5%",
+        display: "grid", gridTemplateColumns: "2fr 1fr", gap: 60, alignItems: "center",
         position: "relative", zIndex: 2,
       }} className="hero-wrap">
 
@@ -25,24 +25,34 @@ export default function Hero() {
         <div>
           <div className="hero-badge" style={{
             display: "inline-flex", alignItems: "center", gap: 6,
-            background: "rgba(255,255,255,.1)", color: "rgba(255,255,255,.9)", fontSize: 12, fontWeight: 600,
+            background: "rgba(255,255,255,.1)", color: "rgba(255,255,255,.9)", fontSize: 10, fontWeight: 600,
             padding: "5px 14px", borderRadius: 20, marginBottom: 18, letterSpacing: ".5px",
             textTransform: "uppercase", border: "1px solid rgba(255,255,255,.15)",
             backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)",
           }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--yellow)", flexShrink: 0, display: "inline-block" }} />
-            Registered Migration Agent · MARN 1572962
+            Registered Migration Agent · MARN 1572962 · MARN 1172003 · MARN 2518802
           </div>
 
           <h1 style={{
             fontFamily: "var(--font-playfair), 'Playfair Display', serif",
             fontSize: 46, lineHeight: 1.15, color: "#fff", marginBottom: 18,
           }}>
-            Your Journey to <em style={{ color: "var(--yellow)", fontStyle: "normal" }}>Australia</em> Starts Here
+            20 Years of Experience in Helping Apply <em style={{ color: "var(--yellow)", fontStyle: "normal" }}>Courses and Visas</em> in Australia
           </h1>
 
-          <p className="hero-desc" style={{ fontSize: 16, color: "rgba(255,255,255,.75)", lineHeight: 1.75, marginBottom: 28 }}>
-            Trusted migration and education consultancy with 20+ years of experience. We speak your language — English, Bahasa, Tagalog, Hindi, Mandarin &amp; more.
+          <p className="hero-desc" style={{ fontSize: 16, color: "rgba(255,255,255,.75)", lineHeight: 1.75, marginBottom: 6 }}>
+            Genuine Advice You Can Trust
+          </p>
+
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,.6)", lineHeight: 1.7, marginBottom: 12 }}>
+            <strong style={{ color: "var(--yellow)", fontWeight: 700 }}>4.8 out of 5</strong> Customer Service Satisfaction
+          </p>
+
+          <p style={{ fontSize: 13, color: "rgba(255,255,255,.6)", lineHeight: 1.7, marginBottom: 28 }}>
+            <strong style={{ color: "rgba(255,255,255,.85)", fontWeight: 700 }}>WE SPEAK :</strong><br />
+            English, Bahasa, Mandarin, Cantonese,<br />
+            Tagalog, Thai, Nepali, Malay, Sinhalese, Vietnamese, Hindi &amp; Punjabi.
           </p>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 36, flexWrap: "wrap" }} className="hero-btns">
@@ -66,6 +76,7 @@ export default function Hero() {
               { val: "20+", label: "Years Experience" },
               { val: "4.8★", label: "Client Satisfaction" },
               { val: "12+", label: "Languages Spoken" },
+              { val: "600+", label: "Google Reviews" },
             ].map((s, i, arr) => (
               <div key={s.label} style={{
                 paddingRight: i < arr.length - 1 ? 24 : 0,
@@ -81,9 +92,10 @@ export default function Hero() {
         {/* Float Cards — glassmorphic */}
         <div style={{ display: "flex", flexDirection: "column", gap: 14, padding: "24px 0 36px" }} className="hero-visual">
           {[
-            { cls: "animate-float-up",   icon: "🎓", title: "Student Visa Approved",        sub: "University of Melbourne · 2 days ago" },
-            { cls: "animate-float-up-2", icon: "✈️", title: "PR Visa Granted",              sub: "Skilled Independent 189 · 1 week ago",  ml: 36 },
-            { cls: "animate-float-up-3", icon: "✅", title: "Employer Sponsored Approved",  sub: "Skills in Demand 482 · 3 days ago" },
+            { cls: "animate-float-up",   icon: "🎓", title: "Student Visa (Subclass 500)",           sub: "Course applications & full lodgement support" },
+            { cls: "animate-float-up-2", icon: "🌟", title: "Skilled Migration 189 / 190 / 491",    sub: "Points-tested pathway to permanent residency", ml: 36 },
+            { cls: "animate-float-up-3", icon: "📋", title: "Temporary Graduate Visa 485",          sub: "Post-study work rights for graduates in Australia" },
+            { cls: "animate-float-up-4", icon: "🏢", title: "Skills in Demand Visa 482",            sub: "Employer-sponsored work visa — all streams", ml: 36 },
           ].map((c) => (
             <div key={c.title} className={c.cls} style={{
               background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.18)", borderRadius: 14,

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
 import Intro from "@/components/Intro";
 import Services from "@/components/Services";
 import WhyRacc from "@/components/WhyRacc";
@@ -18,7 +17,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <TrustBar />
         <Intro />
         <Services />
         <WhyRacc />

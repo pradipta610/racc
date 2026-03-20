@@ -39,7 +39,7 @@ export default function ReviewsV2() {
         .v2-reviews-sec { background: var(--off); padding: 72px 5%; }
         .v2-rv-title {
           font-family: var(--font-playfair), 'Playfair Display', serif;
-          font-size: clamp(20px, 2.5vw, 28px); color: var(--td); font-weight: 600; margin-bottom: 8px;
+          font-size: clamp(26px, 3vw, 38px); color: var(--td); font-weight: 600; margin-bottom: 8px;
         }
         .v2-reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
         .v2-rv {
@@ -52,8 +52,8 @@ export default function ReviewsV2() {
           font-size: 44px; line-height: 1; color: var(--light);
           font-family: var(--font-playfair), 'Playfair Display', serif; pointer-events: none;
         }
-        .v2-rv-stars { color: var(--yellow); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 8px; }
-        .v2-rv-text { font-size: 13px; color: var(--tm); line-height: 1.7; font-style: italic; margin-bottom: 12px; }
+        .v2-rv-stars { color: var(--yellow); font-size: 15px; letter-spacing: 1.5px; margin-bottom: 10px; }
+        .v2-rv-text { font-size: 14px; color: var(--tm); line-height: 1.7; font-style: italic; margin-bottom: 14px; }
         .v2-rv-foot {
           display: flex; align-items: center; gap: 9px;
           padding-top: 10px; border-top: 1px solid var(--border);
@@ -63,10 +63,10 @@ export default function ReviewsV2() {
           color: var(--white); display: flex; align-items: center; justify-content: center;
           font-size: 11px; font-weight: 700; flex-shrink: 0;
         }
-        .v2-rv-name { font-size: 12.5px; font-weight: 600; color: var(--td); }
-        .v2-rv-from { font-size: 11px; color: var(--tl); }
+        .v2-rv-name { font-size: 14px; font-weight: 600; color: var(--td); }
+        .v2-rv-from { font-size: 12px; color: var(--tl); }
         .v2-rv-all-link {
-          font-size: 13px; font-weight: 600; color: var(--navy); text-decoration: none;
+          font-size: 15px; font-weight: 600; color: var(--navy); text-decoration: none;
           border-bottom: 1.5px solid var(--yellow); padding-bottom: 2px; transition: color .15s;
         }
         .v2-rv-all-link:hover { color: var(--blue); }

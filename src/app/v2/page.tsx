@@ -4,7 +4,7 @@ import PillCards from "@/components/v2/PillCards";
 import ReviewsV2 from "@/components/v2/ReviewsV2";
 import LanguagesStrip from "@/components/v2/LanguagesStrip";
 import CTAV2 from "@/components/v2/CTAV2";
-import FooterV2 from "@/components/v2/FooterV2";
+import Footer from "@/components/Footer";
 import { V2_EDU_PILLS, V2_MIG_PILLS } from "@/lib/data";
 
 export default function HomePageV2() {
@@ -30,7 +30,7 @@ export default function HomePageV2() {
         <LanguagesStrip />
         <CTAV2 />
       </main>
-      <FooterV2 />
+      <Footer />
     </>
   );
 }
