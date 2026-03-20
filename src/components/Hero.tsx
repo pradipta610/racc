@@ -75,7 +75,6 @@ export default function Hero() {
             {[
               { val: "20+", label: "Years Experience" },
               { val: "4.8★", label: "Client Satisfaction" },
-              { val: "12+", label: "Languages Spoken" },
               { val: "600+", label: "Google Reviews" },
             ].map((s, i, arr) => (
               <div key={s.label} style={{
@@ -121,6 +120,7 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
+          .hero-badge > span:first-child { display: none !important; }
           .hero-section {
             min-height: calc(100vh - 68px);
             display: flex;
