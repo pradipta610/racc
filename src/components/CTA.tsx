@@ -16,8 +16,8 @@ export default function CTA() {
         Book a free consultation with our registered migration agents. No obligation, genuine advice you can trust.
       </p>
       <div className="cta-btns" style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-        <Link href="https://www.racc.net.au/migration-agent-education-agent" style={{
-          background: "var(--yellow)", color: "var(--navy)", padding: "14px 32px",
+        <Link href="https://www.racc.net.au/migration-agent-education-agent" className="cta-consult-btn" style={{
+          background: "#eddb3c", color: "var(--navy)", padding: "14px 32px",
           borderRadius: 10, fontSize: 15, fontWeight: 700, textDecoration: "none", transition: "all .2s",
         }}>
           Book Consultation
@@ -31,6 +31,11 @@ export default function CTA() {
         </Link>
       </div>
       <style>{`
+        .cta-consult-btn:hover {
+          background: #e2cf35 !important;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         @media (max-width: 768px) {
           .cta-sec h2 { font-size: 26px !important; }
           .cta-sec p { font-size: 14px !important; }

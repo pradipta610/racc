@@ -128,11 +128,15 @@ export default function NavbarV2() {
         }
         .v2-nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
         .v2-nav-cta {
-          background: var(--yellow); color: var(--navy); font-size: 15px; font-weight: 700;
+          background: #eddb3c; color: var(--navy); font-size: 15px; font-weight: 700;
           padding: 11px 22px; border-radius: 7px; text-decoration: none; white-space: nowrap;
           flex-shrink: 0; transition: all .15s;
         }
-        .v2-nav-cta:hover { background: var(--gold); }
+        .v2-nav-cta:hover {
+          background: #e2cf35;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         .v2-nav-links {
           display: flex; align-items: center; gap: 0; flex: 1;
           justify-content: flex-end; list-style: none; margin-right: 14px;
@@ -246,9 +250,13 @@ export default function NavbarV2() {
         }
         .v2-mob-acc-panel a:hover { background: var(--light); color: var(--navy); }
         .v2-mob-cta {
-          background: var(--yellow) !important; color: var(--navy) !important;
+          background: #eddb3c !important; color: var(--navy) !important;
           font-weight: 700 !important; text-align: center; margin-top: 6px;
           border-radius: 8px;
+        }
+        .v2-mob-cta:hover {
+          background: #e2cf35 !important;
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
         }
 
         /* stagger delays */

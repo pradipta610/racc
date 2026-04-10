@@ -32,8 +32,12 @@ export default function CTAV2() {
           padding: 14px 30px; border-radius: 8px; font-size: 16px;
           font-weight: 600; text-decoration: none; transition: all .15s;
         }
-        .v2-btn-navy { background: var(--navy); color: var(--white); }
-        .v2-btn-navy:hover { background: var(--blue); }
+        .v2-btn-navy { background: #eddb3c; color: var(--navy); }
+        .v2-btn-navy:hover {
+          background: #e2cf35;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         .v2-btn-ghost {
           border: 1.5px solid var(--border); color: var(--tm); background: var(--white);
         }

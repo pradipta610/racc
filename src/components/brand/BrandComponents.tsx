@@ -20,7 +20,7 @@ export default function BrandComponents() {
           <button style={{ background: "transparent", color: "var(--navy)", padding: "12px 24px", borderRadius: 8, fontSize: 14, fontWeight: 500, border: "1.5px solid var(--border)", cursor: "default" }}>View All Services</button>
         </div>
         <div style={{ background: "var(--navy)", padding: 16, borderRadius: 10, display: "flex", gap: 12, flexWrap: "wrap", alignItems: "flex-start", marginBottom: 16 }}>
-          <button style={{ background: "var(--yellow)", color: "var(--navy)", padding: "12px 24px", borderRadius: 8, fontSize: 14, fontWeight: 700, border: "none", cursor: "default" }}>Book Consultation</button>
+          <button style={{ background: "#eddb3c", color: "var(--navy)", padding: "12px 24px", borderRadius: 8, fontSize: 14, fontWeight: 700, border: "none", cursor: "default" }}>Book Consultation</button>
           <button style={{ background: "transparent", color: "#fff", padding: "12px 24px", borderRadius: 8, fontSize: 14, fontWeight: 500, border: "1.5px solid rgba(255,255,255,.3)", cursor: "default" }}>💬 WhatsApp Us</button>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>

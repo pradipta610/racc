@@ -56,8 +56,8 @@ export default function Hero() {
           </p>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 36, flexWrap: "wrap" }} className="hero-btns">
-            <Link href={CONSULTATION_URL} style={{
-              background: "var(--yellow)", color: "var(--navy)", padding: "13px 26px",
+            <Link href={CONSULTATION_URL} className="hero-consult-btn" style={{
+              background: "#eddb3c", color: "var(--navy)", padding: "13px 26px",
               borderRadius: 9, fontSize: 15, fontWeight: 700, textDecoration: "none", transition: "all .2s",
             }}>
               Book Consultation
@@ -120,6 +120,11 @@ export default function Hero() {
       </div>
 
       <style>{`
+        .hero-consult-btn:hover {
+          background: #e2cf35 !important;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         @media (max-width: 768px) {
           .hero-badge > span:first-child { display: none !important; }
           .hero-section {

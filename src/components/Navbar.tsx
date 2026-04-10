@@ -119,11 +119,15 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         }
         .nav-link:hover, .nav-link-active { background: var(--light); color: var(--navy); font-weight: 600; }
         .nav-cta-btn {
-          background: var(--yellow); color: var(--navy); font-size: 15px; font-weight: 700;
+          background: #eddb3c; color: var(--navy); font-size: 15px; font-weight: 700;
           padding: 11px 22px; border-radius: 8px; text-decoration: none; white-space: nowrap;
           flex-shrink: 0; transition: all .2s;
         }
-        .nav-cta-btn:hover { background: var(--gold); }
+        .nav-cta-btn:hover {
+          background: #e2cf35;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         .hamburger-btn {
           display: none; flex-direction: column; gap: 5px; cursor: pointer;
           background: none; border: none; padding: 8px;
@@ -186,8 +190,12 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
         }
         .mobile-link:hover { background: var(--light); color: var(--navy); }
         .mob-cta {
-          background: var(--yellow) !important; color: var(--navy) !important;
+          background: #eddb3c !important; color: var(--navy) !important;
           font-weight: 700 !important; text-align: center; margin-top: 6px;
+        }
+        .mob-cta:hover {
+          background: #e2cf35 !important;
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
         }
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }

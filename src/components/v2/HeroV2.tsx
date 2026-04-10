@@ -57,11 +57,15 @@ export default function HeroV2() {
         .v2-hero-langs { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.75; margin-bottom: 36px; }
         .v2-hero-langs b { color: rgba(255,255,255,.85); font-weight: 600; }
         .v2-hero-cta {
-          display: inline-block; background: var(--yellow); color: var(--navy);
+          display: inline-block; background: #eddb3c; color: var(--navy);
           padding: 14px 36px; border-radius: 8px; font-size: 15px; font-weight: 700;
           text-decoration: none; transition: all .15s;
         }
-        .v2-hero-cta:hover { background: var(--gold); transform: translateY(-1px); }
+        .v2-hero-cta:hover {
+          background: #e2cf35;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
       `}</style>
     </section>
   );

@@ -88,9 +88,13 @@ export default function PillCards({ title, subtitle, titleHref, pills }: PillCar
         .v2-svc-cta-btn {
           display: inline-block; padding: 14px 36px; border-radius: 8px;
           font-size: 16px; font-weight: 700; text-decoration: none; transition: all .15s;
-          background: var(--navy); color: var(--white);
+          background: #eddb3c; color: var(--navy);
         }
-        .v2-svc-cta-btn:hover { background: var(--blue); }
+        .v2-svc-cta-btn:hover {
+          background: #e2cf35;
+          transform: translateY(-0.5px);
+          box-shadow: 0 6px 16px rgba(11, 31, 74, .16);
+        }
         @media (max-width: 900px) {
           .v2-pills-cols-3 { grid-template-columns: 1fr 1fr; }
         }
