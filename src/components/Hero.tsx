@@ -52,7 +52,7 @@ export default function Hero() {
           <p style={{ fontSize: 13, color: "rgba(255,255,255,.6)", lineHeight: 1.7, marginBottom: 28 }}>
             <strong style={{ color: "rgba(255,255,255,.85)", fontWeight: 700 }}>WE SPEAK :</strong><br />
             English, Bahasa, Mandarin, Cantonese,<br />
-            Tagalog, Thai, Nepali, Malay, Sinhalese, Vietnamese, Hindi &amp; Punjabi.
+            Tagalog, Malay, Sinhalese, Hindi &amp; Punjabi.
           </p>
 
           <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 36, flexWrap: "wrap" }} className="hero-btns">
@@ -60,7 +60,7 @@ export default function Hero() {
               background: "var(--yellow)", color: "var(--navy)", padding: "13px 26px",
               borderRadius: 9, fontSize: 15, fontWeight: 700, textDecoration: "none", transition: "all .2s",
             }}>
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link href="#services" className="hero-svc-link" style={{
               color: "rgba(255,255,255,.85)", fontSize: 15, fontWeight: 500,
@@ -75,7 +75,8 @@ export default function Hero() {
             {[
               { val: "20+", label: "Years Experience" },
               { val: "4.8★", label: "Client Satisfaction" },
-              { val: "600+", label: "Google Reviews" },
+              { val: "12+", label: "Languages Spoken" },
+              { val: "800+", label: "Google Reviews" },
             ].map((s, i, arr) => (
               <div key={s.label} style={{
                 paddingRight: i < arr.length - 1 ? 24 : 0,

@@ -20,7 +20,7 @@ export default function CTA() {
           background: "var(--yellow)", color: "var(--navy)", padding: "14px 32px",
           borderRadius: 10, fontSize: 15, fontWeight: 700, textDecoration: "none", transition: "all .2s",
         }}>
-          Book Free Consultation
+          Book Consultation
         </Link>
         <Link href="https://wa.me/61420746705" style={{
           background: "transparent", color: "var(--white)", padding: "14px 32px",

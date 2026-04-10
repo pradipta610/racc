@@ -7,7 +7,7 @@ export default function CTAV2() {
       <p>Book a free, no-obligation consultation with our registered migration agents.</p>
       <div className="v2-cta-btns">
         <Link href="https://www.racc.net.au/migration-agent-education-agent" className="v2-btn v2-btn-navy">
-          Book Free Consultation
+          Book Consultation
         </Link>
         <Link href="https://wa.me/61420746705" className="v2-btn v2-btn-ghost">
           💬 WhatsApp

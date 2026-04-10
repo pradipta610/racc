@@ -15,7 +15,7 @@ export default function HeroV2() {
         <p className="v2-hero-rating"><b>4.8 out of 5</b> Customer Service Satisfaction</p>
         <p className="v2-hero-langs">
           <b>WE SPEAK:</b> English · Bahasa · Mandarin · Cantonese ·<br />
-          Tagalog · Thai · Nepali · Malay · Sinhalese · Vietnamese · Hindi &amp; Punjabi
+          Tagalog · Malay · Sinhalese · Hindi &amp; Punjabi
         </p>
         <Link href={CONSULTATION_URL} className="v2-hero-cta">Book Consultation</Link>
       </div>

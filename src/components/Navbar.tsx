@@ -81,7 +81,7 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
 
         {/* CTA */}
         <Link href={CONSULTATION_URL} className="nav-cta-btn nav-links-desktop">
-          Book Free Consultation
+          Book Consultation
         </Link>
 
         {/* Hamburger */}
@@ -108,7 +108,7 @@ export default function Navbar({ activePage }: NavbarProps = {}) {
           </Link>
         ))}
         <Link href={CONSULTATION_URL} className="mobile-link mob-cta" style={{ transitionDelay: mobileOpen ? "300ms" : "0ms" }}>
-          Book Free Consultation
+          Book Consultation
         </Link>
       </div>
 

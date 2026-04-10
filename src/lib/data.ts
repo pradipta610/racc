@@ -601,8 +601,7 @@ export const V2_REVIEWS = [
 
 export const V2_LANGUAGES = [
   "English", "Bahasa Indonesia", "Mandarin", "Cantonese",
-  "Tagalog", "Thai", "Nepali", "Malay",
-  "Sinhalese", "Vietnamese", "Hindi", "Punjabi",
+  "Tagalog", "Malay", "Sinhalese", "Hindi", "Punjabi",
 ];
 
 export const ABOUT_CONSULT_CARDS = [
