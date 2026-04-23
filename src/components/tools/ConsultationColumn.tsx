@@ -71,12 +71,36 @@ export function ConsultationColumn({
                   background: 'var(--border)',
                   flexShrink: 0,
                 }} />
-                <div>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: highlightText(item.label, query),
-                    }}
-                  />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: highlightText(item.label, query),
+                      }}
+                    />
+                    {item.link_url && (
+                      <a
+                        href={item.link_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          fontSize: 11,
+                          fontWeight: 500,
+                          color: 'var(--blue, #1c3a8a)',
+                          textDecoration: 'none',
+                          padding: '2px 8px',
+                          borderRadius: 99,
+                          background: 'var(--light)',
+                          border: '1px solid var(--border)',
+                          whiteSpace: 'nowrap',
+                          transition: 'all .15s',
+                        }}
+                        className="cf-link-pill"
+                      >
+                        View page ↗
+                      </a>
+                    )}
+                  </div>
                   {item.note && (
                     <p style={{ marginTop: 2, fontSize: 11, color: 'var(--tl)' }}>
                       {item.note}
