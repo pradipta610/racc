@@ -16,6 +16,14 @@ const tools = [
     icon: '🧭',
     external: true,
   },
+  {
+    name: 'RACC Courses Directory',
+    description:
+      'Browse daftar course & institusi partner RACC di racc.co.id.',
+    href: 'https://racc.co.id/courses/index.php',
+    icon: '📚',
+    external: true,
+  },
 ]
 
 export default function ToolsPage() {
@@ -59,8 +67,15 @@ export default function ToolsPage() {
               </p>
             </div>
           )
+          const isAbsolute = /^https?:\/\//i.test(tool.href)
           return tool.external ? (
-            <a key={tool.href} href={tool.href} className="tool-card">
+            <a
+              key={tool.href}
+              href={tool.href}
+              className="tool-card"
+              target={isAbsolute ? '_blank' : undefined}
+              rel={isAbsolute ? 'noopener noreferrer' : undefined}
+            >
               {cardContent}
             </a>
           ) : (
