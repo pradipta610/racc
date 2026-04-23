@@ -6,6 +6,15 @@ const tools = [
     description: 'Cari visa atau service untuk tahu tipe konsultasi (Free / Paid).',
     href: '/tools/consultation-filter',
     icon: '🔍',
+    external: false,
+  },
+  {
+    name: 'Skilled Occupations Search',
+    description:
+      'Cari 1,125 ANZSCO occupation — filter by visa list (MLTSSL/STSOL/ROL/CSOL), visa type, dan state eligibility.',
+    href: '/tools/skilled-occupations-search/index.html',
+    icon: '🧭',
+    external: true,
   },
 ]
 
@@ -25,8 +34,8 @@ export default function ToolsPage() {
         gap: 16,
         marginTop: 24,
       }}>
-        {tools.map((tool) => (
-          <Link key={tool.href} href={tool.href} className="tool-card">
+        {tools.map((tool) => {
+          const cardContent = (
             <div style={{ padding: 20 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <div style={{
@@ -49,8 +58,17 @@ export default function ToolsPage() {
                 {tool.description}
               </p>
             </div>
-          </Link>
-        ))}
+          )
+          return tool.external ? (
+            <a key={tool.href} href={tool.href} className="tool-card">
+              {cardContent}
+            </a>
+          ) : (
+            <Link key={tool.href} href={tool.href} className="tool-card">
+              {cardContent}
+            </Link>
+          )
+        })}
       </div>
 
       <style>{`
