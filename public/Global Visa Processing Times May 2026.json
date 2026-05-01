@@ -1,0 +1,2358 @@
+[
+  {
+    "visaCode": "102",
+    "visaName": "Adoption visa (subclass 102)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Adoption visa  (subclass 102)",
+          "VisaSubclassCode": "102",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/adoption-102",
+          "Percent75": "229",
+          "Percent90": "418",
+          "Percent25": "108",
+          "Percent50": "151",
+          "Percent75Text": "8 Months",
+          "Percent90Text": "14 Months",
+          "Percent25Text": "4 Months",
+          "Percent50Text": "5 Months",
+          "ProcessGuideMaxDays": "512",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:52.900Z"
+  },
+  {
+    "visaCode": "888",
+    "visaName": "Business Innovation and Investment (Permanent) (subclass 888)",
+    "streamCode": "12",
+    "streamName": "Business Innovation",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Innovation and Investment (Permanent) visa (subclass 888)",
+          "VisaSubclassCode": "888",
+          "StreamCode": "12",
+          "StreamText": "Business Innovation",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-innovation-and-investment-888/business-innovation-stream",
+          "Percent75": "203",
+          "Percent90": "218",
+          "Percent25": "188",
+          "Percent50": "195",
+          "Percent75Text": "7 Months",
+          "Percent90Text": "7 Months",
+          "Percent25Text": "6 Months",
+          "Percent50Text": "6 Months",
+          "ProcessGuideMaxDays": "244",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:53.721Z"
+  },
+  {
+    "visaCode": "888",
+    "visaName": "Business Innovation and Investment (Permanent) (subclass 888)",
+    "streamCode": "13",
+    "streamName": "Investor",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Innovation and Investment (Permanent) visa (subclass 888)",
+          "VisaSubclassCode": "888",
+          "StreamCode": "13",
+          "StreamText": "Investor",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-innovation-and-investment-888/investor-stream",
+          "Percent75": "131",
+          "Percent90": "150",
+          "Percent25": "90",
+          "Percent50": "111",
+          "Percent75Text": "4 Months",
+          "Percent90Text": "5 Months",
+          "Percent25Text": "90 Days",
+          "Percent50Text": "4 Months",
+          "ProcessGuideMaxDays": "166",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:54.547Z"
+  },
+  {
+    "visaCode": "888",
+    "visaName": "Business Innovation and Investment (Permanent) (subclass 888)",
+    "streamCode": "14",
+    "streamName": "Significant Investor",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Innovation and Investment (Permanent) visa (subclass 888)",
+          "VisaSubclassCode": "888",
+          "StreamCode": "14",
+          "StreamText": "Significant Investor",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-innovation-and-investment-888/significant-investor-stream",
+          "Percent75": "143",
+          "Percent90": "203",
+          "Percent25": "83",
+          "Percent50": "109",
+          "Percent75Text": "5 Months",
+          "Percent90Text": "7 Months",
+          "Percent25Text": "83 Days",
+          "Percent50Text": "4 Months",
+          "ProcessGuideMaxDays": "342",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:55.361Z"
+  },
+  {
+    "visaCode": "188",
+    "visaName": "Business Innovation and Investment (Provisional) (subclass 188)",
+    "streamCode": "9",
+    "streamName": "Business Innovation",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Innovation and Investment (Provisional) visa (subclass 188)",
+          "VisaSubclassCode": "188",
+          "StreamCode": "9",
+          "StreamText": "Business Innovation",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-innovation-and-investment-188/business-innovation-stream",
+          "Percent75": "1698",
+          "Percent90": "1776",
+          "Percent25": "1285",
+          "Percent50": "1595",
+          "Percent75Text": "56 Months",
+          "Percent90Text": "58 Months",
+          "Percent25Text": "42 Months",
+          "Percent50Text": "52 Months",
+          "ProcessGuideMaxDays": "1810",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:56.192Z"
+  },
+  {
+    "visaCode": "188",
+    "visaName": "Business Innovation and Investment (Provisional) (subclass 188)",
+    "streamCode": "35",
+    "streamName": "Business Innovation Extension",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Innovation and Investment (Provisional) visa (subclass 188)",
+          "VisaSubclassCode": "188",
+          "StreamCode": "35",
+          "StreamText": "Business Innovation Extension",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-innovation-and-investment-188/business-innovation-extension-stream",
+          "Percent75": "181",
+          "Percent90": "217",
+          "Percent25": "108",
+          "Percent50": "142",
+          "Percent75Text": "6 Months",
+          "Percent90Text": "7 Months",
+          "Percent25Text": "4 Months",
+          "Percent50Text": "5 Months",
+          "ProcessGuideMaxDays": "261",
+          "ProcessGuideInfo": "​​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:57.047Z"
+  },
+  {
+    "visaCode": "132",
+    "visaName": "Business Talent visa (subclass 132)",
+    "streamCode": "1",
+    "streamName": "Significant Business History",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Business Talent visa (subclass 132)",
+          "VisaSubclassCode": "132",
+          "StreamCode": "1",
+          "StreamText": "Significant Business History",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/business-talent-permanent-132/significant-business-history-stream",
+          "Percent75": "2080",
+          "Percent90": "2114",
+          "Percent25": "1807",
+          "Percent50": "2019",
+          "Percent75Text": "68 Months",
+          "Percent90Text": "69 Months",
+          "Percent25Text": "59 Months",
+          "Percent50Text": "66 Months",
+          "ProcessGuideMaxDays": "2131",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:57.845Z"
+  },
+  {
+    "visaCode": "101",
+    "visaName": "Child visa (subclass 101)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Child visa (subclass 101)",
+          "VisaSubclassCode": "101",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/child-101",
+          "Percent75": "880",
+          "Percent90": "960",
+          "Percent25": "610",
+          "Percent50": "721",
+          "Percent75Text": "29 Months",
+          "Percent90Text": "32 Months",
+          "Percent25Text": "20 Months",
+          "Percent50Text": "24 Months",
+          "ProcessGuideMaxDays": "986",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:58.663Z"
+  },
+  {
+    "visaCode": "802",
+    "visaName": "Child visa (subclass 802)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Child visa (subclass 802)",
+          "VisaSubclassCode": "802",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/child-802",
+          "Percent75": "757",
+          "Percent90": "878",
+          "Percent25": "585",
+          "Percent50": "628",
+          "Percent75Text": "25 Months",
+          "Percent90Text": "29 Months",
+          "Percent25Text": "19 Months",
+          "Percent50Text": "21 Months",
+          "ProcessGuideMaxDays": "942",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:34:59.819Z"
+  },
+  {
+    "visaCode": "445",
+    "visaName": "Dependent Child visa (subclass 445)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Dependent Child visa (subclass 445)",
+          "VisaSubclassCode": "445",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/dependent-child-445",
+          "Percent75": "803",
+          "Percent90": "863",
+          "Percent25": "643",
+          "Percent50": "727",
+          "Percent75Text": "26 Months",
+          "Percent90Text": "28 Months",
+          "Percent25Text": "21 Months",
+          "Percent50Text": "24 Months",
+          "ProcessGuideMaxDays": "908",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:00.650Z"
+  },
+  {
+    "visaCode": "601",
+    "visaName": "Electronic Travel Authority (subclass 601)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Electronic Travel Authority (subclass 601)",
+          "VisaSubclassCode": "601",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
+          "Percent75": "1",
+          "Percent90": "1",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "Less than 1 Day",
+          "Percent90Text": "Less than 1 Day",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "1",
+          "ProcessGuideInfo": "<p>Most applications are processed quickly. However, if further information is required during the application process, the final decision may take longer.​<br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:01.702Z"
+  },
+  {
+    "visaCode": "186",
+    "visaName": "Employer Nomination Scheme (subclass 186)",
+    "streamCode": "3",
+    "streamName": "Direct Entry Pathway",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Employer Nomination Scheme (subclass 186)",
+          "VisaSubclassCode": "186",
+          "StreamCode": "3",
+          "StreamText": "Direct Entry Pathway",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/direct-entry-stream",
+          "Percent75": "348",
+          "Percent90": "471",
+          "Percent25": "257",
+          "Percent50": "289",
+          "Percent75Text": "11 Months",
+          "Percent90Text": "15 Months",
+          "Percent25Text": "8 Months",
+          "Percent50Text": "9 Months",
+          "ProcessGuideMaxDays": "628",
+          "ProcessGuideInfo": "<p>We are receiving a high volume of applications in this group which has impacted the timeframe for allocating and assessing applications.</p><p>For an indication of the current assessment date of nomination and visa applications, please refer to <a href='/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186'>Employer Nomination Scheme (subclass 186) visa</a>.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:02.691Z"
+  },
+  {
+    "visaCode": "186",
+    "visaName": "Employer Nomination Scheme (subclass 186)",
+    "streamCode": "4",
+    "streamName": "Agreement Pathway",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Employer Nomination Scheme (subclass 186)",
+          "VisaSubclassCode": "186",
+          "StreamCode": "4",
+          "StreamText": "Agreement Pathway",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/labour-agreement-stream",
+          "Percent75": "271",
+          "Percent90": "281",
+          "Percent25": "30",
+          "Percent50": "241",
+          "Percent75Text": "9 Months",
+          "Percent90Text": "9 Months",
+          "Percent25Text": "30 Days",
+          "Percent50Text": "8 Months",
+          "ProcessGuideMaxDays": "297",
+          "ProcessGuideInfo": "<p>We are receiving a high volume of applications in this group which has impacted the timeframe for allocating and assessing applications.</p><p>For an indication of the current assessment date of nomination and visa applications, please refer to <a href='/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186'>Employer Nomination Scheme (subclass 186) visa</a>.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:03.679Z"
+  },
+  {
+    "visaCode": "186",
+    "visaName": "Employer Nomination Scheme (subclass 186)",
+    "streamCode": "5",
+    "streamName": "Transition Pathway",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Employer Nomination Scheme (subclass 186)",
+          "VisaSubclassCode": "186",
+          "StreamCode": "5",
+          "StreamText": "Transition Pathway",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream",
+          "Percent75": "382",
+          "Percent90": "445",
+          "Percent25": "265",
+          "Percent50": "302",
+          "Percent75Text": "13 Months",
+          "Percent90Text": "15 Months",
+          "Percent25Text": "9 Months",
+          "Percent50Text": "10 Months",
+          "ProcessGuideMaxDays": "617",
+          "ProcessGuideInfo": "<p>We are receiving a high volume of applications in this group which has impacted the timeframe for allocating and assessing applications.</p><p>For an indication of the current assessment date of nomination and visa applications, please refer to <a href='/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186'>Employer Nomination Scheme (subclass 186) visa</a>.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:04.671Z"
+  },
+  {
+    "visaCode": "651",
+    "visaName": "eVisitor visa (subclass 651)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "eVisitor visa (subclass 651)",
+          "VisaSubclassCode": "651",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/evisitor-651",
+          "Percent75": "1",
+          "Percent90": "1",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "Less than 1 Day",
+          "Percent90Text": "Less than 1 Day",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "1",
+          "ProcessGuideInfo": "​​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:05.741Z"
+  },
+  {
+    "visaCode": "155",
+    "visaName": "Five Year Resident Return visa (subclass 155)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Five Year Resident Return visa (subclass 155)",
+          "VisaSubclassCode": "155",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/resident-return-visa-155-157",
+          "Percent75": "8",
+          "Percent90": "18",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "8 Days",
+          "Percent90Text": "18 Days",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "23",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:06.698Z"
+  },
+  {
+    "visaCode": "858-3",
+    "visaName": "Global Talent visa (subclass 858)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Global Talent visa (subclass 858)",
+          "VisaSubclassCode": "858-3",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/global-talent-visa-858",
+          "Percent75": "570",
+          "Percent90": "643",
+          "Percent25": "355",
+          "Percent50": "528",
+          "Percent75Text": "19 Months",
+          "Percent90Text": "21 Months",
+          "Percent25Text": "12 Months",
+          "Percent50Text": "17 Months",
+          "ProcessGuideMaxDays": "852",
+          "ProcessGuideInfo": "<p>Processing times reflect Global Talent (subclass 858) visa applications lodged before 6 December 2024. We are processing subclass 858 visa applications under Ministerial Direction No. 112. This sets out the Order of consideration and assessing exceptional and outstanding achievement for the subclass 858 visa.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:08.865Z"
+  },
+  {
+    "visaCode": "988",
+    "visaName": "Maritime Crew Visa (subclass 988)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Maritime Crew Visa (subclass 988)",
+          "VisaSubclassCode": "988",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/maritime-crew-988",
+          "Percent75": "1",
+          "Percent90": "1",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "Less than 1 Day",
+          "Percent90Text": "1 Day",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "4",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:10.691Z"
+  },
+  {
+    "visaCode": "602",
+    "visaName": "Medical Treatment visa (subclass 602)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Medical Treatment visa (subclass 602)",
+          "VisaSubclassCode": "602",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/medical-treatment-602",
+          "Percent75": "42",
+          "Percent90": "115",
+          "Percent25": "1",
+          "Percent50": "2",
+          "Percent75Text": "42 Days",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "2 Days",
+          "ProcessGuideMaxDays": "210",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:11.675Z"
+  },
+  {
+    "visaCode": "858-4",
+    "visaName": "National Innovation visa (subclass 858)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "National Innovation visa (subclass 858)",
+          "VisaSubclassCode": "858-4",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/national-innovation-visa-858",
+          "Percent75": "160",
+          "Percent90": "207",
+          "Percent25": "60",
+          "Percent50": "106",
+          "Percent75Text": "5 Months",
+          "Percent90Text": "7 Months",
+          "Percent25Text": "60 Days",
+          "Percent50Text": "3 Months",
+          "ProcessGuideMaxDays": "217",
+          "ProcessGuideInfo": "<p>Processing times reflect Global Talent (subclass 858) visa applications lodged before 6 December 2024. We are processing subclass 858 visa applications under Ministerial Direction No. 112. This sets out the Order of consideration and assessing exceptional and outstanding achievement for the subclass 858 visa.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:12.734Z"
+  },
+  {
+    "visaCode": "461",
+    "visaName": "New Zealand Citizen Family Relationship (Temporary) (subclass 461)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "New Zealand Citizen Family Relationship (Temporary) visa (subclass 461)",
+          "VisaSubclassCode": "461",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/new-zealand-citizen-family-relationship-temporary-461",
+          "Percent75": "109",
+          "Percent90": "132",
+          "Percent25": "52",
+          "Percent50": "89",
+          "Percent75Text": "4 Months",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "52 Days",
+          "Percent50Text": "89 Days",
+          "ProcessGuideMaxDays": "147",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:13.713Z"
+  },
+  {
+    "visaCode": "117",
+    "visaName": "Orphan Relative visa (subclass 117)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Orphan Relative visa (subclass 117)",
+          "VisaSubclassCode": "117",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/orphan-relative-117",
+          "Percent75": "2653",
+          "Percent90": "2930",
+          "Percent25": "2187",
+          "Percent50": "2309",
+          "Percent75Text": "87 Months",
+          "Percent90Text": "96 Months",
+          "Percent25Text": "72 Months",
+          "Percent50Text": "76 Months",
+          "ProcessGuideMaxDays": "3005",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:14.548Z"
+  },
+  {
+    "visaCode": "309",
+    "visaName": "Partner (Provisional) visa (subclass 309)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Partner (Provisional) visa (subclass 309)",
+          "VisaSubclassCode": "309",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/partner-offshore/provisional-309",
+          "Percent75": "609",
+          "Percent90": "756",
+          "Percent25": "336",
+          "Percent50": "441",
+          "Percent75Text": "20 Months",
+          "Percent90Text": "25 Months",
+          "Percent25Text": "11 Months",
+          "Percent50Text": "14 Months",
+          "ProcessGuideMaxDays": "805",
+          "ProcessGuideInfo": "<p>​The Department continues to prioritise aged, and compassionate and compelling applications. This is reflected in current processing times.<br></p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:15.457Z"
+  },
+  {
+    "visaCode": "100",
+    "visaName": "Partner visa (subclass 100)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Partner visa (subclass 100)",
+          "VisaSubclassCode": "100",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/partner-offshore/migrant-100",
+          "Percent75": "359",
+          "Percent90": "536",
+          "Percent25": "275",
+          "Percent50": "319",
+          "Percent75Text": "12 Months",
+          "Percent90Text": "18 Months",
+          "Percent25Text": "9 Months",
+          "Percent50Text": "10 Months",
+          "ProcessGuideMaxDays": "673",
+          "ProcessGuideInfo": "<p>The processing time for a permanent Partner visa starts from the date of eligibility. <br/>   <strong>This is 2 years after you applied for the temporary&#160;and permanent P​artner visas.</strong></p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:16.352Z"
+  },
+  {
+    "visaCode": "801",
+    "visaName": "Partner visa (subclass 801)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Partner visa (subclass 801)",
+          "VisaSubclassCode": "801",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/partner-onshore/permanent-801",
+          "Percent75": "326",
+          "Percent90": "524",
+          "Percent25": "165",
+          "Percent50": "208",
+          "Percent75Text": "11 Months",
+          "Percent90Text": "17 Months",
+          "Percent25Text": "5 Months",
+          "Percent50Text": "7 Months",
+          "ProcessGuideMaxDays": "631",
+          "ProcessGuideInfo": "<p>The processing time for a permanent Partner visa starts from the date of eligibility. <br/>   <strong>This is 2 years after you applied for the temporary&#160;and permanent P​artner visas.</strong></p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:17.173Z"
+  },
+  {
+    "visaCode": "820",
+    "visaName": "Partner visa (subclass 820)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Partner visa (subclass 820)",
+          "VisaSubclassCode": "820",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/partner-onshore/temporary-820",
+          "Percent75": "640",
+          "Percent90": "740",
+          "Percent25": "478",
+          "Percent50": "525",
+          "Percent75Text": "21 Months",
+          "Percent90Text": "24 Months",
+          "Percent25Text": "16 Months",
+          "Percent50Text": "17 Months",
+          "ProcessGuideMaxDays": "936",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:17.965Z"
+  },
+  {
+    "visaCode": "191",
+    "visaName": "Permanent Residence (Skilled Regional) (subclass 191)",
+    "streamCode": "76",
+    "streamName": "Regional Provisional Visa",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Permanent Residence (Skilled Regional) (subclass 191)",
+          "VisaSubclassCode": "191",
+          "StreamCode": "76",
+          "StreamText": "Regional Provisional Visa",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-regional-191/regional-provisional",
+          "Percent75": "228",
+          "Percent90": "238",
+          "Percent25": "222",
+          "Percent50": "225",
+          "Percent75Text": "7 Months",
+          "Percent90Text": "8 Months",
+          "Percent25Text": "7 Months",
+          "Percent50Text": "7 Months",
+          "ProcessGuideMaxDays": "304",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:18.829Z"
+  },
+  {
+    "visaCode": "300",
+    "visaName": "Prospective Marriage visa (subclass 300)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Prospective Marriage visa (subclass 300)",
+          "VisaSubclassCode": "300",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/prospective-marriage-300",
+          "Percent75": "605",
+          "Percent90": "750",
+          "Percent25": "318",
+          "Percent50": "446",
+          "Percent75Text": "20 Months",
+          "Percent90Text": "25 Months",
+          "Percent25Text": "10 Months",
+          "Percent50Text": "15 Months",
+          "ProcessGuideMaxDays": "882",
+          "ProcessGuideInfo": "<p>​The Department continues to prioritise aged, and compassionate and compelling applications. This is reflected in current processing times.<br></p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:19.622Z"
+  },
+  {
+    "visaCode": "187",
+    "visaName": "Regional Sponsored Migration Scheme (subclass 187)",
+    "streamCode": "8",
+    "streamName": "Transition Pathway",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Regional Sponsored Migration Scheme visa (subclass 187)",
+          "VisaSubclassCode": "187",
+          "StreamCode": "8",
+          "StreamText": "Transition Pathway",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/regional-sponsor-migration-scheme-187/temporary-residence-transistion-stream",
+          "Percent75": "99",
+          "Percent90": "150",
+          "Percent25": "40",
+          "Percent50": "73",
+          "Percent75Text": "3 Months",
+          "Percent90Text": "5 Months",
+          "Percent25Text": "40 Days",
+          "Percent50Text": "73 Days",
+          "ProcessGuideMaxDays": "268",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:20.479Z"
+  },
+  {
+    "visaCode": "189",
+    "visaName": "Skilled - Independent visa (subclass 189)",
+    "streamCode": "63",
+    "streamName": "Points-Tested",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled - Independent visa (subclass 189)",
+          "VisaSubclassCode": "189",
+          "StreamCode": "63",
+          "StreamText": "Points-Tested",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested",
+          "Percent75": "181",
+          "Percent90": "191",
+          "Percent25": "123",
+          "Percent50": "171",
+          "Percent75Text": "6 Months",
+          "Percent90Text": "6 Months",
+          "Percent25Text": "4 Months",
+          "Percent50Text": "6 Months",
+          "ProcessGuideMaxDays": "201",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:21.305Z"
+  },
+  {
+    "visaCode": "189",
+    "visaName": "Skilled - Independent visa (subclass 189)",
+    "streamCode": "62",
+    "streamName": "New Zealand",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled - Independent visa (subclass 189)",
+          "VisaSubclassCode": "189",
+          "StreamCode": "62",
+          "StreamText": "New Zealand",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-independent-189/new-zealand",
+          "Percent75": "1719",
+          "Percent90": "1825",
+          "Percent25": "1457",
+          "Percent50": "1565",
+          "Percent75Text": "56 Months",
+          "Percent90Text": "60 Months",
+          "Percent25Text": "48 Months",
+          "Percent50Text": "51 Months",
+          "ProcessGuideMaxDays": "1858",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:22.163Z"
+  },
+  {
+    "visaCode": "190",
+    "visaName": "Skilled - Nominated visa (subclass 190)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled - Nominated visa (subclass 190)",
+          "VisaSubclassCode": "190",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+          "Percent75": "455",
+          "Percent90": "485",
+          "Percent25": "311",
+          "Percent50": "441",
+          "Percent75Text": "15 Months",
+          "Percent90Text": "16 Months",
+          "Percent25Text": "10 Months",
+          "Percent50Text": "14 Months",
+          "ProcessGuideMaxDays": "504",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:23.032Z"
+  },
+  {
+    "visaCode": "887",
+    "visaName": "Skilled - Regional visa (subclass 887)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled - Regional visa (subclass 887)",
+          "VisaSubclassCode": "887",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-regional-887",
+          "Percent75": "431",
+          "Percent90": "539",
+          "Percent25": "112",
+          "Percent50": "208",
+          "Percent75Text": "14 Months",
+          "Percent90Text": "18 Months",
+          "Percent25Text": "4 Months",
+          "Percent50Text": "7 Months",
+          "ProcessGuideMaxDays": "609",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:23.877Z"
+  },
+  {
+    "visaCode": "494",
+    "visaName": "Skilled Employer Sponsored Regional (Provisional) (subclass 494)",
+    "streamCode": "72",
+    "streamName": "Employer Sponsored",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled Employer Sponsored Regional (Provisional) visa (subclass 494)",
+          "VisaSubclassCode": "494",
+          "StreamCode": "72",
+          "StreamText": "Employer Sponsored",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-employer-sponsored-regional-494/employer-sponsored-stream",
+          "Percent75": "267",
+          "Percent90": "335",
+          "Percent25": "191",
+          "Percent50": "252",
+          "Percent75Text": "9 Months",
+          "Percent90Text": "11 Months",
+          "Percent25Text": "6 Months",
+          "Percent50Text": "8 Months",
+          "ProcessGuideMaxDays": "392",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:24.684Z"
+  },
+  {
+    "visaCode": "494",
+    "visaName": "Skilled Employer Sponsored Regional (Provisional) (subclass 494)",
+    "streamCode": "73",
+    "streamName": "Labour Agreement",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled Employer Sponsored Regional (Provisional) visa (subclass 494)",
+          "VisaSubclassCode": "494",
+          "StreamCode": "73",
+          "StreamText": "Labour Agreement",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-employer-sponsored-regional-494/labour-agreement-stream",
+          "Percent75": "257",
+          "Percent90": "270",
+          "Percent25": "135",
+          "Percent50": "233",
+          "Percent75Text": "8 Months",
+          "Percent90Text": "9 Months",
+          "Percent25Text": "4 Months",
+          "Percent50Text": "8 Months",
+          "ProcessGuideMaxDays": "285",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:25.522Z"
+  },
+  {
+    "visaCode": "491",
+    "visaName": "Skilled Work Regional (Provisional) (subclass 491)",
+    "streamCode": "71",
+    "streamName": "State/Territory Government Nominated Regional",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled Work Regional (Provisional) visa (subclass 491)",
+          "VisaSubclassCode": "491",
+          "StreamCode": "71",
+          "StreamText": "State/Territory Government Nominated Regional",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/application",
+          "Percent75": "614",
+          "Percent90": "778",
+          "Percent25": "401",
+          "Percent50": "479",
+          "Percent75Text": "20 Months",
+          "Percent90Text": "26 Months",
+          "Percent25Text": "13 Months",
+          "Percent50Text": "16 Months",
+          "ProcessGuideMaxDays": "816",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:26.323Z"
+  },
+  {
+    "visaCode": "491",
+    "visaName": "Skilled Work Regional (Provisional) (subclass 491)",
+    "streamCode": "70",
+    "streamName": "Family Sponsored Regional",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skilled Work Regional (Provisional) visa (subclass 491)",
+          "VisaSubclassCode": "491",
+          "StreamCode": "70",
+          "StreamText": "Family Sponsored Regional",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/subsequent-entrant",
+          "Percent75": "136",
+          "Percent90": "877",
+          "Percent25": "59",
+          "Percent50": "87",
+          "Percent75Text": "4 Months",
+          "Percent90Text": "29 Months",
+          "Percent25Text": "59 Days",
+          "Percent50Text": "87 Days",
+          "ProcessGuideMaxDays": "979",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:27.147Z"
+  },
+  {
+    "visaCode": "482-1",
+    "visaName": "Skills In Demand visa (482)",
+    "streamCode": "80",
+    "streamName": "Labour Agreement",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skills In Demand visa (482)",
+          "VisaSubclassCode": "482-1",
+          "StreamCode": "80",
+          "StreamText": "Labour Agreement",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482/labour-agreement-stream",
+          "Percent75": "194",
+          "Percent90": "247",
+          "Percent25": "84",
+          "Percent50": "100",
+          "Percent75Text": "6 Months",
+          "Percent90Text": "8 Months",
+          "Percent25Text": "84 Days",
+          "Percent50Text": "3 Months",
+          "ProcessGuideMaxDays": "262",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:27.974Z"
+  },
+  {
+    "visaCode": "482-1",
+    "visaName": "Skills In Demand visa (482)",
+    "streamCode": "81",
+    "streamName": "Core Skills",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skills In Demand visa (482)",
+          "VisaSubclassCode": "482-1",
+          "StreamCode": "81",
+          "StreamText": "Core Skills",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482/core-skills-stream",
+          "Percent75": "143",
+          "Percent90": "248",
+          "Percent25": "39",
+          "Percent50": "69",
+          "Percent75Text": "5 Months",
+          "Percent90Text": "8 Months",
+          "Percent25Text": "39 Days",
+          "Percent50Text": "69 Days",
+          "ProcessGuideMaxDays": "265",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:28.797Z"
+  },
+  {
+    "visaCode": "482-1",
+    "visaName": "Skills In Demand visa (482)",
+    "streamCode": "82",
+    "streamName": "Specialist Skills",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skills In Demand visa (482)",
+          "VisaSubclassCode": "482-1",
+          "StreamCode": "82",
+          "StreamText": "Specialist Skills",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/skills-in-demand-visa-subclass-482/specialist-skills-stream",
+          "Percent75": "34",
+          "Percent90": "51",
+          "Percent25": "3",
+          "Percent50": "7",
+          "Percent75Text": "34 Days",
+          "Percent90Text": "51 Days",
+          "Percent25Text": "3 Days",
+          "Percent50Text": "7 Days",
+          "ProcessGuideMaxDays": "98",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:29.585Z"
+  },
+  {
+    "visaCode": "482-1",
+    "visaName": "Skills In Demand visa (482)",
+    "streamCode": "66",
+    "streamName": "Nomination",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skills In Demand visa (482)",
+          "VisaSubclassCode": "482-1",
+          "StreamCode": "66",
+          "StreamText": "Nomination",
+          "VisaUrl": "",
+          "Percent75": "87",
+          "Percent90": "218",
+          "Percent25": "1",
+          "Percent50": "6",
+          "Percent75Text": "87 days",
+          "Percent90Text": "8 months",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "6 days",
+          "ProcessGuideMaxDays": "274",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:30.531Z"
+  },
+  {
+    "visaCode": "482-1",
+    "visaName": "Skills In Demand visa (482)",
+    "streamCode": "68",
+    "streamName": "Sponsorship",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Skills In Demand visa (482)",
+          "VisaSubclassCode": "482-1",
+          "StreamCode": "68",
+          "StreamText": "Sponsorship",
+          "VisaUrl": "",
+          "Percent75": "88",
+          "Percent90": "108",
+          "Percent25": "9",
+          "Percent50": "23",
+          "Percent75Text": "88 days",
+          "Percent90Text": "4 months",
+          "Percent25Text": "9 days",
+          "Percent50Text": "23 days",
+          "ProcessGuideMaxDays": "116",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:31.355Z"
+  },
+  {
+    "visaCode": "870",
+    "visaName": "Sponsored Parent (Temporary) (subclass 870)",
+    "streamCode": "66",
+    "streamName": "Visa Application",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Sponsored Parent (Temporary)  (subclass 870)",
+          "VisaSubclassCode": "870",
+          "StreamCode": "66",
+          "StreamText": "Visa Application",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/sponsored-parent-temporary-870",
+          "Percent75": "246",
+          "Percent90": "277",
+          "Percent25": "197",
+          "Percent50": "221",
+          "Percent75Text": "8 Months",
+          "Percent90Text": "9 Months",
+          "Percent25Text": "6 Months",
+          "Percent50Text": "7 Months",
+          "ProcessGuideMaxDays": "316",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:32.186Z"
+  },
+  {
+    "visaCode": "870",
+    "visaName": "Sponsored Parent (Temporary) (subclass 870)",
+    "streamCode": "67",
+    "streamName": "Sponsorship",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Sponsored Parent (Temporary) visa (subclass 870)",
+          "VisaSubclassCode": "870",
+          "StreamCode": "67",
+          "StreamText": "Sponsorship",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/sponsored-parent-temporary-870",
+          "Percent75": "127",
+          "Percent90": "144",
+          "Percent25": "120",
+          "Percent50": "125",
+          "Percent75Text": "5 months",
+          "Percent90Text": "5 months",
+          "Percent25Text": "4 months",
+          "Percent50Text": "5 months",
+          "ProcessGuideMaxDays": "158",
+          "ProcessGuideInfo": "<p>​​The increase for Sponsored Parent (Temporary) sponsorship processing times can be attributed to targeted efforts to finalise older on hand cases.​​​<br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:33.088Z"
+  },
+  {
+    "visaCode": "590",
+    "visaName": "Student Guardian visa (subclass 590)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student Guardian visa (subclass 590)",
+          "VisaSubclassCode": "590",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-590",
+          "Percent75": "72",
+          "Percent90": "135",
+          "Percent25": "11",
+          "Percent50": "33",
+          "Percent75Text": "72 Days",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "11 Days",
+          "Percent50Text": "33 Days",
+          "ProcessGuideMaxDays": "204",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:33.934Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "47",
+    "streamName": "Foreign Affairs or Defence Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "47",
+          "StreamText": "Foreign Affairs or Defence Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "7",
+          "Percent90": "17",
+          "Percent25": "1",
+          "Percent50": "4",
+          "Percent75Text": "7 Days",
+          "Percent90Text": "17 Days",
+          "Percent25Text": "1 Day",
+          "Percent50Text": "4 Days",
+          "ProcessGuideMaxDays": "29",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:34.818Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "45",
+    "streamName": "Postgraduate Research Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "45",
+          "StreamText": "Postgraduate Research Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "37",
+          "Percent90": "66",
+          "Percent25": "10",
+          "Percent50": "25",
+          "Percent75Text": "37 Days",
+          "Percent90Text": "66 Days",
+          "Percent25Text": "10 Days",
+          "Percent50Text": "25 Days",
+          "ProcessGuideMaxDays": "242",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:35.728Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "41",
+    "streamName": "Independent ELICOS Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "41",
+          "StreamText": "Independent ELICOS Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "25",
+          "Percent90": "42",
+          "Percent25": "1",
+          "Percent50": "16",
+          "Percent75Text": "25 Days",
+          "Percent90Text": "44 Days",
+          "Percent25Text": "1 Day",
+          "Percent50Text": "16 Days",
+          "ProcessGuideMaxDays": "198",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:36.553Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "42",
+    "streamName": "Schools Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "42",
+          "StreamText": "Schools Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "35",
+          "Percent90": "92",
+          "Percent25": "13",
+          "Percent50": "27",
+          "Percent75Text": "35 Days",
+          "Percent90Text": "3 Months",
+          "Percent25Text": "13 Days",
+          "Percent50Text": "27 Days",
+          "ProcessGuideMaxDays": "143",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:37.533Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "43",
+    "streamName": "Vocational Education and Training Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "43",
+          "StreamText": "Vocational Education and Training Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "196",
+          "Percent90": "203",
+          "Percent25": "29",
+          "Percent50": "120",
+          "Percent75Text": "6 Months",
+          "Percent90Text": "7 Months",
+          "Percent25Text": "29 Days",
+          "Percent50Text": "4 Months",
+          "ProcessGuideMaxDays": "242",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:38.370Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "44",
+    "streamName": "Higher Education Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "44",
+          "StreamText": "Higher Education Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "46",
+          "Percent90": "196",
+          "Percent25": "14",
+          "Percent50": "33",
+          "Percent75Text": "46 Days",
+          "Percent90Text": "6 Months",
+          "Percent25Text": "14 Days",
+          "Percent50Text": "33 Days",
+          "ProcessGuideMaxDays": "197",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:39.175Z"
+  },
+  {
+    "visaCode": "500",
+    "visaName": "Student visa (subclass 500)",
+    "streamCode": "46",
+    "streamName": "Non-Award Sector",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Student visa (subclass 500)",
+          "VisaSubclassCode": "500",
+          "StreamCode": "46",
+          "StreamText": "Non-Award Sector",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/student-500",
+          "Percent75": "21",
+          "Percent90": "37",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "21 Days",
+          "Percent90Text": "37 Days",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "49",
+          "ProcessGuideInfo": "<p>Student visa applications lodged outside Australia are processed in accordance with a Ministerial Direction. Applications lodged before 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-111.pdf'>Ministerial Direction 111</a>, and applications lodged on or after 14 November 2025 are processed according to <a href='/support-subsite/files/ministerial-direction-115.pdf'>Ministerial Direction 115</a>. For more information see <a href='/visas/getting-a-visa/visa-processing-times/visa-processing-priorities/student-visa'>Student visa processing priorities</a>. We recommend applications be lodged well in advance of course commencement and with all supporting documentation.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:39.996Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "50",
+    "streamName": "Entertainment Activities",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "50",
+          "StreamText": "Entertainment Activities",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/entertainment-activities",
+          "Percent75": "15",
+          "Percent90": "24",
+          "Percent25": "2",
+          "Percent50": "8",
+          "Percent75Text": "15 Days",
+          "Percent90Text": "24 Days",
+          "Percent25Text": "2 Days",
+          "Percent50Text": "8 Days",
+          "ProcessGuideMaxDays": "28",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:40.827Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "53",
+    "streamName": "Research Activities",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "53",
+          "StreamText": "Research Activities",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/research-activities",
+          "Percent75": "41",
+          "Percent90": "444",
+          "Percent25": "7",
+          "Percent50": "15",
+          "Percent75Text": "41 Days",
+          "Percent90Text": "15 Months",
+          "Percent25Text": "7 Days",
+          "Percent50Text": "15 Days",
+          "ProcessGuideMaxDays": "456",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:41.634Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "52",
+    "streamName": "Religious Work",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "52",
+          "StreamText": "Religious Work",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/religious-work",
+          "Percent75": "141",
+          "Percent90": "279",
+          "Percent25": "35",
+          "Percent50": "83",
+          "Percent75Text": "5 Months",
+          "Percent90Text": "9 Months",
+          "Percent25Text": "35 Days",
+          "Percent50Text": "83 Days",
+          "ProcessGuideMaxDays": "438",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:42.483Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "54",
+    "streamName": "Special Programs",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "54",
+          "StreamText": "Special Programs",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/special-program",
+          "Percent75": "57",
+          "Percent90": "107",
+          "Percent25": "15",
+          "Percent50": "49",
+          "Percent75Text": "57 Days",
+          "Percent90Text": "3 Months",
+          "Percent25Text": "15 Days",
+          "Percent50Text": "49 Days",
+          "ProcessGuideMaxDays": "158",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:43.310Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "56",
+    "streamName": "Invited for Other Social and Cultural Activity",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "56",
+          "StreamText": "Invited for Other Social and Cultural Activity",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/invited-for-other-social-and-cultural-activity",
+          "Percent75": "14",
+          "Percent90": "33",
+          "Percent25": "1",
+          "Percent50": "6",
+          "Percent75Text": "14 Days",
+          "Percent90Text": "33 Days",
+          "Percent25Text": "1 Day",
+          "Percent50Text": "6 Days",
+          "ProcessGuideMaxDays": "69",
+          "ProcessGuideInfo": "​<br/><p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:44.704Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "55",
+    "streamName": "Exchange Arrangements",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "55",
+          "StreamText": "Exchange Arrangements",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/exchange-arrangements",
+          "Percent75": "49",
+          "Percent90": "148",
+          "Percent25": "18",
+          "Percent50": "28",
+          "Percent75Text": "49 Days",
+          "Percent90Text": "5 Months",
+          "Percent25Text": "18 Days",
+          "Percent50Text": "28 Days",
+          "ProcessGuideMaxDays": "247",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:45.544Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "58",
+    "streamName": "Superyacht Crew",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "58",
+          "StreamText": "Superyacht Crew",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/superyacht-crew",
+          "Percent75": "23",
+          "Percent90": "31",
+          "Percent25": "5",
+          "Percent50": "12",
+          "Percent75Text": "23 Days",
+          "Percent90Text": "31 Days",
+          "Percent25Text": "5 Days",
+          "Percent50Text": "12 Days",
+          "ProcessGuideMaxDays": "42",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:46.516Z"
+  },
+  {
+    "visaCode": "408",
+    "visaName": "Temporary Activity visa (subclass 408)",
+    "streamCode": "51",
+    "streamName": "Sporting Activities",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Activity visa (subclass 408)",
+          "VisaSubclassCode": "408",
+          "StreamCode": "51",
+          "StreamText": "Sporting Activities",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-activity-408/sporting-activities",
+          "Percent75": "27",
+          "Percent90": "82",
+          "Percent25": "3",
+          "Percent50": "13",
+          "Percent75Text": "27 Days",
+          "Percent90Text": "82 Days",
+          "Percent25Text": "3 Days",
+          "Percent50Text": "13 Days",
+          "ProcessGuideMaxDays": "138",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:47.345Z"
+  },
+  {
+    "visaCode": "485",
+    "visaName": "Temporary Graduate visa (subclass 485)",
+    "streamCode": "33",
+    "streamName": "Post-Vocational Education Work",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Graduate visa (subclass 485)",
+          "VisaSubclassCode": "485",
+          "StreamCode": "33",
+          "StreamText": "Post-Vocational Education Work",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-graduate-485/graduate-work",
+          "Percent75": "88",
+          "Percent90": "128",
+          "Percent25": "11",
+          "Percent50": "21",
+          "Percent75Text": "88 Days",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "11 Days",
+          "Percent50Text": "21 Days",
+          "ProcessGuideMaxDays": "158",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:48.679Z"
+  },
+  {
+    "visaCode": "485",
+    "visaName": "Temporary Graduate visa (subclass 485)",
+    "streamCode": "34",
+    "streamName": "Post-Higher Education Work",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Graduate visa (subclass 485)",
+          "VisaSubclassCode": "485",
+          "StreamCode": "34",
+          "StreamText": "Post-Higher Education Work",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-study-work",
+          "Percent75": "17",
+          "Percent90": "34",
+          "Percent25": "2",
+          "Percent50": "9",
+          "Percent75Text": "17 Days",
+          "Percent90Text": "34 Days",
+          "Percent25Text": "2 Days",
+          "Percent50Text": "9 Days",
+          "ProcessGuideMaxDays": "61",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:49.726Z"
+  },
+  {
+    "visaCode": "403",
+    "visaName": "Temporary Work (International Relations) (subclass 403)",
+    "streamCode": "24",
+    "streamName": "Government Agreement",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (International Relations) visa (subclass 403)",
+          "VisaSubclassCode": "403",
+          "StreamCode": "24",
+          "StreamText": "Government Agreement",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-work-403/government-agreement",
+          "Percent75": "14",
+          "Percent90": "20",
+          "Percent25": "4",
+          "Percent50": "9",
+          "Percent75Text": "14 Days",
+          "Percent90Text": "20 Days",
+          "Percent25Text": "4 Days",
+          "Percent50Text": "9 Days",
+          "ProcessGuideMaxDays": "38",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:50.742Z"
+  },
+  {
+    "visaCode": "403",
+    "visaName": "Temporary Work (International Relations) (subclass 403)",
+    "streamCode": "25",
+    "streamName": "Foreign Government Agency",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (International Relations) visa (subclass 403)",
+          "VisaSubclassCode": "403",
+          "StreamCode": "25",
+          "StreamText": "Foreign Government Agency",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-work-403/foreign-government-agency",
+          "Percent75": "14",
+          "Percent90": "19",
+          "Percent25": "5",
+          "Percent50": "8",
+          "Percent75Text": "14 Days",
+          "Percent90Text": "19 Days",
+          "Percent25Text": "5 Days",
+          "Percent50Text": "8 Days",
+          "ProcessGuideMaxDays": "43",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:51.711Z"
+  },
+  {
+    "visaCode": "403",
+    "visaName": "Temporary Work (International Relations) (subclass 403)",
+    "streamCode": "26",
+    "streamName": "Domestic Worker (Diplomatic or Consular)",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (International Relations) visa (subclass 403)",
+          "VisaSubclassCode": "403",
+          "StreamCode": "26",
+          "StreamText": "Domestic Worker (Diplomatic or Consular)",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-work-403/domestic-worker",
+          "Percent75": "62",
+          "Percent90": "81",
+          "Percent25": "9",
+          "Percent50": "55",
+          "Percent75Text": "62 Days",
+          "Percent90Text": "81 Days",
+          "Percent25Text": "9 Days",
+          "Percent50Text": "55 Days",
+          "ProcessGuideMaxDays": "88",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:52.692Z"
+  },
+  {
+    "visaCode": "403",
+    "visaName": "Temporary Work (International Relations) (subclass 403)",
+    "streamCode": "78",
+    "streamName": "Pacific Australia Labour Mobility Scheme",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (International Relations) visa (subclass 403)",
+          "VisaSubclassCode": "403",
+          "StreamCode": "78",
+          "StreamText": "Pacific Australia Labour Mobility Scheme",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-work-403/pacific-australia-labour-mobility-stream",
+          "Percent75": "13",
+          "Percent90": "21",
+          "Percent25": "9",
+          "Percent50": "11",
+          "Percent75Text": "13 Days",
+          "Percent90Text": "21 Days",
+          "Percent25Text": "9 Days",
+          "Percent50Text": "11 Days",
+          "ProcessGuideMaxDays": "32",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:53.688Z"
+  },
+  {
+    "visaCode": "403",
+    "visaName": "Temporary Work (International Relations) (subclass 403)",
+    "streamCode": "79",
+    "streamName": "Mobility Arrangement for Talented Early-professionals Scheme (MATES)",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (International Relations) visa (subclass 403)",
+          "VisaSubclassCode": "403",
+          "StreamCode": "79",
+          "StreamText": "Mobility Arrangement for Talented Early-professionals Scheme (MATES)",
+          "VisaUrl": "",
+          "Percent75": "111",
+          "Percent90": "123",
+          "Percent25": "70",
+          "Percent50": "91",
+          "Percent75Text": "4 Months",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "70 Days",
+          "Percent50Text": "3 Months",
+          "ProcessGuideMaxDays": "127",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:54.687Z"
+  },
+  {
+    "visaCode": "400",
+    "visaName": "Temporary Work (Short Stay Activity) (subclass 400)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Temporary Work (Short Stay Activity) visa (subclass 400)",
+          "VisaSubclassCode": "400",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/temporary-work-400",
+          "Percent75": "13",
+          "Percent90": "20",
+          "Percent25": "4",
+          "Percent50": "6",
+          "Percent75Text": "13 Days",
+          "Percent90Text": "20 Days",
+          "Percent25Text": "4 Days",
+          "Percent50Text": "6 Days",
+          "ProcessGuideMaxDays": "26",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:55.728Z"
+  },
+  {
+    "visaCode": "157",
+    "visaName": "Three Month Resident Return visa (subclass 157)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Three Month Resident Return visa (subclass 157)",
+          "VisaSubclassCode": "157",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/resident-return-visa-155-157",
+          "Percent75": "61",
+          "Percent90": "68",
+          "Percent25": "24",
+          "Percent50": "32",
+          "Percent75Text": "61 Days",
+          "Percent90Text": "68 Days",
+          "Percent25Text": "24 Days",
+          "Percent50Text": "32 Days",
+          "ProcessGuideMaxDays": "71",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:56.652Z"
+  },
+  {
+    "visaCode": "407",
+    "visaName": "Training visa (subclass 407)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Training visa (subclass 407)",
+          "VisaSubclassCode": "407",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/training-407",
+          "Percent75": "322",
+          "Percent90": "418",
+          "Percent25": "47",
+          "Percent50": "158",
+          "Percent75Text": "11 Months",
+          "Percent90Text": "14 Months",
+          "Percent25Text": "47 Days",
+          "Percent50Text": "5 Months",
+          "ProcessGuideMaxDays": "433",
+          "ProcessGuideInfo": "<p>​​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:57.648Z"
+  },
+  {
+    "visaCode": "771",
+    "visaName": "Transit visa (subclass 771)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Transit visa (subclass 771)",
+          "VisaSubclassCode": "771",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/transit-771",
+          "Percent75": "13",
+          "Percent90": "21",
+          "Percent25": "1",
+          "Percent50": "5",
+          "Percent75Text": "13 Days",
+          "Percent90Text": "21 Days",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "5 Days",
+          "ProcessGuideMaxDays": "24",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:58.698Z"
+  },
+  {
+    "visaCode": "600",
+    "visaName": "Visitor visa (subclass 600)",
+    "streamCode": "29",
+    "streamName": "Tourist",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Visitor visa (subclass 600)",
+          "VisaSubclassCode": "600",
+          "StreamCode": "29",
+          "StreamText": "Tourist",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
+          "Percent75": "22",
+          "Percent90": "29",
+          "Percent25": "6",
+          "Percent50": "13",
+          "Percent75Text": "22 Days",
+          "Percent90Text": "29 Days",
+          "Percent25Text": "6 Days",
+          "Percent50Text": "13 Days",
+          "ProcessGuideMaxDays": "50",
+          "ProcessGuideInfo": "​​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:35:59.768Z"
+  },
+  {
+    "visaCode": "600",
+    "visaName": "Visitor visa (subclass 600)",
+    "streamCode": "30",
+    "streamName": "Sponsored Family",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Visitor visa (subclass 600)",
+          "VisaSubclassCode": "600",
+          "StreamCode": "30",
+          "StreamText": "Sponsored Family",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/visitor-600/sponsored-family-stream",
+          "Percent75": "54",
+          "Percent90": "79",
+          "Percent25": "33",
+          "Percent50": "38",
+          "Percent75Text": "54 Days",
+          "Percent90Text": "79 Days",
+          "Percent25Text": "33 Days",
+          "Percent50Text": "38 Days",
+          "ProcessGuideMaxDays": "90",
+          "ProcessGuideInfo": ""
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:36:00.753Z"
+  },
+  {
+    "visaCode": "600",
+    "visaName": "Visitor visa (subclass 600)",
+    "streamCode": "31",
+    "streamName": "Business Visitor",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Visitor visa (subclass 600)",
+          "VisaSubclassCode": "600",
+          "StreamCode": "31",
+          "StreamText": "Business Visitor",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/visitor-600/business-visitor-stream",
+          "Percent75": "13",
+          "Percent90": "23",
+          "Percent25": "3",
+          "Percent50": "6",
+          "Percent75Text": "13 Days",
+          "Percent90Text": "23 Days",
+          "Percent25Text": "3 Days",
+          "Percent50Text": "6 Days",
+          "ProcessGuideMaxDays": "28",
+          "ProcessGuideInfo": "<p>​<br><br></p>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:36:01.743Z"
+  },
+  {
+    "visaCode": "462",
+    "visaName": "Work and Holiday visa (subclass 462)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Work and Holiday visa (subclass 462)",
+          "VisaSubclassCode": "462",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/work-holiday-462",
+          "Percent75": "79",
+          "Percent90": "120",
+          "Percent25": "9",
+          "Percent50": "45",
+          "Percent75Text": "79 Days",
+          "Percent90Text": "4 Months",
+          "Percent25Text": "9 Days",
+          "Percent50Text": "45 Days",
+          "ProcessGuideMaxDays": "157",
+          "ProcessGuideInfo": "<p>Your application <strong>may take longer</strong> to process than the times shown in the guide due to the number of Working Holiday visa applications we receive. <strong>Do not</strong> arrange travel to Australia before we tell you in writing that we have granted your visa.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:36:02.650Z"
+  },
+  {
+    "visaCode": "417",
+    "visaName": "Working Holiday visa (subclass 417)",
+    "streamCode": "",
+    "streamName": "",
+    "processingData": {
+      "__type": "Internet.Domain.JsonResponse",
+      "success": true,
+      "data": [
+        {
+          "VisaSubclassText": "Working Holiday visa (subclass 417)",
+          "VisaSubclassCode": "417",
+          "StreamCode": "",
+          "StreamText": "",
+          "VisaUrl": "/visas/getting-a-visa/visa-listing/work-holiday-417",
+          "Percent75": "33",
+          "Percent90": "72",
+          "Percent25": "1",
+          "Percent50": "1",
+          "Percent75Text": "33 Days",
+          "Percent90Text": "72 Days",
+          "Percent25Text": "Less than 1 Day",
+          "Percent50Text": "Less than 1 Day",
+          "ProcessGuideMaxDays": "77",
+          "ProcessGuideInfo": "<p>Your application <strong>may take longer</strong> to process than the times shown in the guide due to the number of Working Holiday visa applications we receive. <strong>Do not</strong> arrange travel to Australia before we tell you in writing that we have granted your visa.</p>​<br>"
+        }
+      ],
+      "message": null
+    },
+    "fetchedAt": "2026-05-01T00:36:03.683Z"
+  }
+]

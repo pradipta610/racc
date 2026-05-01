@@ -24,6 +24,14 @@ const tools = [
     icon: '📚',
     external: true,
   },
+  {
+    name: 'Global Visa Processing Times',
+    description:
+      'Snapshot 76 visa subclass — cari & sort by 25 / 50 / 75 / 90 percentile processing time dari Home Affairs.',
+    href: '/tools/visa-processing-times',
+    icon: '⏱️',
+    external: false,
+  },
 ]
 
 export default function ToolsPage() {
