@@ -1,5 +1,26 @@
 export type ConsultationType = 'free' | 'paid'
 
+export type AnzscoList = 'MLTSSL' | 'STSOL' | 'ROL' | 'CSOL'
+
+export interface AnzscoOccupation {
+  anzsco: string
+  occupation: string
+  alt_titles: string
+  version: string
+  skill_level: string
+  assessed_by: string
+  tier: string
+  last_invited_points: string
+  no_shortage: boolean
+  ila: boolean
+  srlap: boolean
+  dama: boolean
+  dama_list: string[]
+  lists: AnzscoList[]
+  eligible_visas: string[]
+  state_nomination: string[]
+}
+
 export interface VisaProcessingRow {
   visaCode: string
   visaName: string

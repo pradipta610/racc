@@ -11,10 +11,10 @@ const tools = [
   {
     name: 'Skilled Occupations Search',
     description:
-      'Cari 1,125 ANZSCO occupation — filter by visa list (MLTSSL/STSOL/ROL/CSOL), visa type, dan state eligibility.',
-    href: '/tools/skilled-occupations-search/index.html',
+      'Search & filter 1,125 ANZSCO occupations by list (MLTSSL/STSOL/ROL/CSOL), visa subclass, state nomination, dan flags (DAMA/ILA/SRLAP).',
+    href: '/tools/skilled-occupations-search',
     icon: '🧭',
-    external: true,
+    external: false,
   },
   {
     name: 'RACC Courses Directory',
