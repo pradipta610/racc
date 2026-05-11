@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RACC Migration – Skilled Occupations Search</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3864; --navy-deep:#0e1d3d; --navy-soft:#2d4d89;
+  --yellow:#F5C518; --yellow-soft:#ffd94a;
+  --text:#0f172a; --muted:#64748b;
+  --green:#15803d; --green-bg:rgba(34,197,94,.15);
+  --red:#b91c1c;
+  --glass:rgba(255,255,255,.72);
+  --glass-strong:rgba(255,255,255,.88);
+  --glass-border:rgba(255,255,255,.6);
+  --glass-shadow:0 8px 32px rgba(15,23,42,.12);
+  --ring:0 0 0 3px rgba(245,197,24,.35);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(245,197,24,.22), transparent 60%),
+    radial-gradient(900px 500px at 95% 0%, rgba(45,77,137,.35), transparent 55%),
+    radial-gradient(700px 500px at 50% 120%, rgba(31,56,100,.25), transparent 60%),
+    linear-gradient(180deg,#eef2f9 0%,#e5ebf5 100%);
+  background-attachment:fixed;
+}
+
+/* ===== HEADER ===== */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%);
+  background:linear-gradient(180deg, rgba(31,56,100,.92), rgba(31,56,100,.78));
+  color:#fff; border-bottom:1px solid rgba(255,255,255,.15);
+  box-shadow:0 4px 20px rgba(14,29,61,.25);
+}
+.topbar-inner{max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:40px;height:40px;border-radius:10px;
+  background:linear-gradient(135deg,var(--yellow),var(--yellow-soft));
+  color:var(--navy-deep);display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:13px;letter-spacing:.5px;
+  box-shadow:0 4px 12px rgba(245,197,24,.35);
+}
+.brand-text h1{margin:0;font-size:16px;font-weight:700;letter-spacing:-.01em}
+.brand-text p{margin:0;font-size:12px;opacity:.75;font-weight:400}
+.topbar .stats{margin-left:auto;display:flex;gap:8px}
+.stat{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  padding:6px 12px;border-radius:20px;font-size:12px;font-weight:500;
+  display:flex;align-items:center;gap:6px;
+}
+.stat b{color:var(--yellow);font-weight:700}
+.back-link{color:#fff;text-decoration:none;transition:all .15s}
+.back-link:hover{background:rgba(245,197,24,.2);border-color:var(--yellow);color:var(--yellow)}
+
+/* ===== SEARCH BAR (sticky under topbar) ===== */
+.searchbar{
+  position:sticky; top:68px; z-index:40;
+  padding:16px 24px 0;
+}
+.searchbar-inner{
+  max-width:1400px;margin:0 auto;
+  background:var(--glass-strong);
+  backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--glass-shadow);
+  padding:14px;
+  display:flex;gap:10px;align-items:center;
+}
+.search-wrap{flex:1;position:relative}
+.search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+#q{
+  width:100%;padding:12px 90px 12px 42px;
+  border:1.5px solid rgba(15,23,42,.08);
+  border-radius:10px;font-size:15px;font-family:inherit;
+  background:rgba(255,255,255,.7);
+  transition:all .15s; outline:none;
+}
+#q:focus{border-color:var(--navy);background:#fff;box-shadow:var(--ring)}
+.kbd{
+  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  font-size:11px;color:var(--muted);background:rgba(15,23,42,.06);
+  padding:3px 8px;border-radius:5px;font-family:'JetBrains Mono',monospace;
+  border:1px solid rgba(15,23,42,.08);
+}
+.count-pill{
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:#fff;padding:10px 16px;border-radius:10px;font-weight:600;font-size:13px;
+  white-space:nowrap;box-shadow:0 4px 12px rgba(31,56,100,.25);
+}
+.count-pill b{color:var(--yellow);margin-right:4px;font-size:15px}
+
+/* ===== FILTERS ===== */
+.container{max-width:1400px;margin:0 auto;padding:16px 24px 60px}
+.filter-panel{
+  background:var(--glass);
+  backdrop-filter:blur(16px) saturate(160%); -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--glass-shadow);
+  padding:16px 18px;
+  margin-bottom:14px;
+}
+.filter-panel summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+  font-weight:600;font-size:14px;color:var(--navy);
+}
+.filter-panel summary::-webkit-details-marker{display:none}
+.filter-panel summary::before{
+  content:'';width:8px;height:8px;border-right:2px solid var(--yellow);border-bottom:2px solid var(--yellow);
+  transform:rotate(-45deg);transition:transform .2s;margin-right:2px;
+}
+.filter-panel[open] summary::before{transform:rotate(45deg)}
+.filter-panel summary .active-count{
+  margin-left:auto;background:var(--yellow);color:var(--navy-deep);
+  padding:2px 9px;border-radius:10px;font-size:11px;font-weight:700;
+}
+.filter-panel summary .active-count:empty{display:none}
+.filter-body{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.filter-block .lbl{
+  font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);
+  font-weight:700;margin-bottom:8px;display:block;
+}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  padding:6px 12px;border:1.5px solid rgba(15,23,42,.1);
+  background:rgba(255,255,255,.6);
+  border-radius:20px;cursor:pointer;font-size:12.5px;font-weight:500;
+  user-select:none;transition:all .15s;color:var(--text);
+  font-family:inherit;
+}
+.chip:hover{background:#fff;border-color:var(--navy);transform:translateY(-1px)}
+.chip.active{
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:#fff;border-color:var(--navy);
+  box-shadow:0 3px 10px rgba(31,56,100,.3);
+}
+.chip.state-chip.active{
+  background:linear-gradient(135deg,var(--yellow),var(--yellow-soft));
+  color:var(--navy-deep);border-color:var(--yellow);
+  box-shadow:0 3px 10px rgba(245,197,24,.4);
+}
+.reset-row{margin-top:14px;display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.active-filters{flex:1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.active-filters .hint{font-size:12px;color:var(--muted)}
+.active-tag{
+  background:var(--yellow);color:var(--navy-deep);padding:3px 8px 3px 10px;
+  border-radius:12px;font-size:11.5px;font-weight:600;display:inline-flex;align-items:center;gap:4px;
+  cursor:pointer; border:none; font-family:inherit;
+}
+.active-tag:hover{background:var(--yellow-soft)}
+.active-tag::after{content:'×';font-size:14px;line-height:1;opacity:.7}
+.reset-btn{
+  padding:8px 16px;background:transparent;border:1.5px solid rgba(15,23,42,.12);
+  color:var(--muted);border-radius:20px;cursor:pointer;font-size:12.5px;font-weight:600;
+  font-family:inherit;transition:all .15s;
+}
+.reset-btn:hover{color:var(--red);border-color:var(--red);background:rgba(185,28,28,.05)}
+
+/* ===== LEGEND ===== */
+.legend{
+  background:var(--glass);
+  backdrop-filter:blur(16px) saturate(160%); -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--glass-shadow);
+  margin-bottom:14px;overflow:hidden;
+}
+.legend summary{
+  padding:14px 18px;cursor:pointer;list-style:none;
+  display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--navy);
+}
+.legend summary::-webkit-details-marker{display:none}
+.legend summary::before{
+  content:'';width:8px;height:8px;border-right:2px solid var(--yellow);border-bottom:2px solid var(--yellow);
+  transform:rotate(-45deg);transition:transform .2s;
+}
+.legend[open] summary::before{transform:rotate(45deg)}
+.legend-body{padding:4px 18px 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 24px;font-size:13px}
+.legend-body dl{margin:0;padding:6px 0;border-bottom:1px dashed rgba(15,23,42,.08)}
+.legend-body dt{font-weight:700;color:var(--navy);display:inline}
+.legend-body dd{margin:0 0 0 6px;display:inline;color:var(--muted)}
+.legend-body dd::before{content:'— '}
+
+/* ===== CARDS ===== */
+.results{display:grid;gap:12px}
+.card{
+  background:var(--glass-strong);
+  backdrop-filter:blur(14px) saturate(160%); -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:0 4px 16px rgba(15,23,42,.06);
+  overflow:hidden;transition:all .2s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(15,23,42,.12);border-color:rgba(31,56,100,.2)}
+.card.open{box-shadow:0 10px 32px rgba(15,23,42,.15)}
+.card-head{
+  padding:14px 16px;cursor:pointer;display:grid;
+  grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;
+}
+.code{
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:var(--yellow);padding:6px 10px;border-radius:8px;
+  font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12.5px;
+  letter-spacing:.5px;white-space:nowrap;
+}
+.occ-name{font-weight:600;font-size:15.5px;color:var(--navy-deep);letter-spacing:-.01em;min-width:0}
+.head-tags{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;max-width:340px}
+.mini-tag{
+  font-size:10.5px;padding:3px 8px;border-radius:10px;font-weight:600;
+  background:rgba(15,23,42,.05);color:var(--muted);border:1px solid rgba(15,23,42,.06);
+  white-space:nowrap;
+}
+.mini-tag.list{background:rgba(31,56,100,.1);color:var(--navy);border-color:rgba(31,56,100,.15)}
+.mini-tag.yellow{background:rgba(245,197,24,.2);color:#7a5d00;border-color:rgba(245,197,24,.35)}
+.mini-tag.state-y{background:var(--green-bg);color:var(--green);border-color:rgba(34,197,94,.3)}
+.mini-tag.dama{background:rgba(245,197,24,.2);color:#7a5d00;border-color:rgba(245,197,24,.35)}
+.toggle{
+  width:28px;height:28px;border-radius:50%;
+  background:rgba(245,197,24,.2);color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:18px;line-height:1;transition:all .2s;
+}
+.card.open .toggle{background:var(--yellow);transform:rotate(45deg)}
+.card-body{display:none;padding:4px 18px 18px;border-top:1px solid rgba(15,23,42,.06)}
+.card.open .card-body{display:block;animation:fadeIn .2s ease-out}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+.alt-titles{
+  font-size:13px;color:var(--navy);margin:12px 0 14px;
+  padding:10px 14px;background:rgba(245,197,24,.12);
+  border-left:3px solid var(--yellow);border-radius:8px;
+}
+.alt-titles b{color:var(--navy-deep)}
+
+.detail-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:18px;
+}
+.detail{
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(15,23,42,.06);
+  padding:10px 12px;border-radius:10px;
+}
+.detail .dl{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:700;margin-bottom:3px}
+.detail .dv{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:5px}
+.detail .dv.y{color:var(--green)}
+.detail .dv.y::before{content:'●';font-size:8px}
+.detail .dv.n{color:var(--muted)}
+
+.section-title{
+  font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--navy);
+  font-weight:700;margin:14px 0 8px;display:flex;align-items:center;gap:8px;
+}
+.section-title::before{content:'';width:14px;height:2px;background:var(--yellow);border-radius:2px}
+
+.visa-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.visa-tag{
+  background:rgba(31,56,100,.08);color:var(--navy);
+  padding:5px 10px;border-radius:6px;font-size:12px;font-weight:500;
+  border:1px solid rgba(31,56,100,.12);
+}
+.visa-tag b{color:var(--navy-deep);font-weight:700;font-family:'JetBrains Mono',monospace}
+
+.states-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.state-box{
+  border:1px solid rgba(15,23,42,.08);border-radius:10px;overflow:hidden;
+  background:rgba(255,255,255,.5);
+}
+.state-box.elig{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.04)}
+.state-box.none{opacity:.55}
+.state-header{
+  padding:8px 12px;font-weight:700;font-size:12.5px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft));color:#fff;
+}
+.state-box.none .state-header{background:#94a3b8}
+.state-header .badge{
+  background:var(--yellow);color:var(--navy-deep);
+  font-size:9.5px;padding:2px 7px;border-radius:4px;font-weight:700;letter-spacing:.3px;
+}
+.state-box.none .state-header .badge{background:rgba(255,255,255,.3);color:#fff}
+.stream-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:7px 12px;font-size:12px;border-top:1px solid rgba(15,23,42,.05);
+}
+.stream-row:first-of-type{border-top:none}
+.stream-row .label{color:var(--text)}
+.yn{
+  font-weight:700;min-width:22px;height:22px;padding:0 6px;border-radius:11px;
+  display:inline-flex;align-items:center;justify-content:center;font-size:11px;
+}
+.yn.y{background:var(--green-bg);color:var(--green)}
+.yn.n{background:rgba(15,23,42,.05);color:#94a3b8}
+.stream-none{padding:10px 12px;font-size:12px;color:var(--muted);font-style:italic}
+
+.dama-list{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.dama-item{
+  background:rgba(245,197,24,.12);color:#7a5d00;
+  padding:5px 10px;border-radius:6px;font-size:12px;font-weight:500;
+  border:1px solid rgba(245,197,24,.3);
+}
+
+.highlight{background:var(--yellow);color:var(--navy-deep);padding:1px 3px;border-radius:3px;font-weight:700}
+
+.empty{
+  text-align:center;padding:60px 20px;
+  background:var(--glass);backdrop-filter:blur(12px);border-radius:var(--radius);
+  border:1px solid var(--glass-border);
+}
+.empty .ico{font-size:40px;margin-bottom:8px}
+.empty h2{color:var(--navy);margin:0 0 6px;font-size:18px}
+.empty p{margin:0;color:var(--muted);font-size:14px}
+
+.loading{
+  text-align:center;padding:80px 20px;
+  background:var(--glass);backdrop-filter:blur(12px);border-radius:var(--radius);
+  border:1px solid var(--glass-border);color:var(--muted);font-size:14px;
+}
+
+.load-more{
+  display:block;margin:18px auto 0;padding:12px 24px;
+  background:linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:var(--yellow);border:none;border-radius:10px;
+  font-weight:600;cursor:pointer;font-size:14px;font-family:inherit;
+  box-shadow:0 4px 14px rgba(31,56,100,.3);transition:all .15s;
+}
+.load-more:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(31,56,100,.4)}
+
+footer{
+  text-align:center;color:var(--muted);font-size:12px;padding:24px;
+  margin-top:20px;
+}
+
+@media(max-width:768px){
+  .topbar-inner{padding:12px 14px;gap:10px}
+  .brand-text h1{font-size:14px}
+  .brand-text p{display:none}
+  .topbar .stats{display:none}
+  .searchbar{padding:12px 14px 0;top:62px}
+  .searchbar-inner{padding:10px;flex-direction:column;align-items:stretch}
+  .count-pill{text-align:center}
+  .kbd{display:none}
+  #q{padding-right:14px}
+  .container{padding:12px 14px 40px}
+  .card-head{grid-template-columns:auto 1fr auto;gap:10px;padding:12px}
+  .head-tags{display:none}
+  .occ-name{font-size:14px}
+  .states-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">RACC</div>
+      <div class="brand-text">
+        <h1>Skilled Occupations Search</h1>
+        <p>RACC Migration &amp; Education Services</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="totalCount">…</b> occupations</div>
+      <div class="stat"><b>8</b> states/territories</div>
+      <a class="stat back-link" href="/tools">← Back to tools</a>
+    </div>
+  </div>
+</div>
+
+<div class="searchbar">
+  <div class="searchbar-inner">
+    <div class="search-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Search by occupation, ANZSCO code, or alternative title..." autocomplete="off" aria-label="Search">
+      <span class="kbd">⌘K</span>
+    </div>
+    <div class="count-pill"><b id="resultCount">0</b>results</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <details class="filter-panel" open>
+    <summary>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+      Filters
+      <span class="active-count" id="activeCount"></span>
+    </summary>
+    <div class="filter-body">
+      <div class="filter-block">
+        <span class="lbl">Visa List</span>
+        <div class="chips" id="listFilters">
+          <span class="chip" data-list="MLTSSL">MLTSSL</span>
+          <span class="chip" data-list="STSOL">STSOL</span>
+          <span class="chip" data-list="ROL">ROL</span>
+          <span class="chip" data-list="CSOL">CSOL</span>
+        </div>
+      </div>
+      <div class="filter-block">
+        <span class="lbl">Visa Type</span>
+        <div class="chips" id="visaFilters">
+          <span class="chip" data-visa="189">189</span>
+          <span class="chip" data-visa="190">190</span>
+          <span class="chip" data-visa="491">491</span>
+          <span class="chip" data-visa="482">482</span>
+          <span class="chip" data-visa="485">485</span>
+          <span class="chip" data-visa="186">186</span>
+          <span class="chip" data-visa="494">494</span>
+          <span class="chip" data-visa="407">407</span>
+        </div>
+      </div>
+      <div class="filter-block">
+        <span class="lbl">Eligible in State / Territory</span>
+        <div class="chips" id="stateFilters">
+          <span class="chip state-chip" data-state="ACT">ACT</span>
+          <span class="chip state-chip" data-state="NSW">NSW</span>
+          <span class="chip state-chip" data-state="NT">NT</span>
+          <span class="chip state-chip" data-state="QLD">QLD</span>
+          <span class="chip state-chip" data-state="SA">SA</span>
+          <span class="chip state-chip" data-state="TAS">TAS</span>
+          <span class="chip state-chip" data-state="VIC">VIC</span>
+          <span class="chip state-chip" data-state="WA">WA</span>
+        </div>
+      </div>
+      <div class="filter-block">
+        <span class="lbl">Flags</span>
+        <div class="chips" id="flagFilters">
+          <span class="chip" data-flag="dama">DAMA</span>
+          <span class="chip" data-flag="ila">ILA</span>
+          <span class="chip" data-flag="srlap">SRLAP</span>
+          <span class="chip" data-flag="in_shortage">In-shortage</span>
+        </div>
+      </div>
+    </div>
+    <div class="reset-row">
+      <div class="active-filters" id="activeFilters"></div>
+      <button class="reset-btn" id="resetBtn">Clear all</button>
+    </div>
+  </details>
+
+  <details class="legend">
+    <summary>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+      Abbreviation Legend
+    </summary>
+    <div class="legend-body">
+      <div>
+        <dl><dt>ANZSCO</dt><dd>Australian & New Zealand Standard Classification of Occupations</dd></dl>
+        <dl><dt>MLTSSL</dt><dd>Medium and Long-term Strategic Skills List</dd></dl>
+        <dl><dt>STSOL</dt><dd>Short-term Skilled Occupation List</dd></dl>
+        <dl><dt>ROL</dt><dd>Regional Occupation List</dd></dl>
+        <dl><dt>CSOL</dt><dd>Core Skills Occupation List</dd></dl>
+        <dl><dt>ILA</dt><dd>Invited-Level Assessment available</dd></dl>
+        <dl><dt>SRLAP</dt><dd>Skills Recognition Licensing &amp; Accreditation Pathway</dd></dl>
+      </div>
+      <div>
+        <dl><dt>189</dt><dd>Skilled Independent visa</dd></dl>
+        <dl><dt>190</dt><dd>Skilled Nominated (State/Territory)</dd></dl>
+        <dl><dt>491</dt><dd>Skilled Work Regional (Provisional)</dd></dl>
+        <dl><dt>482</dt><dd>Skills in Demand (Core / Specialist)</dd></dl>
+        <dl><dt>485</dt><dd>Temporary Graduate (Post-Vocational)</dd></dl>
+        <dl><dt>186</dt><dd>Employer Nomination Scheme (ENS)</dd></dl>
+      </div>
+      <div>
+        <dl><dt>187</dt><dd>Regional Sponsored Migration Scheme (RSMS-TRT)</dd></dl>
+        <dl><dt>494</dt><dd>Skilled Employer Sponsored Regional</dd></dl>
+        <dl><dt>407</dt><dd>Training Visa</dd></dl>
+        <dl><dt>DAMA</dt><dd>Designated Area Migration Agreement</dd></dl>
+        <dl><dt>WASMOL</dt><dd>Western Australian Skilled Migration Occupation List</dd></dl>
+        <dl><dt>TSE / TSG / TER / TBO</dt><dd>Tasmanian streams (Skilled Employment, Skills Graduate, Established Resident, Business Owner)</dd></dl>
+      </div>
+    </div>
+  </details>
+
+  <div id="loading" class="loading">Loading occupations…</div>
+  <div id="results" class="results"></div>
+  <div id="empty" class="empty" style="display:none">
+    <div class="ico">🔍</div>
+    <h2>No matching occupations</h2>
+    <p>Try loosening your filters or clearing the search term.</p>
+  </div>
+  <button id="loadMore" class="load-more" style="display:none">Load more</button>
+</div>
+
+<footer>RACC Migration &amp; Education Services · Data: ANZSCO Data (1).json</footer>
+
+<script>
+// ===== Data source (update filename here saat data baru) =====
+const DATA_URL = '/ANZSCO%20Data%20%281%29.json';
+
+const STATES = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA'];
+// Master list — 40 official state-nomination streams (used to render Y/N grid)
+const ALL_STATE_STREAMS = {
+  ACT: ['190','491'],
+  NSW: ['190','491 Pathway 1','491 Pathways 2&3'],
+  NT:  ['190 (Residents & Graduates)','190 (Offshore Priority)','491 (Residents & Graduates)','491 (Offshore Priority)'],
+  QLD: ['190 (Offshore)','190 (Living in QLD)','491 (Offshore)','491 (Living in QLD)'],
+  SA:  ['190 (Graduates)','190 (Skilled Employment)','190 (Outer Regional)','190 (Offshore)','491 (Graduates)','491 (Skilled Employment)','491 (Outer Regional)','491 (Offshore)'],
+  TAS: ['190 (TSE Priority)','190 (TSE Long-Term)','190 (TSG)','190 (TER)','190 (Overseas Health/Ed)','491 (TSE Priority)','491 (TSE Long-Term)','491 (TSG)','491 (TER)','491 (TBO)','491 (Overseas Invite)'],
+  VIC: ['190','491'],
+  WA:  ['190 (WASMOL Sch 1)','190 (WASMOL Sch 2)','190 (Graduate)','491 (WASMOL Sch 1)','491 (WASMOL Sch 2)','491 (Graduate)'],
+};
+const $ = s => document.querySelector(s);
+const state = { q:'', lists:new Set(), visas:new Set(), states:new Set(), flags:new Set(), shown:40 };
+let DATA = []; // populated after fetch
+
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+function hl(text,q){
+  if(!q) return esc(text);
+  const re = new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');
+  return esc(text).replace(re,'<span class="highlight">$1</span>');
+}
+
+// Extract state code from "ACT – 190" => "ACT"
+function getStateCode(entry){
+  const m = entry.match(/^([A-Z]{2,4})\s*[–-]/);
+  return m ? m[1] : null;
+}
+// Strip state prefix "ACT – 190 (Offshore)" => "190 (Offshore)"
+function stripStatePrefix(entry){
+  return entry.replace(/^[A-Z]{2,4}\s*[–-]\s*/, '');
+}
+// Extract visa subclass (3 digits) from any string
+function getVisaSubclass(entry){
+  const m = entry.match(/\b(\d{3})\b/);
+  return m ? m[1] : null;
+}
+
+// Pre-build state map per occupation: { ACT: Set("190","491"), ... }
+function buildStateMap(occ){
+  const map = {};
+  occ.state_nomination.forEach(entry => {
+    const code = getStateCode(entry);
+    if(!code) return;
+    if(!map[code]) map[code] = new Set();
+    map[code].add(stripStatePrefix(entry));
+  });
+  return map;
+}
+
+function matches(o){
+  const q = state.q.toLowerCase().trim();
+  if(q){
+    const hay = (o.anzsco + ' ' + o.occupation + ' ' + (o.alt_titles||'')).toLowerCase();
+    if(!hay.includes(q)) return false;
+  }
+  if(state.lists.size){
+    for(const l of state.lists) if(!o.lists.includes(l)) return false;
+  }
+  if(state.visas.size){
+    const codes = new Set();
+    o.eligible_visas.forEach(v => {
+      const c = getVisaSubclass(v);
+      if(c) codes.add(c);
+    });
+    for(const v of state.visas) if(!codes.has(v)) return false;
+  }
+  if(state.states.size){
+    for(const s of state.states){
+      if(!o._stateMap[s] || o._stateMap[s].size === 0) return false;
+    }
+  }
+  if(state.flags.size){
+    if(state.flags.has('dama') && !o.dama) return false;
+    if(state.flags.has('ila') && !o.ila) return false;
+    if(state.flags.has('srlap') && !o.srlap) return false;
+    if(state.flags.has('in_shortage') && o.no_shortage) return false;
+  }
+  return true;
+}
+
+function eligibleStateBadges(o){
+  return STATES.filter(s => o._stateMap[s] && o._stateMap[s].size > 0)
+    .map(s => `<span class="mini-tag state-y">${s}</span>`).join('');
+}
+
+function formatVisa(v){
+  const m = v.match(/^(\d{3})\s*(.*)$/);
+  if(m) return `<b>${m[1]}</b> ${esc(m[2])}`;
+  return esc(v);
+}
+
+function renderCard(o){
+  const q = state.q.trim();
+  const altList = (o.alt_titles||'').split(',').map(s=>s.trim()).filter(Boolean);
+  const altHtml = altList.length
+    ? `<div class="alt-titles"><b>Also known as:</b> ${altList.map(a=>hl(a,q)).join(' · ')}</div>`
+    : '';
+
+  const yn = (b) => b ? 'YES' : '';
+  const details = [
+    ['Skill Level', o.skill_level],
+    ['Assessed By', o.assessed_by],
+    ['Tier', o.tier],
+    ['Last Invited Points', o.last_invited_points],
+    ['No Shortage', yn(o.no_shortage)],
+    ['ILA', yn(o.ila)],
+    ['SRLAP', yn(o.srlap)],
+    ['DAMA', yn(o.dama)],
+    ['Version', o.version],
+  ].map(([l,v])=>{
+    if(!v) return '';
+    const u = String(v).toUpperCase();
+    const cls = u==='YES' ? 'y' : (u==='NO' ? 'n' : '');
+    return `<div class="detail"><div class="dl">${l}</div><div class="dv ${cls}">${esc(v)}</div></div>`;
+  }).join('');
+
+  const visaTags = o.eligible_visas.map(v => `<span class="visa-tag">${formatVisa(v)}</span>`).join('');
+
+  const stateGrid = STATES.map(s => {
+    const allStreams = ALL_STATE_STREAMS[s] || [];
+    const eligibleSet = o._stateMap[s] || new Set();
+    const anyEligible = eligibleSet.size > 0;
+    const streams = allStreams.map(stream => {
+      const isY = eligibleSet.has(stream);
+      return `<div class="stream-row"><span class="label">${esc(stream)}</span><span class="yn ${isY?'y':'n'}">${isY?'Y':'N'}</span></div>`;
+    }).join('');
+    const cls = anyEligible ? 'elig' : 'none';
+    const badge = anyEligible ? 'ELIGIBLE' : 'NOT ELIGIBLE';
+    return `<div class="state-box ${cls}"><div class="state-header">${s}<span class="badge">${badge}</span></div>${streams}</div>`;
+  }).join('');
+
+  const damaListHtml = (o.dama_list && o.dama_list.length)
+    ? `<div class="section-title">DAMA Agreements</div><div class="dama-list">${o.dama_list.map(d=>`<span class="dama-item">${esc(d)}</span>`).join('')}</div>`
+    : '';
+
+  const listTags = o.lists.map(l => `<span class="mini-tag list">${esc(l)}</span>`).join('');
+  const tierTag = o.tier ? `<span class="mini-tag yellow">Tier ${esc(o.tier)}</span>` : '';
+  const damaTag = o.dama ? `<span class="mini-tag dama">DAMA</span>` : '';
+  const stateTags = eligibleStateBadges(o);
+
+  return `<div class="card" data-code="${esc(o.anzsco)}">
+    <div class="card-head">
+      <span class="code">${hl(o.anzsco,q)}</span>
+      <span class="occ-name">${hl(o.occupation,q)}</span>
+      <span class="head-tags">${listTags}${tierTag}${damaTag}${stateTags}</span>
+      <span class="toggle">+</span>
+    </div>
+    <div class="card-body">
+      ${altHtml}
+      <div class="section-title">Occupation details</div>
+      <div class="detail-grid">${details||'<div class="detail"><div class="dl">—</div><div class="dv">No extra details</div></div>'}</div>
+      <div class="section-title">Eligible Visas</div>
+      <div class="visa-tags">${visaTags||'<span class="mini-tag">None listed</span>'}</div>
+      ${damaListHtml}
+      <div class="section-title">State / Territory eligibility</div>
+      <div class="states-grid">${stateGrid}</div>
+    </div>
+  </div>`;
+}
+
+function renderActiveFilters(){
+  const box = $('#activeFilters');
+  const tags = [];
+  state.lists.forEach(v => tags.push(`<button class="active-tag" data-remove="list" data-val="${v}">${v}</button>`));
+  state.visas.forEach(v => tags.push(`<button class="active-tag" data-remove="visa" data-val="${v}">Visa ${v}</button>`));
+  state.states.forEach(v => tags.push(`<button class="active-tag" data-remove="state" data-val="${v}">${v}</button>`));
+  state.flags.forEach(v => tags.push(`<button class="active-tag" data-remove="flag" data-val="${v}">${v.toUpperCase()}</button>`));
+  const total = state.lists.size + state.visas.size + state.states.size + state.flags.size;
+  $('#activeCount').textContent = total ? total : '';
+  box.innerHTML = tags.length ? tags.join('') : '<span class="hint">No filters active — showing all occupations.</span>';
+}
+
+function render(){
+  const filtered = DATA.filter(matches);
+  $('#resultCount').textContent = filtered.length.toLocaleString();
+  const box = $('#results'); const empty = $('#empty'); const lm = $('#loadMore');
+  renderActiveFilters();
+  if(!filtered.length){ box.innerHTML=''; empty.style.display='block'; lm.style.display='none'; return; }
+  empty.style.display = 'none';
+  const slice = filtered.slice(0, state.shown);
+  box.innerHTML = slice.map(renderCard).join('');
+  if(filtered.length > state.shown){
+    lm.style.display = 'block';
+    lm.textContent = `Load more · ${(filtered.length - state.shown).toLocaleString()} remaining`;
+  } else lm.style.display = 'none';
+}
+
+document.addEventListener('click', e => {
+  const rm = e.target.closest('.active-tag');
+  if(rm){
+    const k = rm.dataset.remove, v = rm.dataset.val;
+    const set = k==='list' ? state.lists : k==='visa' ? state.visas : k==='state' ? state.states : state.flags;
+    set.delete(v);
+    const sel = k==='list' ? `[data-list="${v}"]` : k==='visa' ? `[data-visa="${v}"]` : k==='state' ? `[data-state="${v}"]` : `[data-flag="${v}"]`;
+    const chip = document.querySelector(sel); if(chip) chip.classList.remove('active');
+    state.shown = 40; render(); return;
+  }
+  const head = e.target.closest('.card-head');
+  if(head){ head.parentElement.classList.toggle('open'); return; }
+  const chip = e.target.closest('.chip');
+  if(chip){
+    chip.classList.toggle('active');
+    const l = chip.dataset.list, v = chip.dataset.visa, s = chip.dataset.state, f = chip.dataset.flag;
+    const set = l ? state.lists : v ? state.visas : s ? state.states : state.flags;
+    const key = l || v || s || f;
+    if(chip.classList.contains('active')) set.add(key); else set.delete(key);
+    state.shown = 40; render();
+  }
+});
+
+$('#q').addEventListener('input', e => { state.q = e.target.value; state.shown = 40; render(); });
+$('#resetBtn').addEventListener('click', () => {
+  state.q = ''; state.lists.clear(); state.visas.clear(); state.states.clear(); state.flags.clear(); state.shown = 40;
+  $('#q').value = '';
+  document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+  render();
+});
+$('#loadMore').addEventListener('click', () => { state.shown += 40; render(); window.scrollBy({top:200,behavior:'smooth'}); });
+
+document.addEventListener('keydown', e => {
+  if((e.ctrlKey||e.metaKey) && e.key==='k'){ e.preventDefault(); $('#q').focus(); $('#q').select(); }
+  if(e.key==='Escape' && document.activeElement===$('#q')){ $('#q').blur(); }
+});
+
+// ===== Boot =====
+fetch(DATA_URL)
+  .then(r => {
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  })
+  .then(data => {
+    DATA = data.map(o => ({ ...o, _stateMap: buildStateMap(o) }));
+    $('#totalCount').textContent = DATA.length.toLocaleString();
+    $('#loading').style.display = 'none';
+    render();
+  })
+  .catch(err => {
+    $('#loading').innerHTML = `<strong style="color:var(--red)">Failed to load data:</strong> ${esc(err.message)}<br><small>Expected: <code>${esc(DATA_URL)}</code></small>`;
+  });
+</script>
+</body>
+</html>
