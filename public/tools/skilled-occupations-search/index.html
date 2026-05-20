@@ -522,37 +522,44 @@ function hl(text,q){
   return esc(text).replace(re,'<span class="highlight">$1</span>');
 }
 
-// Extract state code from "ACT – 190" => "ACT"
-function getStateCode(entry){
-  const m = entry.match(/^([A-Z]{2,4})\s*[–-]/);
-  return m ? m[1] : null;
-}
-// Strip state prefix "ACT – 190 (Offshore)" => "190 (Offshore)"
-function stripStatePrefix(entry){
-  return entry.replace(/^[A-Z]{2,4}\s*[–-]\s*/, '');
-}
+// Map from flat JSON field → [state, stream label]
+const STATE_FIELD_MAP = {
+  act_190:'ACT|190', act_491:'ACT|491',
+  nsw_190:'NSW|190', nsw_491_p1:'NSW|491 Pathway 1', nsw_491_p23:'NSW|491 Pathways 2&3',
+  nt_190_res:'NT|190 (Residents & Graduates)', nt_190_off:'NT|190 (Offshore Priority)', nt_491_res:'NT|491 (Residents & Graduates)', nt_491_off:'NT|491 (Offshore Priority)',
+  qld_190_off:'QLD|190 (Offshore)', qld_190_liv:'QLD|190 (Living in QLD)', qld_491_off:'QLD|491 (Offshore)', qld_491_liv:'QLD|491 (Living in QLD)',
+  sa_190_grad:'SA|190 (Graduates)', sa_190_emp:'SA|190 (Skilled Employment)', sa_190_reg:'SA|190 (Outer Regional)', sa_190_off:'SA|190 (Offshore)',
+  sa_491_grad:'SA|491 (Graduates)', sa_491_emp:'SA|491 (Skilled Employment)', sa_491_reg:'SA|491 (Outer Regional)', sa_491_off:'SA|491 (Offshore)',
+  tas_190_tse_pri:'TAS|190 (TSE Priority)', tas_190_tse_lt:'TAS|190 (TSE Long-Term)', tas_190_tsg:'TAS|190 (TSG)', tas_190_ter:'TAS|190 (TER)', tas_190_overseas:'TAS|190 (Overseas Health/Ed)',
+  tas_491_tse_pri:'TAS|491 (TSE Priority)', tas_491_tse_lt:'TAS|491 (TSE Long-Term)', tas_491_tsg:'TAS|491 (TSG)', tas_491_ter:'TAS|491 (TER)', tas_491_tbo:'TAS|491 (TBO)', tas_491_overseas:'TAS|491 (Overseas Invite)',
+  vic_190:'VIC|190', vic_491:'VIC|491',
+  wa_190_sch1:'WA|190 (WASMOL Sch 1)', wa_190_sch2:'WA|190 (WASMOL Sch 2)', wa_190_grad:'WA|190 (Graduate)',
+  wa_491_sch1:'WA|491 (WASMOL Sch 1)', wa_491_sch2:'WA|491 (WASMOL Sch 2)', wa_491_grad:'WA|491 (Graduate)',
+};
+
 // Extract visa subclass (3 digits) from any string
 function getVisaSubclass(entry){
   const m = entry.match(/\b(\d{3})\b/);
   return m ? m[1] : null;
 }
 
-// Pre-build state map per occupation: { ACT: Set("190","491"), ... }
+// Build state map from flat Y/N fields: { ACT: Set("190","491"), ... }
 function buildStateMap(occ){
   const map = {};
-  occ.state_nomination.forEach(entry => {
-    const code = getStateCode(entry);
-    if(!code) return;
-    if(!map[code]) map[code] = new Set();
-    map[code].add(stripStatePrefix(entry));
-  });
+  for(const [field, val] of Object.entries(STATE_FIELD_MAP)){
+    if(occ[field] && occ[field].toUpperCase() === 'Y'){
+      const [st, stream] = val.split('|');
+      if(!map[st]) map[st] = new Set();
+      map[st].add(stream);
+    }
+  }
   return map;
 }
 
 function matches(o){
   const q = state.q.toLowerCase().trim();
   if(q){
-    const hay = (o.anzsco + ' ' + o.occupation + ' ' + (o.alt_titles||'')).toLowerCase();
+    const hay = (o.code + ' ' + o.occupation + ' ' + (o.alternative_titles||'')).toLowerCase();
     if(!hay.includes(q)) return false;
   }
   if(state.lists.size){
@@ -593,7 +600,7 @@ function formatVisa(v){
 
 function renderCard(o){
   const q = state.q.trim();
-  const altList = (o.alt_titles||'').split(',').map(s=>s.trim()).filter(Boolean);
+  const altList = (o.alternative_titles||'').split(',').map(s=>s.trim()).filter(Boolean);
   const altHtml = altList.length
     ? `<div class="alt-titles"><b>Also known as:</b> ${altList.map(a=>hl(a,q)).join(' · ')}</div>`
     : '';
@@ -640,9 +647,9 @@ function renderCard(o){
   const damaTag = o.dama ? `<span class="mini-tag dama">DAMA</span>` : '';
   const stateTags = eligibleStateBadges(o);
 
-  return `<div class="card" data-code="${esc(o.anzsco)}">
+  return `<div class="card" data-code="${esc(o.code)}">
     <div class="card-head">
-      <span class="code">${hl(o.anzsco,q)}</span>
+      <span class="code">${hl(o.code,q)}</span>
       <span class="occ-name">${hl(o.occupation,q)}</span>
       <span class="head-tags">${listTags}${tierTag}${damaTag}${stateTags}</span>
       <span class="toggle">+</span>
@@ -731,7 +738,13 @@ fetch(DATA_URL)
     return r.json();
   })
   .then(data => {
-    DATA = data.map(o => ({ ...o, _stateMap: buildStateMap(o) }));
+    DATA = data.map(o => {
+      // Normalise: lists string → array, ensure eligible_visas & dama_list are arrays
+      const lists = typeof o.lists === 'string' ? o.lists.split(',').map(s=>s.trim()).filter(Boolean) : (o.lists||[]);
+      const eligible_visas = Array.isArray(o.eligible_visas) ? o.eligible_visas : (o.eligible_visas||'').split(',').map(s=>s.trim()).filter(Boolean);
+      const dama_list = Array.isArray(o.dama_list) ? o.dama_list : (o.dama_list||'').split(',').map(s=>s.trim()).filter(Boolean);
+      return { ...o, lists, eligible_visas, dama_list, _stateMap: buildStateMap(o) };
+    });
     $('#totalCount').textContent = DATA.length.toLocaleString();
     $('#loading').style.display = 'none';
     render();

@@ -32,6 +32,14 @@ const tools = [
     icon: '⏱️',
     external: false,
   },
+  {
+    name: 'EOI SkillSelect Backlog',
+    description:
+      'Lihat data EOI (Expression of Interest) SkillSelect per occupation — submitted & invited, breakdown by visa type dan state.',
+    href: '/tools/eoi',
+    icon: '📊',
+    external: false,
+  },
 ]
 
 export default function ToolsPage() {
