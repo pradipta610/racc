@@ -33,6 +33,13 @@ const tools = [
     external: false,
   },
   {
+    name: 'Sitemap Page Checker',
+    description: 'Cek apakah slug atau halaman sudah ada di sitemap sebelum dibuat — hindari duplikat.',
+    href: '/tools/sitemap-checker',
+    icon: '🗺️',
+    external: false,
+  },
+  {
     name: 'EOI SkillSelect Backlog',
     description:
       'Lihat data EOI (Expression of Interest) SkillSelect per occupation — submitted & invited, breakdown by visa type dan state.',
