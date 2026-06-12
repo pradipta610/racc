@@ -11,6 +11,16 @@ type Source = 'pages' | 'blog' | 'both'
 type ResultItem = { slug: string; found: boolean; matches: string[] }
 type Tab = 'all' | 'found' | 'missing'
 
+function urlMatches(url: string, slug: string): boolean {
+  const u = url.toLowerCase()
+  return (
+    u.includes(slug) ||
+    u.includes(slug.replace(/\s+/g, '-')) ||
+    u.includes(slug.replace(/\s+/g, '_')) ||
+    u.includes(slug.replace(/\s+/g, ''))
+  )
+}
+
 async function fetchSitemap(url: string): Promise<string[]> {
   const res = await fetch('/api/fetch-sitemap?url=' + encodeURIComponent(url))
   if (!res.ok) {
@@ -39,6 +49,15 @@ export function SitemapCheckerClient() {
   const [allSearch, setAllSearch]   = useState('')
   const [copied, setCopied]         = useState(false)
   const [hasRun, setHasRun]         = useState(false)
+  const [expanded, setExpanded]     = useState<Set<string>>(new Set())
+
+  const toggleExpand = (slug: string) => {
+    setExpanded(prev => {
+      const next = new Set(prev)
+      if (next.has(slug)) { next.delete(slug) } else { next.add(slug) }
+      return next
+    })
+  }
 
   const runCheck = useCallback(async () => {
     const slugs = input.split('\n').map(s => s.trim().toLowerCase()).filter(Boolean)
@@ -68,8 +87,8 @@ export function SitemapCheckerClient() {
 
       const checked: ResultItem[] = slugs.map(slug => ({
         slug,
-        found: urls.some(u => u.toLowerCase().includes(slug)),
-        matches: urls.filter(u => u.toLowerCase().includes(slug)),
+        found: urls.some(u => urlMatches(u, slug)),
+        matches: urls.filter(u => urlMatches(u, slug)),
       }))
 
       setProgress(100)
@@ -210,25 +229,42 @@ export function SitemapCheckerClient() {
           <div style={scrollList}>
             {visibleResults.length === 0
               ? <div style={empty}>No results match.</div>
-              : visibleResults.map(r => (
-                <div key={r.slug} style={resultItem(r.found)}>
-                  <span style={badge(r.found)}>{r.found ? 'FOUND' : 'NOT FOUND'}</span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <code style={{ fontSize: 13 }}>{r.slug}</code>
-                    {r.found
-                      ? r.matches.slice(0, 5).map(u => (
-                          <div key={u} style={urlLine}>
-                            ↳ <a href={u} target="_blank" rel="noopener" style={{ color: 'var(--navy)' }}>{u}</a>
-                          </div>
-                        ))
-                      : <div style={{ ...urlLine, color: 'var(--tl)' }}>Safe to create — no match in sitemap</div>
-                    }
-                    {r.matches.length > 5 && (
-                      <div style={{ ...urlLine, color: 'var(--tl)' }}>…and {r.matches.length - 5} more</div>
-                    )}
+              : visibleResults.map(r => {
+                const isExpanded = expanded.has(r.slug)
+                const showCount = isExpanded ? r.matches.length : 5
+                const hasMore = r.matches.length > 5
+                return (
+                  <div key={r.slug} style={resultItem(r.found)}>
+                    <span style={badge(r.found)}>{r.found ? 'FOUND' : 'NOT FOUND'}</span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <code style={{ fontSize: 13 }}>{r.slug}</code>
+                      {r.found
+                        ? (
+                          <>
+                            {r.matches.slice(0, showCount).map(u => (
+                              <div key={u} style={urlLine}>
+                                ↳ <a href={u} target="_blank" rel="noopener" style={{ color: 'var(--navy)' }}>{u}</a>
+                              </div>
+                            ))}
+                            {hasMore && (
+                              <button
+                                onClick={() => toggleExpand(r.slug)}
+                                style={expandBtn}
+                              >
+                                {isExpanded
+                                  ? '▲ Show less'
+                                  : `▼ Show ${r.matches.length - 5} more matches`
+                                }
+                              </button>
+                            )}
+                          </>
+                        )
+                        : <div style={{ ...urlLine, color: 'var(--tl)' }}>Safe to create — no match in sitemap</div>
+                      }
+                    </div>
                   </div>
-                </div>
-              ))
+                )
+              })
             }
           </div>
         </div>
@@ -374,6 +410,11 @@ function pill(bg: string, color: string): React.CSSProperties {
   return { padding: '4px 10px', borderRadius: 20, fontSize: 12, fontWeight: 700, background: bg, color }
 }
 const urlLine: React.CSSProperties = { fontSize: 11, marginTop: 3, wordBreak: 'break-all', fontFamily: 'monospace' }
+const expandBtn: React.CSSProperties = {
+  marginTop: 6, padding: '3px 10px', border: '1px solid var(--border)', borderRadius: 6,
+  background: 'var(--light)', fontFamily: 'inherit', fontSize: 11, fontWeight: 600,
+  color: 'var(--navy)', cursor: 'pointer',
+}
 const errorBox: React.CSSProperties = {
   marginTop: 10, padding: '10px 14px', borderRadius: 8,
   background: '#fee2e2', border: '1px solid #fca5a5',
