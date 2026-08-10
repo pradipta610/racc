@@ -55,6 +55,14 @@ const tools = [
     icon: '🎓',
     external: false,
   },
+  {
+    name: 'Migration Intelligence Calendar',
+    description:
+      'Roadmap konten 12 bulan — AI citation strategy, topical authority planning, life journey knowledge graph, dan visa category bank. Editable.',
+    href: '/tools/migration-calendar',
+    icon: '📅',
+    external: false,
+  },
 ]
 
 export default function ToolsPage() {

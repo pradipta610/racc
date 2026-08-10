@@ -18,8 +18,6 @@ export default function ToolsLayout({
         padding: '12px 5%',
       }}>
         <div style={{
-          maxWidth: 960,
-          margin: '0 auto',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -41,7 +39,7 @@ export default function ToolsLayout({
           </a>
         </div>
       </header>
-      <main style={{ maxWidth: 960, margin: '0 auto', padding: '32px 5%' }}>
+      <main style={{ padding: '32px 5%' }}>
         {children}
       </main>
     </div>
