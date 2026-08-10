@@ -47,6 +47,14 @@ const tools = [
     icon: '📊',
     external: false,
   },
+  {
+    name: 'Skill Assessment',
+    description:
+      '714 occupations — cari assessing authority, biaya, dan processing time untuk skill assessment Australia. Filter by MLTSSL/STSOL/ROL/CSOL.',
+    href: '/tools/skill-assessment',
+    icon: '🎓',
+    external: false,
+  },
 ]
 
 export default function ToolsPage() {
