@@ -2,21 +2,35 @@ import Link from "next/link";
 
 const CONSULTATION_URL = "https://www.racc.net.au/migration-agent-education-agent";
 
-export default function HeroV2() {
+interface HeroV2Props {
+  brandName?: string;
+  concise?: boolean;
+  combined?: boolean;
+}
+
+export default function HeroV2({ brandName, concise = false, combined = false }: HeroV2Props = {}) {
   return (
     <section className="v2-hero">
       <div className="v2-hero-bg-slot" />
       <div className="v2-hero-inner">
         <h1>
-          20 Years of Experience in Helping Apply<br />
-          <em>Courses and Visas</em> in Australia
+          {brandName && <><span className="v2-hero-brand">{brandName}</span><br /></>}
+          {combined ? (
+            <>Migration, Education and <em>Workforce Solutions</em> for Australia</>
+          ) : concise ? (
+            <>20 Years Helping You <em>Study and Migrate</em> to Australia</>
+          ) : (
+            <>20 Years of Experience in Helping Apply<br /><em>Courses and Visas</em> in Australia</>
+          )}
         </h1>
-        <p className="v2-hero-sub">Genuine Advice You Can Trust</p>
+        <p className="v2-hero-sub">
+          Genuine Advice You Can Trust
+        </p>
         <p className="v2-hero-rating"><b>4.8 out of 5</b> Customer Service Satisfaction</p>
-        <p className="v2-hero-langs">
+        {!concise && <p className="v2-hero-langs">
           <b>WE SPEAK:</b> English · Bahasa · Mandarin · Cantonese ·<br />
           Tagalog · Malay · Sinhalese · Hindi &amp; Punjabi
-        </p>
+        </p>}
         <Link href={CONSULTATION_URL} className="v2-hero-cta">Book Consultation</Link>
       </div>
 
@@ -51,6 +65,7 @@ export default function HeroV2() {
           color: var(--white); margin-bottom: 18px; font-weight: 600;
         }
         .v2-hero h1 em { color: var(--yellow); font-style: normal; }
+        .v2-hero-brand { color: var(--white); }
         .v2-hero-sub { font-size: 20px; color: rgba(255,255,255,.8); margin-bottom: 8px; font-weight: 500; }
         .v2-hero-rating { font-size: 17px; color: rgba(255,255,255,.65); margin-bottom: 22px; }
         .v2-hero-rating b { color: var(--yellow); font-weight: 700; }
