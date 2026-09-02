@@ -63,6 +63,14 @@ const tools = [
     icon: '📅',
     external: false,
   },
+  {
+    name: 'Content Tracker',
+    description:
+      'Lacak konten dari Draft ke Review, Revisi, sampai Terbit — real-time, gantinya spreadsheet Excel.',
+    href: '/tools/content-tracker',
+    icon: '🗞️',
+    external: false,
+  },
 ]
 
 export default function ToolsPage() {
