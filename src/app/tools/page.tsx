@@ -66,7 +66,7 @@ const tools = [
   {
     name: 'Content Tracker',
     description:
-      'Lacak konten dari Draft ke Review, Revisi, sampai Terbit — real-time, gantinya spreadsheet Excel.',
+      'Drag content across Draft, Review, Revision, and Published — real-time, replaces the Excel tracker.',
     href: '/tools/content-tracker',
     icon: '🗞️',
     external: false,

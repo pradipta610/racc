@@ -3,7 +3,7 @@ import { ContentTrackerClient } from '@/components/tools/ContentTrackerClient'
 
 export const metadata: Metadata = {
   title: 'Content Tracker — RACC internal tools',
-  description: 'Lacak konten dari draft sampai terbit — pengganti spreadsheet, real-time untuk seluruh tim.',
+  description: 'Track content from draft to published — real-time, shared across the team.',
 }
 
 export default function ContentTrackerPage() {
@@ -14,7 +14,7 @@ export default function ContentTrackerPage() {
           Content Tracker
         </h1>
         <p style={{ fontSize: 14, color: 'var(--tl)', marginTop: 4 }}>
-          Geser konten dari Draft ke Review, Revisi, sampai Terbit — semua orang lihat update yang sama.
+          Drag content across Draft, Review, Revision, and Published — everyone sees the same board update live.
         </p>
       </div>
       <ContentTrackerClient />
