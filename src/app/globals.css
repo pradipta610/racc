@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-playfair: 'Playfair Display';
+  --font-dm-sans: 'DM Sans';
   --navy:   #1C3A8A;
   --blue:   #2E6DB4;
   --sky:    #5BA3D9;
@@ -18,7 +20,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-dm-sans), sans-serif;
   color: var(--td);
   background: var(--white);
   overflow-x: hidden;
