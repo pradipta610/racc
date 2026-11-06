@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 const SITEMAPS = {
   pages: 'https://www.racc.net.au/pages-sitemap.xml',
@@ -10,6 +10,107 @@ const SITEMAPS = {
 type Source = 'pages' | 'blog' | 'both'
 type ResultItem = { slug: string; found: boolean; matches: string[] }
 type Tab = 'all' | 'found' | 'missing'
+type PagePreview = {
+  title: string
+  description: string
+  h1: string
+  image: string
+  screenshotUrl: string
+}
+
+const VISUAL_PAGE_SIZE = 12
+
+function readableTitle(url: string): string {
+  try {
+    const segment = new URL(url).pathname.split('/').filter(Boolean).pop() || 'RACC homepage'
+    return segment.replace(/[-_]+/g, ' ').replace(/\b\w/g, char => char.toUpperCase())
+  } catch {
+    return url
+  }
+}
+
+function searchableUrl(url: string): string {
+  try {
+    return decodeURIComponent(new URL(url).pathname).replace(/[-_/]+/g, ' ').toLowerCase()
+  } catch {
+    return url.toLowerCase()
+  }
+}
+
+function rankUrls(urls: string[], query: string): string[] {
+  const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean)
+  if (!tokens.length) return []
+
+  return urls
+    .map(url => {
+      const haystack = searchableUrl(url)
+      if (!tokens.every(token => haystack.includes(token))) return null
+      const phraseIndex = haystack.indexOf(tokens.join(' '))
+      const score = phraseIndex >= 0
+        ? phraseIndex
+        : tokens.reduce((total, token) => total + haystack.indexOf(token), 1000)
+      return { url, score }
+    })
+    .filter((item): item is { url: string; score: number } => item !== null)
+    .sort((a, b) => a.score - b.score || a.url.length - b.url.length)
+    .map(item => item.url)
+}
+
+function PagePreviewCard({ url }: { url: string }) {
+  const [preview, setPreview] = useState<PagePreview | null>(null)
+  const [failed, setFailed] = useState(false)
+  const [imageSource, setImageSource] = useState('')
+
+  useEffect(() => {
+    const controller = new AbortController()
+
+    fetch('/api/page-preview?url=' + encodeURIComponent(url), { signal: controller.signal })
+      .then(res => {
+        if (!res.ok) throw new Error(`Preview error ${res.status}`)
+        return res.json()
+      })
+      .then((data: PagePreview) => {
+        setPreview(data)
+        setImageSource(data.screenshotUrl || data.image)
+      })
+      .catch(error => {
+        if (error instanceof Error && error.name !== 'AbortError') setFailed(true)
+      })
+
+    return () => controller.abort()
+  }, [url])
+
+  const title = preview?.title || readableTitle(url)
+
+  const handleImageError = () => {
+    if (preview?.image && imageSource !== preview.image) {
+      setImageSource(preview.image)
+    } else {
+      setImageSource('')
+    }
+  }
+
+  return (
+    <article style={previewCard}>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={previewImageLink}>
+        {imageSource
+          ? <>
+              {/* Dynamic screenshot URLs intentionally bypass Next image optimization. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={imageSource} alt={`Preview halaman ${title}`} onError={handleImageError} style={previewImage} />
+            </>
+          : <div style={previewPlaceholder}>{failed ? 'Preview unavailable' : 'Loading preview…'}</div>
+        }
+        <span style={openBadge}>Open ↗</span>
+      </a>
+      <div style={previewBody}>
+        <a href={url} target="_blank" rel="noopener noreferrer" style={previewTitle}>{title}</a>
+        {preview?.description && <p style={previewDescription}>{preview.description}</p>}
+        <code style={previewUrl}>{new URL(url).pathname || '/'}</code>
+      </div>
+    </article>
+  )
+}
 
 function urlMatches(url: string, slug: string): boolean {
   const u = url.toLowerCase()
@@ -47,6 +148,7 @@ export function SitemapCheckerClient() {
   const [tab, setTab]               = useState<Tab>('all')
   const [resultSearch, setResultSearch] = useState('')
   const [allSearch, setAllSearch]   = useState('')
+  const [visualLimit, setVisualLimit] = useState(VISUAL_PAGE_SIZE)
   const [copied, setCopied]         = useState(false)
   const [hasRun, setHasRun]         = useState(false)
   const [expanded, setExpanded]     = useState<Set<string>>(new Set())
@@ -124,7 +226,8 @@ export function SitemapCheckerClient() {
     .filter(r => tab === 'all' ? true : tab === 'found' ? r.found : !r.found)
     .filter(r => !resultSearch || r.slug.includes(resultSearch.toLowerCase()))
 
-  const visibleAll = allUrls.filter(u => !allSearch || u.toLowerCase().includes(allSearch.toLowerCase()))
+  const visualMatches = rankUrls(allUrls, allSearch)
+  const visibleAll = visualMatches.slice(0, visualLimit)
 
   const foundCount   = results.filter(r => r.found).length
   const missingCount = results.filter(r => !r.found).length
@@ -276,22 +379,37 @@ export function SitemapCheckerClient() {
           <Label>All pages in sitemap ({allUrls.length.toLocaleString()} URLs)</Label>
           <input
             value={allSearch}
-            onChange={e => setAllSearch(e.target.value)}
-            placeholder="Search all pages…"
+            onChange={e => { setAllSearch(e.target.value); setVisualLimit(VISUAL_PAGE_SIZE) }}
+            placeholder="Ketik yang kamu ingat, contoh: nursing perth…"
             style={{ ...searchInput, marginBottom: 10 }}
           />
-          <div style={scrollList}>
-            {visibleAll.length === 0
-              ? <div style={empty}>No pages match.</div>
-              : visibleAll.map(u => (
-                <div key={u} style={{ ...resultItem(false), background: 'var(--white)', borderColor: 'var(--border)' }}>
-                  <div style={urlLine}>
-                    <a href={u} target="_blank" rel="noopener" style={{ color: 'var(--navy)', fontFamily: 'monospace', fontSize: 12 }}>{u}</a>
+          <p style={{ fontSize: 12, color: 'var(--tl)', margin: '0 0 12px' }}>
+            Bisa pakai beberapa kata tanpa harus berurutan. Preview dimuat hanya untuk hasil yang tampil agar tetap cepat.
+          </p>
+
+          {!allSearch.trim()
+            ? <div style={visualEmpty}>Mulai ketik untuk melihat halaman dalam bentuk thumbnail.</div>
+            : visualMatches.length === 0
+              ? <div style={visualEmpty}>Tidak ada halaman yang cocok. Coba keyword yang lebih pendek.</div>
+              : (
+                <>
+                  <div style={visualSummary}>
+                    Menampilkan {visibleAll.length} dari {visualMatches.length} halaman yang cocok
                   </div>
-                </div>
-              ))
-            }
-          </div>
+                  <div style={previewGrid}>
+                    {visibleAll.map(url => <PagePreviewCard key={url} url={url} />)}
+                  </div>
+                  {visibleAll.length < visualMatches.length && (
+                    <button
+                      onClick={() => setVisualLimit(limit => limit + VISUAL_PAGE_SIZE)}
+                      style={loadMoreBtn}
+                    >
+                      Load {Math.min(VISUAL_PAGE_SIZE, visualMatches.length - visibleAll.length)} more previews
+                    </button>
+                  )}
+                </>
+              )
+          }
         </div>
       )}
 
@@ -421,3 +539,48 @@ const errorBox: React.CSSProperties = {
   fontSize: 13, color: '#b91c1c',
 }
 const empty: React.CSSProperties = { textAlign: 'center', padding: '32px 0', color: 'var(--tl)', fontSize: 14 }
+const visualEmpty: React.CSSProperties = {
+  textAlign: 'center', padding: '42px 18px', color: 'var(--tl)', fontSize: 13,
+  border: '1px dashed var(--border)', borderRadius: 10, background: 'var(--off)',
+}
+const visualSummary: React.CSSProperties = { fontSize: 12, color: 'var(--tl)', marginBottom: 10 }
+const previewGrid: React.CSSProperties = {
+  display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12,
+}
+const previewCard: React.CSSProperties = {
+  minWidth: 0, overflow: 'hidden', border: '1px solid var(--border)', borderRadius: 12,
+  background: 'var(--white)', boxShadow: '0 2px 10px rgba(15, 23, 42, .06)',
+}
+const previewImageLink: React.CSSProperties = {
+  display: 'block', position: 'relative', aspectRatio: '16 / 10', overflow: 'hidden',
+  background: 'var(--light)', borderBottom: '1px solid var(--border)', textDecoration: 'none',
+}
+const previewImage: React.CSSProperties = {
+  width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block',
+}
+const previewPlaceholder: React.CSSProperties = {
+  width: '100%', height: '100%', display: 'grid', placeItems: 'center', color: 'var(--tl)',
+  fontSize: 12, background: 'linear-gradient(110deg, var(--light) 25%, var(--off) 45%, var(--light) 65%)',
+}
+const openBadge: React.CSSProperties = {
+  position: 'absolute', top: 8, right: 8, padding: '4px 8px', borderRadius: 7,
+  background: 'rgba(15, 23, 42, .82)', color: '#fff', fontSize: 10, fontWeight: 700,
+}
+const previewBody: React.CSSProperties = { padding: '11px 12px 13px' }
+const previewTitle: React.CSSProperties = {
+  color: 'var(--td)', fontSize: 13, lineHeight: 1.35, fontWeight: 700, textDecoration: 'none',
+  display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+}
+const previewDescription: React.CSSProperties = {
+  margin: '6px 0 8px', color: 'var(--tl)', fontSize: 11, lineHeight: 1.45,
+  display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+}
+const previewUrl: React.CSSProperties = {
+  display: 'block', marginTop: 7, color: 'var(--navy)', fontSize: 10, whiteSpace: 'nowrap',
+  overflow: 'hidden', textOverflow: 'ellipsis',
+}
+const loadMoreBtn: React.CSSProperties = {
+  display: 'block', margin: '14px auto 0', padding: '9px 16px', border: '1px solid var(--border)',
+  borderRadius: 9, background: 'var(--off)', color: 'var(--navy)', fontFamily: 'inherit',
+  fontSize: 12, fontWeight: 700, cursor: 'pointer',
+}
